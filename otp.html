@@ -1,0 +1,346 @@
+<script src="js/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#form_data").submit(function(e) {
+            $("#login_button").attr("disabled", true);
+            return true;
+        });
+    });
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+<script src="../cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.2/dist/js/bootstrap.min.js"></script> -->
+<script>
+    $(document).ready(function () {
+
+        var successContainer = $('#successContainer');
+        if (successContainer.length > 0 && successContainer.html().trim().length > 0) {
+            // Set a timeout to fade out the success message after 5000 milliseconds (5 seconds)
+            setTimeout(function () {
+                successContainer.fadeOut(3000, function () {
+                    // After fadeOut is complete, you can optionally remove the element from the DOM
+                    successContainer.remove();
+                });
+            }, 3000);
+        }
+        // Check if the checkbox state is stored in the session
+        var checkboxState = sessionStorage.getItem('checkboxState');
+        if (checkboxState === 'unchecked') {
+            // Redirect to login if the checkbox is not checked
+            logoutAndRedirect('login.html');
+        }
+
+        $("#form_data").submit(function (e) {
+            var actionUrl = $(this).attr('action');
+
+            // Parse the URL to get the last segment
+            var urlSegments = actionUrl.split('index.html');
+            var lastSegment = urlSegments[urlSegments.length - 1];
+
+                // Make an AJAX request
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'), // Use the form's action URL
+                    data: $(this).serialize(), // Serialize the form data
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        let user = response.user;
+                        console.log(response);
+                        if(response.errors){
+                            displayValidationErrors(response.errors);
+                        }
+                        if (user.first_login == 0) {
+                            // Assuming the login was successful, open the popup
+                            $('body').append(response.html); // Append the response (popup content) to the body
+                            $('#termsModal').modal('show'); // Show the modal
+
+                            // Enable the "Agree" button when the checkbox is checked
+                            $('#agreeCheckbox').change(function () {
+                                $('#agreeButton').prop('disabled', !$(this).prop('checked'));
+                            });
+
+                            // Handle the modal close event
+                            $('#termsModal').on('hidden.bs.modal', function () {
+                                // Redirect to the login page if the checkbox is not checked
+                                if (!$('#agreeCheckbox').prop('checked')) {
+                                    // Store the checkbox state in the session
+                                    window.location.replace("login.html");
+                                    // sessionStorage.setItem('checkboxState', 'unchecked');
+                                    // logoutAndRedirect('https://hr-uat.little.africa/login');
+                                } else {
+                                    // Remove the stored checkbox state if checked
+                                    sessionStorage.removeItem('checkboxState');
+                                }
+                            });
+
+                            // Handle the "Agree" button click
+                            $('#agreeButton').click(function () {
+                                // Check if the checkbox is checked
+                                if ($('#agreeCheckbox').prop('checked')) {
+                                    // Add any additional logic or AJAX requests if needed
+                                    axios.post('update_first_login.html', {
+                                            _token: $('#csrf_token').val(),
+                                            first_login: $('#first_login').val(),
+                                            email: $('#email').val(),
+                                            password: $('#password').val(),
+                                        })
+                                        .then(response => {
+                                            if (response.data.success) {
+                                                // Redirect to the dashboard
+                                                window.location.replace("login.html");
+                                            } else {
+                                                // Redirect to the login page
+                                                logoutAndRedirect('signin.html');
+                                            }
+                                        })
+                                        .catch(error => {
+                                            alert('threre');
+                                            // Handle the error as needed
+                                            console.error(error);
+                                        });
+                                } else {
+                                    // Store the checkbox state in the session
+                                    sessionStorage.setItem('checkboxState', 'unchecked');
+                                    // Redirect to the login page if the checkbox is not checked
+                                    logoutAndRedirect('signin.html');
+                                }
+                            });
+                        } else {
+                            window.location.replace("login.html");
+                        }
+                    },
+                    error: function (error) {
+
+                        if (error.responseJSON && error.responseJSON.danger) {
+                            // Clear any previous validation errors
+                            $('#form_data').find('.is-invalid').removeClass('is-invalid');
+                            $('.error').empty();
+
+                            // Display the error message in the errorContainer
+                            $('#errorContainer').html('<div class="alert alert-danger">' + error.responseJSON.danger + '</div>');
+
+                            // Fade out the error message after 5000 milliseconds (5 seconds)
+                            $('#errorContainer').fadeOut(3000, function () {
+                                // After fadeOut is complete, clear the error message and show any additional error handling
+                                $('#errorContainer').empty();
+                            });
+                        } else {
+                            // Handle other errors or validation errors
+                            displayValidationErrors(error.responseJSON.errors);
+                        }
+                    }
+                });
+            return false;
+        });
+
+        function displayValidationErrors(errors) {
+            // Loop through the errors and display them on the form
+            $('#form_data').find('.is-invalid').removeClass('is-invalid');
+            $('.error').empty();
+            $.each(errors, function (field, messages) {
+                var input = $('[name="' + field + '"]');
+                input.addClass('is-invalid');
+                input.next('.error').html('<small>' + messages.join('<br>') + '</small>');
+            });
+        }
+        // Function to logout and redirect
+        function logoutAndRedirect(redirectUrl) {
+            axios.post('logout.html')
+                .then(response => {
+                    // Redirect to the specified URL
+                    window.location.replace(redirectUrl);
+                })
+                .catch(error => {
+                    // Handle the error as needed
+                    console.error(error);
+                });
+        }
+    });
+
+
+
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="">
+
+
+<!-- Mirrored from hr-uat.little.africa/otp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Feb 2025 13:55:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    
+    <title>
+        
+        - OTP Verify
+</title>
+
+    <!-- SEO META -->
+    <meta name="title" content="">
+    <meta name="description" content="">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hr-uat.little.africa">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image"
+        content="https://hr-uat.little.africa/storage/uploads/meta">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hr-uat.little.africa">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image"
+        content="https://hr-uat.little.africa/storage/uploads/meta">
+
+
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+    <meta name="description" content="Craft HR Description" />
+    <meta name="keywords" content="Craft HR" />
+    <meta name="author" content="Zynamis" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="storage/uploads/logo/favicon.png" type="image/x-icon" />
+
+    <!-- font css -->
+    <link rel="stylesheet" href="assets/fonts/tabler-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/feather.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="assets/fonts/material.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.html">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- vendor css -->
+    
+
+    <link rel="stylesheet" href="assets/css/customizer.css">
+
+    
+        <link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
+    
+    
+</head>
+
+<body class="theme-1">
+    <!-- [ auth-signup ] start -->
+    <div class="auth-wrapper auth-v3">
+        <div class="bg-auth-side bg-primary"></div>
+        <div class="auth-content">
+
+            <div class="card">
+                <div class="row align-items-center ">
+                    
+    <div class="card" id="otp-verify-container">
+        <div class="row align-items-center text-start">
+            <div class="col-xl-6">
+                <div class="card-body">
+                    <div class="">
+                                                <div id="errorContainer"></div>
+                        <div id="successContainer">
+                                                    </div>
+                                                <h2 class="mb-3 f-w-600">Otp Verify</h2>
+                                            </div>
+                    <!-- <form method="POST" action="https://hr-uat.little.africa/login" class="needs-validation" novalidate=""
+                        id="form_data"> -->
+                        <form method="POST" action="https://hr-uat.little.africa/signin" class="needs-validation" novalidate=""
+                        id="form_data">
+                        <input type="hidden" name="_token" value="txjPUrctNGxpqSruei4QbDRiBOK2pKEMjHblCZ3R">                        <div>
+                        <div class="form-group mb-3">
+                            <label class="form-label">OTP</label>
+                            <input class="form-control " id="otp" type="text"
+                                name="otp" value="" required autocomplete="otp" autofocus
+                                placeholder="Enter OTP">
+                           
+                            <span class="error invalid-email text-danger" role="alert">
+                                <small></small>
+                            </span>
+                        </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="login-do-btn btn btn-primary btn-block mt-2"
+                                    tabindex="4">Submit</button>
+                            </div>
+
+                            
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <input type="hidden" id="email" name="email" value="">
+            <input type="hidden" id="password" name="password" value="">
+            <div class="col-xl-6 img-card-side">
+                <div class="auth-img-content">
+                    <img src="assets/images/auth/img-auth-3.svg" alt="" class="img-fluid">
+                    <h3 class="text-white mb-4 mt-5"> “Think. Craft. Transform“</h3>
+                    <p class="text-white">
+                        The more effortless the writing looks, the more effort the writer actually put into the
+                        process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+                </div>
+            </div>
+            <div class="auth-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6">
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ auth-signup ] end -->
+
+    <!-- Required Js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="assets/js/vendor-all.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+
+    
+
+    <input type="checkbox" class="d-none" id="cust-theme-bg"  />
+    <input type="checkbox" class="d-none" id="cust-darklayout"  />
+
+
+
+    
+    <script src="js/custom.js"></script>
+        
+    
+        </body>
+
+
+
+<!-- Mirrored from hr-uat.little.africa/otp by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Feb 2025 13:55:25 GMT -->
+</html>
