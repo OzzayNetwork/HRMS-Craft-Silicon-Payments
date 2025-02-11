@@ -2584,7 +2584,7 @@
 
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#createDesignationModal"
                                     class="btn btn-sm btn-primary" title="Create New Designation">
-                                    <i class="ti ti-plus"></i> Create New Designation
+                                    <i class="ti ti-plus"></i>
                                     </a>
 
                                     <!-- Create Designation Modal -->
@@ -2597,49 +2597,409 @@
                                         </div>
                                         <div class="modal-body">
                                             <p>Please fill in the details below to create a new designation. Ensure you select the correct ministry, department, section, and unit for accurate categorization.</p>
-                                            <form action="https://hr-uat.little.africa/department/create" method="POST">
-                                            <div class="mb-3">
-                                                <label for="ministry" class="form-label">Ministry</label>
-                                                <select class="form-select" id="ministry" name="ministry" required>
-                                                <option value="">Select Ministry</option>
-                                                <option value="Ministry of Health">Ministry of Health</option>
-                                                <option value="Ministry of Education">Ministry of Education</option>
-                                                <option value="Ministry of Agriculture">Ministry of Agriculture</option>
-                                                <option value="Ministry of Transport">Ministry of Transport</option>
-                                                </select>
-                                            </div>
+                                            <form action="" method="POST">
+                                            <div class="row">
+                                                <div class="form-group col-sm-12 col-md-12">
+                                                    <label for="branch_id" class="form-label">Ministry</label><span
+                                                        class="text-danger pl-1">*</span>
+                                                    <div class="form-icon-user">
+                                                        <select class="form-control branch_id" required="required"
+                                                            id="branch_id" name="branch_id">
+                                                            <option selected="selected" value="">Select Ministry
+                                                            </option>
+                                                            <option value="1">Public Health and Medical Services
+                                                            </option>
+                                                            <option value="2">Roads, Public Works, Transport and
+                                                                Infrastructure</option>
+                                                            <option value="3">Education, Human Capital Development and
+                                                                Vocational Training</option>
+                                                            <option value="4">Finance and Economic Planning</option>
+                                                            <option value="5">Water, Irrigation, Sanitation,
+                                                                Environment, Energy, Forestry and Climate Change
+                                                            </option>
+                                                            <option value="6">Trade, Industry, Tourism, Cooperative
+                                                                Development and Marketing</option>
+                                                            <option value="7">Lands, Physical Planning, Housing and
+                                                                Urban Development</option>
+                                                            <option value="8">Governance, Administration, Communication
+                                                                and Devolution</option>
+                                                            <option value="9">Blue Economy, Fisheries, Mining and
+                                                                Digital Economy</option>
+                                                            <option value="10">Youth, Sports, Talent Development, Gender
+                                                                Inclusivity, Cultural Heritage and Social Services
+                                                            </option>
+                                                        </select>
+                                                    </div>
 
-                                            <div class="mb-3">
-                                                <label for="department" class="form-label">Department</label>
-                                                <select class="form-select" id="department" name="department" required>
-                                                <option value="">Select Department</option>
-                                                <option value="Health Services">Health Services</option>
-                                                <option value="Education Management">Education Management</option>
-                                                <option value="Agricultural Support">Agricultural Support</option>
-                                                <option value="Transport Planning">Transport Planning</option>
-                                                </select>
-                                            </div>
+                                                </div>
 
-                                            <div class="mb-3">
-                                                <label for="section" class="form-label">Section</label>
-                                                <select class="form-select" id="section" name="section" required>
-                                                <option value="">Select Section</option>
-                                                <option value="Clinical Services">Clinical Services</option>
-                                                <option value="Curriculum Development">Curriculum Development</option>
-                                                <option value="Farm Support">Farm Support</option>
-                                                <option value="Road Safety">Road Safety</option>
-                                                </select>
-                                            </div>
+                                                <div class="form-group col-sm-12 col-md-12">
+                                                    <label for="branch_id" class="form-label">Department</label><span
+                                                        class="text-danger pl-1">*</span>
+                                                    <div class="form-icon-user">
+                                                        <select class="form-control branch_id" required="required"
+                                                            id="branch_id" name="branch_id">
+                                                            <option selected="selected" value="">Select Department
+                                                            </option>
 
-                                            <div class="mb-3">
-                                                <label for="unit" class="form-label">Unit</label>
-                                                <select class="form-select" id="unit" name="unit" required>
-                                                <option value="">Select Unit</option>
-                                                <option value="Outpatient Unit">Outpatient Unit</option>
-                                                <option value="Teaching Unit">Teaching Unit</option>
-                                                <option value="Irrigation Unit">Irrigation Unit</option>
-                                                <option value="Traffic Analysis Unit">Traffic Analysis Unit</option>
-                                                </select>
+                                                            <!-- Public Health and Medical Services -->
+                                                            <optgroup label="Public Health and Medical Services">
+                                                                <option value="1.1">General Health Services</option>
+                                                                <option value="1.2">Preventive and Promotive Health
+                                                                </option>
+                                                                <option value="1.3">Medical Supplies and Logistics
+                                                                </option>
+                                                                <option value="1.4">Public Health Programs</option>
+                                                            </optgroup>
+
+                                                            <!-- Roads, Public Works, Transport and Infrastructure -->
+                                                            <optgroup
+                                                                label="Roads, Public Works, Transport and Infrastructure">
+                                                                <option value="2.1">Road Maintenance</option>
+                                                                <option value="2.2">Transport Services</option>
+                                                                <option value="2.3">Infrastructure Development</option>
+                                                            </optgroup>
+
+                                                            <!-- Education, Human Capital Development and Vocational Training -->
+                                                            <optgroup
+                                                                label="Education, Human Capital Development and Vocational Training">
+                                                                <option value="3.1">Early Childhood Development (ECD)
+                                                                </option>
+                                                                <option value="3.2">Vocational Training Centers</option>
+                                                                <option value="3.3">Human Capital Development Programs
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Finance and Economic Planning -->
+                                                            <optgroup label="Finance and Economic Planning">
+                                                                <option value="4.1">Budget and Planning</option>
+                                                                <option value="4.2">Revenue Collection</option>
+                                                                <option value="4.3">Audit and Risk Management</option>
+                                                            </optgroup>
+
+                                                            <!-- Water, Irrigation, Sanitation, Environment, Energy, Forestry and Climate Change -->
+                                                            <optgroup
+                                                                label="Water, Irrigation, Environment, Forestry, and Climate Change">
+                                                                <option value="5.1">Water Supply and Sanitation</option>
+                                                                <option value="5.2">Irrigation Projects</option>
+                                                                <option value="5.3">Forestry and Natural Resources
+                                                                </option>
+                                                                <option value="5.4">Climate Change Mitigation</option>
+                                                            </optgroup>
+
+                                                            <!-- Trade, Industry, Tourism, Cooperative Development and Marketing -->
+                                                            <optgroup
+                                                                label="Trade, Industry, Tourism, Cooperative Development and Marketing">
+                                                                <option value="6.1">Trade Development</option>
+                                                                <option value="6.2">Tourism Promotion</option>
+                                                                <option value="6.3">Cooperative Development</option>
+                                                                <option value="6.4">Market Expansion Programs</option>
+                                                            </optgroup>
+
+                                                            <!-- Lands, Physical Planning, Housing and Urban Development -->
+                                                            <optgroup
+                                                                label="Lands, Physical Planning, Housing and Urban Development">
+                                                                <option value="7.1">Physical Planning</option>
+                                                                <option value="7.2">Housing Projects</option>
+                                                                <option value="7.3">Urban Development</option>
+                                                            </optgroup>
+
+                                                            <!-- Governance, Administration, Communication and Devolution -->
+                                                            <optgroup
+                                                                label="Governance, Administration, Communication and Devolution">
+                                                                <option value="8.1">County Governance</option>
+                                                                <option value="8.2">Devolution and Liaison</option>
+                                                                <option value="8.3">Public Communication</option>
+                                                            </optgroup>
+
+                                                            <!-- Blue Economy, Fisheries, Mining and Digital Economy -->
+                                                            <optgroup
+                                                                label="Blue Economy, Fisheries, Mining and Digital Economy">
+                                                                <option value="9.1">Fisheries Management</option>
+                                                                <option value="9.2">Mining Development</option>
+                                                                <option value="9.3">Digital Innovation Programs</option>
+                                                            </optgroup>
+
+                                                            <!-- Youth, Sports, Talent Development, Gender Inclusivity, Cultural Heritage and Social Services -->
+                                                            <optgroup
+                                                                label="Youth, Sports, Talent Development, and Social Services">
+                                                                <option value="10.1">Youth Empowerment Programs</option>
+                                                                <option value="10.2">Sports and Talent Development
+                                                                </option>
+                                                                <option value="10.3">Gender Inclusivity Programs
+                                                                </option>
+                                                                <option value="10.4">Cultural Heritage Preservation
+                                                                </option>
+                                                                <option value="10.5">Social Welfare Services</option>
+                                                            </optgroup>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-sm-12 col-md-12">
+                                                    <label for="branch_id" class="form-label">Section</label><span
+                                                        class="text-danger pl-1">*</span>
+                                                    <div class="form-icon-user">
+                                                        <select class="form-control branch_id" required="required"
+                                                            id="branch_id" name="branch_id">
+                                                            <option selected="selected" value="">Select
+                                                                Ministry/Department/Section</option>
+
+                                                            <!-- Public Health and Medical Services -->
+                                                            <optgroup label="Public Health and Medical Services">
+                                                                <option value="1.1">General Health Services - Outpatient
+                                                                    Section</option>
+                                                                <option value="1.2">Preventive Health - Immunization
+                                                                    Programs</option>
+                                                                <option value="1.3">Medical Supplies - Logistics Section
+                                                                </option>
+                                                                <option value="1.4">Public Health Programs - Disease
+                                                                    Surveillance</option>
+                                                            </optgroup>
+
+                                                            <!-- Roads, Public Works, Transport and Infrastructure -->
+                                                            <optgroup
+                                                                label="Roads, Public Works, Transport and Infrastructure">
+                                                                <option value="2.1">Road Maintenance - Pothole Repair
+                                                                    Section</option>
+                                                                <option value="2.2">Transport Services - Fleet
+                                                                    Management Section</option>
+                                                                <option value="2.3">Infrastructure Development - Project
+                                                                    Design Section</option>
+                                                            </optgroup>
+
+                                                            <!-- Education, Human Capital Development and Vocational Training -->
+                                                            <optgroup
+                                                                label="Education, Human Capital Development and Vocational Training">
+                                                                <option value="3.1">ECD - Teacher Training Section
+                                                                </option>
+                                                                <option value="3.2">Vocational Training - Skills
+                                                                    Development Section</option>
+                                                                <option value="3.3">Human Capital Development - Capacity
+                                                                    Building Section</option>
+                                                            </optgroup>
+
+                                                            <!-- Finance and Economic Planning -->
+                                                            <optgroup label="Finance and Economic Planning">
+                                                                <option value="4.1">Budgeting - Expenditure Analysis
+                                                                    Section</option>
+                                                                <option value="4.2">Revenue Collection - Compliance
+                                                                    Section</option>
+                                                                <option value="4.3">Audit - Risk Assessment Section
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Water, Irrigation, Sanitation, Environment, Energy, Forestry and Climate Change -->
+                                                            <optgroup
+                                                                label="Water, Irrigation, Environment, Forestry, and Climate Change">
+                                                                <option value="5.1">Water Supply - Distribution Section
+                                                                </option>
+                                                                <option value="5.2">Irrigation Projects - Design and
+                                                                    Implementation</option>
+                                                                <option value="5.3">Forestry - Conservation Section
+                                                                </option>
+                                                                <option value="5.4">Climate Change - Mitigation Programs
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Trade, Industry, Tourism, Cooperative Development and Marketing -->
+                                                            <optgroup
+                                                                label="Trade, Industry, Tourism, Cooperative Development and Marketing">
+                                                                <option value="6.1">Trade Development - SME Support
+                                                                    Section</option>
+                                                                <option value="6.2">Tourism Promotion - Destination
+                                                                    Marketing Section</option>
+                                                                <option value="6.3">Cooperative Development -
+                                                                    Registration Section</option>
+                                                                <option value="6.4">Market Expansion - Export Programs
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Lands, Physical Planning, Housing and Urban Development -->
+                                                            <optgroup
+                                                                label="Lands, Physical Planning, Housing and Urban Development">
+                                                                <option value="7.1">Physical Planning - Land Use
+                                                                    Management</option>
+                                                                <option value="7.2">Housing Projects - Affordable
+                                                                    Housing Section</option>
+                                                                <option value="7.3">Urban Development - Urban Renewal
+                                                                    Section</option>
+                                                            </optgroup>
+
+                                                            <!-- Governance, Administration, Communication and Devolution -->
+                                                            <optgroup
+                                                                label="Governance, Administration, Communication and Devolution">
+                                                                <option value="8.1">Governance - Policy Development
+                                                                    Section</option>
+                                                                <option value="8.2">Devolution - County Liaison Section
+                                                                </option>
+                                                                <option value="8.3">Public Communication - Media
+                                                                    Relations</option>
+                                                            </optgroup>
+
+                                                            <!-- Blue Economy, Fisheries, Mining and Digital Economy -->
+                                                            <optgroup
+                                                                label="Blue Economy, Fisheries, Mining and Digital Economy">
+                                                                <option value="9.1">Fisheries Management - Aquaculture
+                                                                    Section</option>
+                                                                <option value="9.2">Mining Development - Exploration
+                                                                    Section</option>
+                                                                <option value="9.3">Digital Innovation - Tech Hubs
+                                                                    Section</option>
+                                                            </optgroup>
+
+                                                            <!-- Youth, Sports, Talent Development, and Social Services -->
+                                                            <optgroup
+                                                                label="Youth, Sports, Talent Development, and Social Services">
+                                                                <option value="10.1">Youth Empowerment - Training
+                                                                    Section</option>
+                                                                <option value="10.2">Sports and Talent Development -
+                                                                    Event Coordination</option>
+                                                                <option value="10.3">Gender Inclusivity - Women
+                                                                    Empowerment Section</option>
+                                                                <option value="10.4">Cultural Heritage Preservation -
+                                                                    Museum Section</option>
+                                                                <option value="10.5">Social Welfare Services -
+                                                                    Assistance Programs</option>
+                                                            </optgroup>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group col-sm-12 col-md-12">
+                                                    <label for="branch_id" class="form-label">Unit</label><span
+                                                        class="text-danger pl-1">*</span>
+                                                    <div class="form-icon-user">
+                                                        <select class="form-control branch_id" required="required"
+                                                            id="branch_id" name="branch_id">
+                                                            <option selected="selected" value="">Select
+                                                                Ministry/Department/Unit</option>
+
+                                                            <!-- Public Health and Medical Services -->
+                                                            <optgroup label="Public Health and Medical Services">
+                                                                <option value="1.1.1">Triage Unit (General Health
+                                                                    Services)</option>
+                                                                <option value="1.1.2">Laboratory Unit (General Health
+                                                                    Services)</option>
+                                                                <option value="1.2.1">Community Outreach Unit
+                                                                    (Preventive Health)</option>
+                                                                <option value="1.3.1">Procurement Unit (Medical
+                                                                    Supplies)</option>
+                                                                <option value="1.4.1">Data Analysis Unit (Disease
+                                                                    Surveillance)</option>
+                                                            </optgroup>
+
+                                                            <!-- Roads, Public Works, Transport and Infrastructure -->
+                                                            <optgroup
+                                                                label="Roads, Public Works, Transport and Infrastructure">
+                                                                <option value="2.1.1">Inspection Unit (Road Maintenance)
+                                                                </option>
+                                                                <option value="2.2.1">Vehicle Maintenance Unit (Fleet
+                                                                    Management)</option>
+                                                                <option value="2.3.1">Drafting Unit (Project Design)
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Education, Human Capital Development and Vocational Training -->
+                                                            <optgroup
+                                                                label="Education, Human Capital Development and Vocational Training">
+                                                                <option value="3.1.1">Curriculum Development Unit (ECD)
+                                                                </option>
+                                                                <option value="3.2.1">Workshop Unit (Vocational
+                                                                    Training)</option>
+                                                                <option value="3.3.1">Training Unit (Capacity Building)
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Finance and Economic Planning -->
+                                                            <optgroup label="Finance and Economic Planning">
+                                                                <option value="4.1.1">Monitoring Unit (Expenditure
+                                                                    Analysis)</option>
+                                                                <option value="4.2.1">Taxpayer Support Unit (Revenue
+                                                                    Collection)</option>
+                                                                <option value="4.3.1">Internal Control Unit (Risk
+                                                                    Assessment)</option>
+                                                            </optgroup>
+
+                                                            <!-- Water, Irrigation, Sanitation, Environment, Energy, Forestry and Climate Change -->
+                                                            <optgroup
+                                                                label="Water, Irrigation, Sanitation, Environment, Energy, Forestry and Climate Change">
+                                                                <option value="5.1.1">Pumping Station Unit (Water
+                                                                    Supply)</option>
+                                                                <option value="5.2.1">Surveying Unit (Irrigation
+                                                                    Projects)</option>
+                                                                <option value="5.3.1">Tree Planting Unit (Forestry)
+                                                                </option>
+                                                                <option value="5.4.1">Awareness Unit (Climate Change
+                                                                    Mitigation)</option>
+                                                            </optgroup>
+
+                                                            <!-- Trade, Industry, Tourism, Cooperative Development and Marketing -->
+                                                            <optgroup
+                                                                label="Trade, Industry, Tourism, Cooperative Development and Marketing">
+                                                                <option value="6.1.1">Training Unit (SME Support)
+                                                                </option>
+                                                                <option value="6.2.1">Branding Unit (Destination
+                                                                    Marketing)</option>
+                                                                <option value="6.3.1">Compliance Unit (Cooperative
+                                                                    Development)</option>
+                                                                <option value="6.4.1">Trade Facilitation Unit (Market
+                                                                    Expansion)</option>
+                                                            </optgroup>
+
+                                                            <!-- Lands, Physical Planning, Housing and Urban Development -->
+                                                            <optgroup
+                                                                label="Lands, Physical Planning, Housing and Urban Development">
+                                                                <option value="7.1.1">Zoning Unit (Land Use Management)
+                                                                </option>
+                                                                <option value="7.2.1">Construction Unit (Affordable
+                                                                    Housing)</option>
+                                                                <option value="7.3.1">Beautification Unit (Urban
+                                                                    Renewal)</option>
+                                                            </optgroup>
+
+                                                            <!-- Governance, Administration, Communication and Devolution -->
+                                                            <optgroup
+                                                                label="Governance, Administration, Communication and Devolution">
+                                                                <option value="8.1.1">Research Unit (Policy Development)
+                                                                </option>
+                                                                <option value="8.2.1">County Relations Unit (Devolution)
+                                                                </option>
+                                                                <option value="8.3.1">Digital Content Unit (Media
+                                                                    Relations)</option>
+                                                            </optgroup>
+
+                                                            <!-- Blue Economy, Fisheries, Mining and Digital Economy -->
+                                                            <optgroup
+                                                                label="Blue Economy, Fisheries, Mining and Digital Economy">
+                                                                <option value="9.1.1">Breeding Unit (Aquaculture)
+                                                                </option>
+                                                                <option value="9.2.1">Resource Mapping Unit
+                                                                    (Exploration)</option>
+                                                                <option value="9.3.1">Startup Support Unit (Tech Hubs)
+                                                                </option>
+                                                            </optgroup>
+
+                                                            <!-- Youth, Sports, Talent Development, and Social Services -->
+                                                            <optgroup
+                                                                label="Youth, Sports, Talent Development, and Social Services">
+                                                                <option value="10.1.1">Career Guidance Unit (Youth
+                                                                    Empowerment)</option>
+                                                                <option value="10.2.1">Venue Management Unit (Event
+                                                                    Coordination)</option>
+                                                                <option value="10.3.1">Capacity Building Unit (Women
+                                                                    Empowerment)</option>
+                                                                <option value="10.4.1">Archiving Unit (Cultural Heritage
+                                                                    Preservation)</option>
+                                                                <option value="10.5.1">Beneficiary Support Unit (Social
+                                                                    Welfare Services)</option>
+                                                            </optgroup>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <div class="mb-3">
@@ -2647,7 +3007,7 @@
                                                 <input type="text" class="form-control" id="designationName" name="designation_name" placeholder="Enter designation name" required>
                                             </div>
 
-                                            <div class="modal-footer">
+                                            <div class="modal-footer px-0">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                 <button type="submit" class="btn btn-primary">Create Designation</button>
                                             </div>
@@ -3094,7 +3454,7 @@
                                                     data-ms-editor="true"></div>
                                         </div>
                                         <div class="dataTable-container">
-                                            <table class="table datatable dataTable-table" id="pc-dt-simple">
+                                            <table class="table datatable dataTable-table d-none" id="pc-dt-simple">
                                                 <thead>
                                                     <tr>
                                                         <th data-sortable=""><a href="#"
@@ -3539,449 +3899,300 @@
                                                     data-ms-editor="true"></div>
                                         </div>
                                         <div class="dataTable-container">
-                                            <table class="table datatable dataTable-table" id="pc-dt-simplee">
+                                            <table class="table table-bordered table-striped" id="designationsTable">
                                                 <thead>
-                                                    <tr>
-                                                        <th data-sortable="" style="width: 40.254%;"><a href="#"
-                                                                class="dataTable-sorter">Branch</a></th>
-                                                        <th data-sortable="" style="width: 39.277%;"><a href="#"
-                                                                class="dataTable-sorter">Department</a></th>
-                                                        <th data-sortable="" style="width: 42.5989%;"><a href="#"
-                                                                class="dataTable-sorter">Designation</a></th>
-                                                        <th width="200px" data-sortable="" style="width: 22.4719%;"><a
-                                                                href="#" class="dataTable-sorter">Action</a></th>
-                                                    </tr>
+                                                  <tr>
+                                                    <th>Ministry</th>
+                                                    <th>Department</th>
+                                                    <th>Section</th>
+                                                    <th>Unit</th>
+                                                    <th>Designation Name</th>
+                                                    <th>Number of Occupants</th>
+                                                    <th>Action</th>
+                                                  </tr>
                                                 </thead>
-                                                <tbody id="designationId">
-                                                    <tr id="designation-row-164">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Logistics</td>
-                                                        <td>Head of fulfilling</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/164/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>Ministry of Health</td>
+                                                    <td>Public Health</td>
+                                                    <td>Epidemiology</td>
+                                                    <td>Research</td>
+                                                    <td>Senior Epidemiologist</td>
+                                                    <td>3</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/164"
-                                                                        accept-charset="UTF-8" id="delete-form-164"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 164)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-163">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Sales</td>
-                                                        <td>Sales Executive</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/163/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Health</td>
+                                                    <td>Public Health</td>
+                                                    <td>Epidemiology</td>
+                                                    <td>Research</td>
+                                                    <td>Senior Epidemiologist</td>
+                                                    <td>3</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/163"
-                                                                        accept-charset="UTF-8" id="delete-form-163"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 163)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-91">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Leadership &amp; Management</td>
-                                                        <td>Chief Executive Officer</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/91/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Agriculture</td>
+                                                    <td>Food Security</td>
+                                                    <td>Crop Management</td>
+                                                    <td>Extension Services</td>
+                                                    <td>Crop Specialist</td>
+                                                    <td>5</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/91"
-                                                                        accept-charset="UTF-8" id="delete-form-91"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 91)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-89">
-                                                        <td>Little Technology- Uganda</td>
-                                                        <td>Sales-Uganda</td>
-                                                        <td>corporate sales specialist</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/89/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Education</td>
+                                                    <td>Curriculum Development</td>
+                                                    <td>Research and Innovation</td>
+                                                    <td>Instructional Design</td>
+                                                    <td>Curriculum Specialist</td>
+                                                    <td>2</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/89"
-                                                                        accept-charset="UTF-8" id="delete-form-89"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 89)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-88">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Deliveries</td>
-                                                        <td>Order Management Associate</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/88/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Transport</td>
+                                                    <td>Road Safety</td>
+                                                    <td>Inspection</td>
+                                                    <td>Monitoring</td>
+                                                    <td>Road Safety Officer</td>
+                                                    <td>4</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/88"
-                                                                        accept-charset="UTF-8" id="delete-form-88"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 88)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-87">
-                                                        <td>Little Tanzania</td>
-                                                        <td>Operations</td>
-                                                        <td>Courier Operations Specialist</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/87/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Environment</td>
+                                                    <td>Climate Change</td>
+                                                    <td>Policy</td>
+                                                    <td>Analysis</td>
+                                                    <td>Environmental Analyst</td>
+                                                    <td>3</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/87"
-                                                                        accept-charset="UTF-8" id="delete-form-87"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 87)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-86">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Deliveries</td>
-                                                        <td>Head of Deliveries</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/86/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Finance</td>
+                                                    <td>Budgeting</td>
+                                                    <td>Planning</td>
+                                                    <td>Fiscal Policy</td>
+                                                    <td>Budget Analyst</td>
+                                                    <td>6</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/86"
-                                                                        accept-charset="UTF-8" id="delete-form-86"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 86)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-85">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Logistics</td>
-                                                        <td>Senior Operations Associate</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/85/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Interior</td>
+                                                    <td>Security</td>
+                                                    <td>Operations</td>
+                                                    <td>Field Units</td>
+                                                    <td>Security Officer</td>
+                                                    <td>8</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/85"
-                                                                        accept-charset="UTF-8" id="delete-form-85"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 85)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-84">
-                                                        <td>Little Tanzania</td>
-                                                        <td>Sales</td>
-                                                        <td>Client Success Manager</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/84/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Energy</td>
+                                                    <td>Renewable Energy</td>
+                                                    <td>Project Development</td>
+                                                    <td>Implementation</td>
+                                                    <td>Project Engineer</td>
+                                                    <td>7</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/84"
-                                                                        accept-charset="UTF-8" id="delete-form-84"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 84)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="designation-row-83">
-                                                        <td>Little Kenya (HQ)</td>
-                                                        <td>Corporate food</td>
-                                                        <td>Corporate Food Sales Lead</td>
-                                                        <td class="Action">
-                                                            <span>
-                                                                <div class="action-btn bg-info ms-2">
-                                                                    <a href="#"
-                                                                        class="mx-3 btn btn-sm align-items-center"
-                                                                        data-url="https://hr-uat.little.africa/designation/83/edit"
-                                                                        data-ajax-popup="true" data-size="md"
-                                                                        data-bs-toggle="tooltip" title=""
-                                                                        data-bs-original-title="Edit Designation">
-                                                                        <i class="ti ti-pencil text-white"></i>
-                                                                    </a>
-                                                                </div>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of ICT</td>
+                                                    <td>Digital Services</td>
+                                                    <td>Application Development</td>
+                                                    <td>Testing</td>
+                                                    <td>Software Developer</td>
+                                                    <td>10</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
 
-                                                                <div class="action-btn bg-danger ms-2">
-                                                                    <form method="POST"
-                                                                        action="https://hr-uat.little.africa/designation/83"
-                                                                        accept-charset="UTF-8" id="delete-form-83"
-                                                                        style="display:inline-block;"><input
-                                                                            name="_method" type="hidden"
-                                                                            value="DELETE"><input name="_token"
-                                                                            type="hidden"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <input type="hidden" name="_token"
-                                                                            value="APaKNh5fHF0gQN6zdW81orgOjsrVMYqGxoquijB6">
-                                                                        <a href="#"
-                                                                            class="mx-3 btn btn-sm align-items-center"
-                                                                            data-bs-toggle="tooltip" title=""
-                                                                            aria-label="Delete"
-                                                                            onclick="deleteDesignation(event, 83)"
-                                                                            data-bs-original-title="Delete">
-                                                                            <i class="ti ti-trash text-white"></i>
-                                                                        </a>
-                                                                    </form>
-                                                                </div>
+                                                           
                                                             </span>
-                                                        </td>
-                                                    </tr>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Tourism</td>
+                                                    <td>Wildlife Conservation</td>
+                                                    <td>Ecotourism</td>
+                                                    <td>Community Engagement</td>
+                                                    <td>Conservation Officer</td>
+                                                    <td>5</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
+
+                                                           
+                                                            </span>
+                                                            </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>Ministry of Water</td>
+                                                    <td>Water Resource Management</td>
+                                                    <td>Hydrology</td>
+                                                    <td>Groundwater Studies</td>
+                                                    <td>Hydrologist</td>
+                                                    <td>3</td>
+                                                    <td class="Action">
+                                                        <span>
+                                                            <div class="action-btn bg-info ms-2">
+                                                                <a href="#" class="mx-3 btn btn-sm align-items-center"
+                                                                    data-url="https://hr-uat.little.africa/designation/164/edit"
+                                                                    data-ajax-popup="true" data-size="md"
+                                                                    data-bs-toggle="tooltip" title=""
+                                                                    data-bs-original-title="Edit Designation">
+                                                                    <i class="ti ti-pencil text-white"></i>
+                                                                </a>
+                                                            </div>
+
+                                                           
+                                                            </span>
+                                                            </td>
+                                                  </tr>
+                                                  
                                                 </tbody>
-                                            </table>
+                                              </table>
                                         </div>
-                                        <div class="dataTable-bottom">
-                                            <div class="dataTable-info">Showing 1 to 10 of 75 entries</div>
-                                            <nav class="dataTable-pagination">
-                                                <ul class="dataTable-pagination-list">
-                                                    <li class="active"><a href="#" data-page="1">1</a></li>
-                                                    <li class=""><a href="#" data-page="2">2</a></li>
-                                                    <li class=""><a href="#" data-page="3">3</a></li>
-                                                    <li class=""><a href="#" data-page="4">4</a></li>
-                                                    <li class=""><a href="#" data-page="5">5</a></li>
-                                                    <li class=""><a href="#" data-page="6">6</a></li>
-                                                    <li class=""><a href="#" data-page="7">7</a></li>
-                                                    <li class=""><a href="#" data-page="8">8</a></li>
-                                                    <li class="pager"><a href="#" data-page="2">›</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -4237,13 +4448,30 @@
     <script src="https://hr-uat.little.africa/assets/js/plugins/bootstrap-switch-button.min.js"></script>
     <script src="https://hr-uat.little.africa/assets/js/dash.js"></script>
     <script src="https://hr-uat.little.africa/assets/js/plugins/sweetalert2.all.min.js"></script>
-    <script src="https://hr-uat.little.africa/assets/js/plugins/simple-datatables.js"></script>
+    <script src="assets/js/plugins/simple-datatables.js"></script>
     <script src="https://hr-uat.little.africa/assets/js/plugins/flatpickr.min.js"></script>
 
     <script src="https://hr-uat.little.africa/js/custom.js"></script>
 
     <script src="https://hr-uat.little.africa/js/chatify/autosize.js"></script>
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+  $('#designationsTable').DataTable();
+});
+
+        </script>
 
 
 
@@ -4662,6 +4890,25 @@
         const getMaxUploadSize = 157286400;
     </script>
     <script src="https://hr-uat.little.africa/js/chatify/code.js"></script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    $('#designationsTable').DataTable({
+      responsive: true,
+      paging: true,
+      searching: true,
+      info: true,
+      language: {
+        search: "Filter Records:",
+        paginate: {
+          previous: "Prev",
+          next: "Next"
+        }
+      }
+    });
+  });
+</script>
+
 
 
 
