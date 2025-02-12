@@ -989,52 +989,23 @@
                         <div class="col-xl-5">
                             <div class="card">
                                 <div class="card-header card-body table-border-style">
-                                    <h5>Employee of the Month - February 2025</h5>
+                                    <h5>Gender Comparissons</h5>
                                 </div>
                                 <div class="card-body">
-                                    
+                                    <div id="GenderContainer" style="height: 250px;"></div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header card-body table-border-style">
-                                    <h5>New Employees Joining - February 2025</h5>
+                                    <h5>Staff Turnover by Department Feb 2025</h5>
                                 </div>
                                 <div class="card-body p-3">
-                                    <div class="table-responsive"
-                                        style="max-height: 300px; overflow-y: auto; border: 1px solid #ccc; border-radius: 5px;">
-                                        <table class="table table-striped">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th scope="col">Employee ID</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Department</th>
-                                                    <th scope="col">Designation</th>
-                                                    <th scope="col">Date of Joining</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>LKE006</td>
-                                                    <td>Wambui Wairimu njoroge</td>
-                                                    <td>Customer Support</td>
-                                                    <td>Customer Care- Front Desk</td>
-                                                    <td>07 Feb 2025</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>LKE001</td>
-                                                    <td>Victor Kimani Mumbi</td>
-                                                    <td>Tech</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>07 Feb 2025</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <div id="NewContainer"></div>
                                 </div>
                             </div>
 
 
-                            <div class="card">
+                            <div class="card d-none">
                                 <div class="card-header card-body table-border-style">
                                     <h5>Meeting Schedules</h5>
                                 </div>
@@ -1055,7 +1026,7 @@
                                 </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card d-none">
                                 <div class="card-header card-body table-border-style">
                                     <h5>Employees Not Clocked In Today</h5>
                                 </div>
@@ -1098,30 +1069,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body card-635 ">
+                                <div class="card-body ">
                                     <div id="AttendanceContainer"></div>
                                 </div>
                             </div>
 
                             <div class="card">
                                 <div class="card-header card-body table-border-style">
-                                    <h5>Upcoming Announcements</h5>
+                                    <h5 class="text-capitalize">Employee atendance for Today</h5>
                                 </div>
-                                <div class="card-body" style="height: 324px; overflow:auto">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Title</th>
-                                                    <th>Start Date</th>
-                                                    <th>End Date</th>
-                                                    <th>Description</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list">
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="card-body" id="TodayAttendanceContainer">
+                                   
                                 </div>
                             </div>
 
@@ -1977,6 +1935,294 @@
         }
     });
 </script>
+
+<!-- gender comparrisons -->
+ <script>
+    Highcharts.chart('GenderContainer', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: null
+    },
+    subtitle: {
+        text: 'Click the slices to view department distribution.'
+    },
+
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        },
+        point: {
+            
+        }
+    },
+
+    plotOptions: {
+        series: {
+            borderRadius: 5,
+            dataLabels: [
+                {
+                    enabled: true,
+                    distance: 15,
+                    format: '{point.name}: {point.y}',
+                    
+                },
+                {
+                    enabled: true,
+                    distance: '-30%',
+                    filter: {
+                        property: 'percentage',
+                        operator: '>',
+                        value: 5
+                    },
+                    format: '{point.y}',
+                    style: {
+                        fontSize: '0.9em',
+                        textOutline: 'none'
+                    }
+                }
+            ]
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
+            '<b>{point.y} of {point.total}</b><br/>'
+    },
+
+    series: [
+        {
+            name: 'Gender',
+            colorByPoint: true,
+            data: [
+                {
+                    name: 'Male',
+                    y: 4623,
+                    drilldown: 'Male',
+                    total: 4623
+                },
+                {
+                    name: 'Female',
+                    y: 3066,
+                    drilldown: 'Female',
+                    total: 3066
+                }
+            ]
+        }
+    ],
+    
+    drilldown: {
+        series: [
+            {
+                name: 'Male Employees',
+                id: 'Male',
+                data: [
+                    ['Health Services', 1500],
+                    ['Education & ICT', 1200],
+                    ['Finance & Economic Planning', 600],
+                    ['Agriculture, Livestock & Fisheries', 500],
+                    ['Transport & Infrastructure', 400],
+                    ['Trade, Industry & Cooperatives', 300],
+                    ['Other', 123]
+                ]
+            },
+            {
+                name: 'Female Employees',
+                id: 'Female',
+                data: [
+                    ['Health Services', 1300],
+                    ['Education & ICT', 900],
+                    ['Finance & Economic Planning', 400],
+                    ['Agriculture, Livestock & Fisheries', 200],
+                    ['Transport & Infrastructure', 150],
+                    ['Trade, Industry & Cooperatives', 90],
+                    ['Other', 26]
+                ]
+            }
+        ]
+    }
+});
+
+ </script>
+<!-- end of gender comparissons -->
+
+<!-- todays attendance chart -->
+ <script>
+    Highcharts.chart('TodayAttendanceContainer', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: null
+    },
+    subtitle: {
+        text: 'Click the columns to view department-wise attendance.'
+    },
+
+    accessibility: {
+        announceNewData: {
+            enabled: true
+        },
+        point: {
+            valueSuffix: '%'
+        }
+    },
+
+    xAxis: {
+        type: 'category',
+        title: {
+            text: 'Attendance Status'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Number of Employees'
+        }
+    },
+
+    plotOptions: {
+        column: {
+            dataLabels: {
+                enabled: true,
+                formatter: function() {
+                    let percentage = (this.y / 7689 * 100).toFixed(1);
+                    return `${this.y} (${percentage}%)`;
+                }
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
+            '<b>{point.y} ({(point.y / 7689 * 100).toFixed(1)}%)</b> of total<br/>'
+    },
+
+    series: [
+        {
+            name: 'Attendance',
+            colorByPoint: true,
+            data: [
+                {
+                    name: 'Present',
+                    y: 6500,
+                    drilldown: 'Present'
+                },
+                {
+                    name: 'Absent',
+                    y: 1189,
+                    drilldown: 'Absent'
+                }
+            ]
+        }
+    ],
+    
+    drilldown: {
+        series: [
+            {
+                name: 'Present Employees',
+                id: 'Present',
+                type: 'column',
+                data: [
+                    ['Health Services', 2200],
+                    ['Education & ICT', 1500],
+                    ['Finance & Economic Planning', 900],
+                    ['Agriculture, Livestock & Fisheries', 600],
+                    ['Transport & Infrastructure', 300],
+                    ['Trade, Industry & Cooperatives', 800],
+                    ['Other', 200]
+                ]
+            },
+            {
+                name: 'Absent Employees',
+                id: 'Absent',
+                type: 'column',
+                data: [
+                    ['Health Services', 200],
+                    ['Education & ICT', 300],
+                    ['Finance & Economic Planning', 100],
+                    ['Agriculture, Livestock & Fisheries', 50],
+                    ['Transport & Infrastructure', 50],
+                    ['Trade, Industry & Cooperatives', 400],
+                    ['Other', 89]
+                ]
+            }
+        ]
+    }
+});
+
+ </script>
+ <!-- end of attendance -->
+
+ <!-- newley hired staff distribution bey department start -->
+  <script>
+   Highcharts.chart('NewContainer', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: null
+    },
+    subtitle: {
+        text: 'Comparison of new hires and exits across departments'
+    },
+    xAxis: {
+        categories: [
+            'Health Services',
+            'Education & ICT',
+            'Finance & Economic Planning',
+            'Agriculture, Livestock & Fisheries',
+            'Transport & Infrastructure',
+            'Trade, Industry & Cooperatives',
+            'Other'
+        ],
+        title: {
+            text: 'Departments'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Number of Employees'
+        }
+    },
+    legend: {
+        enabled: true
+    },
+    tooltip: {
+        shared: true,
+        pointFormat: '<b>{series.name}: {point.y}</b>'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            },
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: 'New Hires',
+        data: [150, 120, 80, 60, 40, 30, 20],
+        color: '#33FF57'
+    }, {
+        name: 'Exits',
+        data: [50, 40, 30, 20, 25, 15, 10],
+        color: '#FF5733'
+    }],
+    
+    // Display total hires and exits at the bottom in bold, visible, and right-aligned
+    caption: {
+        text: '<div style="text-align: right; font-size: 16px; font-weight: bold; color: #000;">Total New Hires: 500 | Total Exits: 190</div>',
+        useHTML: true
+    }
+});
+
+  </script>
+
+ <!-- newley hired staff distribution bey department End -->
 
 
 
