@@ -919,7 +919,7 @@
                                             </div>
                                         </div>
                                         <div class="col-auto text-end">
-                                            <h4 class="m-0 text-primary">2</h4>
+                                            <h4 class="m-0 text-primary">7,720</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -992,7 +992,7 @@
                                     <h5>Gender Comparissons</h5>
                                 </div>
                                 <div class="card-body">
-                                    <div id="GenderContainer" style="height: 250px;"></div>
+                                    <div id="GenderContainer" ></div>
                                 </div>
                             </div>
                             <div class="card">
@@ -1938,7 +1938,7 @@
 
 <!-- gender comparrisons -->
  <script>
-    Highcharts.chart('GenderContainer', {
+  Highcharts.chart('GenderContainer', {
     chart: {
         type: 'pie'
     },
@@ -1954,7 +1954,6 @@
             enabled: true
         },
         point: {
-            
         }
     },
 
@@ -1966,7 +1965,6 @@
                     enabled: true,
                     distance: 15,
                     format: '{point.name}: {point.y}',
-                    
                 },
                 {
                     enabled: true,
@@ -1999,15 +1997,15 @@
             data: [
                 {
                     name: 'Male',
-                    y: 4623,
+                    y: 4620,
                     drilldown: 'Male',
-                    total: 4623
+                    total: 4620
                 },
                 {
                     name: 'Female',
-                    y: 3066,
+                    y: 3100,
                     drilldown: 'Female',
-                    total: 3066
+                    total: 3100
                 }
             ]
         }
@@ -2021,24 +2019,24 @@
                 data: [
                     ['Health Services', 1500],
                     ['Education & ICT', 1200],
-                    ['Finance & Economic Planning', 600],
+                    ['Finance & Economic Planning', 650],
                     ['Agriculture, Livestock & Fisheries', 500],
-                    ['Transport & Infrastructure', 400],
-                    ['Trade, Industry & Cooperatives', 300],
-                    ['Other', 123]
+                    ['Transport & Infrastructure', 420],
+                    ['Trade, Industry & Cooperatives', 250],
+                    ['Other', 100]
                 ]
             },
             {
                 name: 'Female Employees',
                 id: 'Female',
                 data: [
-                    ['Health Services', 1300],
-                    ['Education & ICT', 900],
-                    ['Finance & Economic Planning', 400],
+                    ['Health Services', 1250],
+                    ['Education & ICT', 950],
+                    ['Finance & Economic Planning', 500],
                     ['Agriculture, Livestock & Fisheries', 200],
                     ['Transport & Infrastructure', 150],
-                    ['Trade, Industry & Cooperatives', 90],
-                    ['Other', 26]
+                    ['Trade, Industry & Cooperatives', 50],
+                    ['Other', 100]
                 ]
             }
         ]
