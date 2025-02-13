@@ -3426,103 +3426,113 @@
                                         </div>
                                         <div class="card-body employee-detail-create-body">
                                            <div class="row">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Document</th>
-                                                        <th>Choose File</th>
-                                                        <th>Valid Till</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1. ID Card</td>
-                                                        <td><input type="file" class="form-control" id="id_card" name="id_card"></td>
-                                                        <td><input type="date" class="form-control" id="id_card_date" name="id_card_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2. SHIF</td>
-                                                        <td><input type="file" class="form-control" id="shif" name="shif"></td>
-                                                        <td><input type="date" class="form-control" id="shif_date" name="shif_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3. NSSF</td>
-                                                        <td><input type="file" class="form-control" id="nssf" name="nssf"></td>
-                                                        <td><input type="date" class="form-control" id="nssf_date" name="nssf_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4. KRA PIN</td>
-                                                        <td><input type="file" class="form-control" id="kra_pin" name="kra_pin"></td>
-                                                        <td><input type="date" class="form-control" id="kra_pin_date" name="kra_pin_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5. Deployment Letters</td>
-                                                        <td><input type="file" class="form-control" id="deployment_letter" name="deployment_letter"></td>
-                                                        <td><input type="date" class="form-control" id="deployment_letter_date" name="deployment_letter_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>6. Appointment Letter</td>
-                                                        <td><input type="file" class="form-control" id="appointment_letter" name="appointment_letter"></td>
-                                                        <td><input type="date" class="form-control" id="appointment_letter_date" name="appointment_letter_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7. Birth Certificate</td>
-                                                        <td><input type="file" class="form-control" id="birth_certificate" name="birth_certificate"></td>
-                                                        <td><input type="date" class="form-control" id="birth_certificate_date" name="birth_certificate_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8. Transfer Letter (Optional)</td>
-                                                        <td><input type="file" class="form-control" id="transfer_letter" name="transfer_letter"></td>
-                                                        <td><input type="date" class="form-control" id="transfer_letter_date" name="transfer_letter_date"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>9. Other Documents</td>
-                                                        <td colspan="3">
-                                                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#otherDocumentModal">
-                                                                Upload Other Documents
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <!-- Other Document Modal -->
-                                            <div class="modal fade" id="otherDocumentModal" tabindex="-1" role="dialog"
-                                                aria-labelledby="otherDocumentModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="otherDocumentModalLabel">Upload
-                                                                Other Document</h5>
-                                                            <button type="button" class="close" data-bs-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <p class="text-muted">
-                                                                Please use this form to upload any additional document
-                                                                that is relevant but not listed in the primary document
-                                                                categories. Ensure you provide a clear and concise
-                                                                document title for easy identification.
-                                                            </p>
-                                                            <div class="form-group mt-3">
-                                                                <label for="document_title">Document Title</label>
-                                                                <input type="text" class="form-control"
-                                                                    id="document_title" name="document_title"
-                                                                    placeholder="Enter document title">
+                                            <div class="col-12">
+                                               <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Document</th>
+                                                            <th>Choose File</th>
+                                                            <th>Valid Till</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1. ID Card</td>
+                                                            <td><input type="file" class="form-control" id="id_card" name="id_card"></td>
+                                                            <td><input type="date" class="form-control" id="id_card_date" name="id_card_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2. SHIF</td>
+                                                            <td><input type="file" class="form-control" id="shif" name="shif"></td>
+                                                            <td><input type="date" class="form-control" id="shif_date" name="shif_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3. NSSF</td>
+                                                            <td><input type="file" class="form-control" id="nssf" name="nssf"></td>
+                                                            <td><input type="date" class="form-control" id="nssf_date" name="nssf_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4. KRA PIN</td>
+                                                            <td><input type="file" class="form-control" id="kra_pin" name="kra_pin"></td>
+                                                            <td><input type="date" class="form-control" id="kra_pin_date" name="kra_pin_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5. Deployment Letters</td>
+                                                            <td><input type="file" class="form-control" id="deployment_letter" name="deployment_letter"></td>
+                                                            <td><input type="date" class="form-control" id="deployment_letter_date" name="deployment_letter_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6. Appointment Letter</td>
+                                                            <td><input type="file" class="form-control" id="appointment_letter" name="appointment_letter"></td>
+                                                            <td><input type="date" class="form-control" id="appointment_letter_date" name="appointment_letter_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7. Birth Certificate</td>
+                                                            <td><input type="file" class="form-control" id="birth_certificate" name="birth_certificate"></td>
+                                                            <td><input type="date" class="form-control" id="birth_certificate_date" name="birth_certificate_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8. Transfer Letter (Optional)</td>
+                                                            <td><input type="file" class="form-control" id="transfer_letter" name="transfer_letter"></td>
+                                                            <td><input type="date" class="form-control" id="transfer_letter_date" name="transfer_letter_date"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9. Other Documents</td>
+                                                            <td colspan="3">
+                                                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#otherDocumentModal">
+                                                                    Upload Other Documents
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                               </div>
+    
+                                                <!-- Other Document Modal -->
+                                                <div class="modal fade" id="otherDocumentModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="otherDocumentModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="otherDocumentModalLabel">Upload
+                                                                    Other Document</h5>
+                                                                <button type="button" class="close" data-bs-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
                                                             </div>
-                                                            <div class="form-group mt-3">
-                                                                <label for="other_document">Choose File</label>
-                                                                <input type="file" class="form-control"
-                                                                    id="other_document" name="other_document">
+                                                            <div class="modal-body">
+                                                                <p class="text-muted">
+                                                                    Please use this form to upload any additional document
+                                                                    that is relevant but not listed in the primary document
+                                                                    categories. Ensure you provide a clear and concise
+                                                                    document title for easy identification.
+                                                                </p>
+                                                                <div class="form-group mt-3">
+                                                                    <label for="document_title">Document Title</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="document_title" name="document_title"
+                                                                        placeholder="Enter document title">
+                                                                </div>
+    
+                                                                <div class="form-group mt-3">
+                                                                    <label for="document_title">Expiry Date</label>
+                                                                    <input type="date" class="form-control" id="" name="">
+                                                                </div>
+    
+                                                                <div class="form-group mt-3">
+                                                                    <label for="other_document">Choose File</label>
+                                                                    <input type="file" class="form-control"
+                                                                        id="other_document" name="other_document">
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Close</button>
-                                                            <button type="submit"
-                                                                class="btn btn-primary">Upload</button>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Close</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary">Upload</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
