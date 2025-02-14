@@ -987,6 +987,59 @@
 
                 <div class="col-xxl-12">
                     <div class="row">
+                        <div class="col-xl-7">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <h5>Attendance Summary for This Year</h5>
+                                            <input type="hidden" id="path_admin" value="https://hr-uat.little.africa">
+                                        </div>
+                                        <div class="col-lg-6">
+
+                                            <label for=""></label>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body ">
+                                    <div id="AttendanceContainer"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5">
+                            <div class="card">
+                                <div class="card-header card-body table-border-style">
+                                    <h5 class="text-capitalize">Employee atendance for Today</h5>
+                                </div>
+                                <div class="card-body" id="TodayAttendanceContainer">
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-7">
+                            <div class="card">
+                                <div class="card-header card-body table-border-style">
+                                    <h5>Staff Turnover by Department Feb 2025</h5>
+                                </div>
+                                <div class="card-body p-3">
+                                    <div id="NewContainer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5">
+                            <div class="card">
+                                <div class="card-header card-body table-border-style">
+                                    <h5>Nature Of Exits</h5>
+                                </div>
+                                <div class="card-body p-3">
+                                    <div id="ExitChart"></div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-xl-5">
                             <div class="card">
                                 <div class="card-header card-body table-border-style">
@@ -996,14 +1049,8 @@
                                     <div id="GenderContainer" ></div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header card-body table-border-style">
-                                    <h5>Staff Turnover by Department Feb 2025</h5>
-                                </div>
-                                <div class="card-body p-3">
-                                    <div id="NewContainer"></div>
-                                </div>
-                            </div>
+                           
+
 
 
                             <div class="card d-none">
@@ -1055,36 +1102,18 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xl-7">
                             <div class="card">
-                                <div class="card-header">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <h5>Attendance Summary for This Year</h5>
-                                            <input type="hidden" id="path_admin" value="https://hr-uat.little.africa">
-                                        </div>
-                                        <div class="col-lg-6">
-
-                                            <label for=""></label>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body ">
-                                    <div id="AttendanceContainer"></div>
-                                </div>
-                            </div>
-
-                            <div class="card">
                                 <div class="card-header card-body table-border-style">
-                                    <h5 class="text-capitalize">Employee atendance for Today</h5>
+                                    <h5>Distribution of Employees with Disabilities</h5>
                                 </div>
-                                <div class="card-body" id="TodayAttendanceContainer">
-                                   
+                                <div class="card-body p-3">
+                                    <div id="disabilityChart"></div>
                                 </div>
                             </div>
-
                         </div>
+                        
                     </div>
                 </div>
 
@@ -1700,137 +1729,44 @@
              }
          }
      },
-     series: [{
-             name: 'Present',
-             color: '#0caf60',
-             data: [{
-                     name: 'January',
-                     y: Math.round(7720 * 0.95), // 31 days in January
-                     drilldown: 'January-Attendance'
-                 },
-                 {
-                     name: 'February',
-                     y: Math.round(7720 * 0.95), // 28 days in February
-                     drilldown: 'February-Attendance'
-                 },
-                 {
-                     name: 'March',
-                     y: Math.round(7720 * 0.95), // 31 days in March
-                     drilldown: 'March-Attendance'
-                 },
-                 {
-                     name: 'April',
-                     y: Math.round(7720 * 0.95), // 30 days in April
-                     drilldown: 'April-Attendance'
-                 },
-                 {
-                     name: 'May',
-                     y: Math.round(7720 * 0.95), // 31 days in May
-                     drilldown: 'May-Attendance'
-                 },
-                 {
-                     name: 'June',
-                     y: Math.round(7720 * 0.95), // 30 days in June
-                     drilldown: 'June-Attendance'
-                 },
-                 {
-                     name: 'July',
-                     y: Math.round(7720 * 0.95), // 31 days in July
-                     drilldown: 'July-Attendance'
-                 },
-                 {
-                     name: 'August',
-                     y: Math.round(7720 * 0.95), // 31 days in August
-                     drilldown: 'August-Attendance'
-                 },
-                 {
-                     name: 'September',
-                     y: Math.round(7720 * 0.95), // 30 days in September
-                     drilldown: 'September-Attendance'
-                 },
-                 {
-                     name: 'October',
-                     y: Math.round(7720 * 0.85), // 31 days in October
-                     drilldown: 'October-Attendance'
-                 },
-                 {
-                     name: 'November',
-                     y: Math.round(7720 * 0.65), // 30 days in November
-                     drilldown: 'November-Attendance'
-                 },
-                 {
-                     name: 'December',
-                     y: Math.round(7720 * 0.59), // 31 days in December
-                     drilldown: 'December-Attendance'
-                 }
-             ]
-         },
-         {
-             name: 'Absent',
-             color: '#ff3a6e',
-             data: [{
-                     name: 'January',
-                     y: Math.round(7720 * 0.05), // 31 days in January
-                     drilldown: 'January-Absenteeism'
-                 },
-                 {
-                     name: 'February',
-                     y: Math.round(7720 * 0.05), // 28 days in February
-                     drilldown: 'February-Absenteeism'
-                 },
-                 {
-                     name: 'March',
-                     y: Math.round(7720 * 0.05), // 31 days in March
-                     drilldown: 'March-Absenteeism'
-                 },
-                 {
-                     name: 'April',
-                     y: Math.round(7720 * 0.05), // 30 days in April
-                     drilldown: 'April-Absenteeism'
-                 },
-                 {
-                     name: 'May',
-                     y: Math.round(7720 * 0.05), // 31 days in May
-                     drilldown: 'May-Absenteeism'
-                 },
-                 {
-                     name: 'June',
-                     y: Math.round(7720 * 0.05), // 30 days in June
-                     drilldown: 'June-Absenteeism'
-                 },
-                 {
-                     name: 'July',
-                     y: Math.round(7720 * 0.05), // 31 days in July
-                     drilldown: 'July-Absenteeism'
-                 },
-                 {
-                     name: 'August',
-                     y: Math.round(7720 * 0.05), // 31 days in August
-                     drilldown: 'August-Absenteeism'
-                 },
-                 {
-                     name: 'September',
-                     y: Math.round(7720 * 0.05), // 30 days in September
-                     drilldown: 'September-Absenteeism'
-                 },
-                 {
-                     name: 'October',
-                     y: Math.round(7720 * 0.15), // 31 days in October
-                     drilldown: 'October-Absenteeism'
-                 },
-                 {
-                     name: 'November',
-                     y: Math.round(7720 * 0.35), // 30 days in November
-                     drilldown: 'November-Absenteeism'
-                 },
-                 {
-                     name: 'December',
-                     y: Math.round(7720 * 0.41), // 31 days in December
-                     drilldown: 'December-Absenteeism'
-                 }
-             ]
-         }
-     ],
+     series: [
+    {
+        name: 'Present',
+        color: '#0caf60',
+        data: [
+            { name: 'January', y: 7500, drilldown: 'January-Attendance' },
+            { name: 'February', y: 7480, drilldown: 'February-Attendance' },
+            { name: 'March', y: 7450, drilldown: 'March-Attendance' },
+            { name: 'April', y: 7400, drilldown: 'April-Attendance' },
+            { name: 'May', y: 7350, drilldown: 'May-Attendance' },
+            { name: 'June', y: 7300, drilldown: 'June-Attendance' },
+            { name: 'July', y: 7200, drilldown: 'July-Attendance' },
+            { name: 'August', y: 7100, drilldown: 'August-Attendance' },
+            { name: 'September', y: 6950, drilldown: 'September-Attendance' },
+            { name: 'October', y: 6700, drilldown: 'October-Attendance' },
+            { name: 'November', y: 6400, drilldown: 'November-Attendance' },
+            { name: 'December', y: 6000, drilldown: 'December-Attendance' }
+        ]
+    },
+    {
+        name: 'Absent',
+        color: '#ff3a6e',
+        data: [
+            { name: 'January', y: 220, drilldown: 'January-Absenteeism' },
+            { name: 'February', y: 240, drilldown: 'February-Absenteeism' },
+            { name: 'March', y: 270, drilldown: 'March-Absenteeism' },
+            { name: 'April', y: 320, drilldown: 'April-Absenteeism' },
+            { name: 'May', y: 370, drilldown: 'May-Absenteeism' },
+            { name: 'June', y: 420, drilldown: 'June-Absenteeism' },
+            { name: 'July', y: 520, drilldown: 'July-Absenteeism' },
+            { name: 'August', y: 620, drilldown: 'August-Absenteeism' },
+            { name: 'September', y: 770, drilldown: 'September-Absenteeism' },
+            { name: 'October', y: 1020, drilldown: 'October-Absenteeism' },
+            { name: 'November', y: 1320, drilldown: 'November-Absenteeism' },
+            { name: 'December', y: 1720, drilldown: 'December-Absenteeism' }
+        ]
+    }
+],
      drilldown: {
          series: [
              // January
@@ -1848,34 +1784,34 @@
              {
                  id: 'February-Attendance',
                  name: 'Attendance Data for February',
-                 data: generateDailyData(28, 0.95) // 28 days in February
+                 data: generateDailyData(28, 0.65) // 28 days in February
              },
              {
                  id: 'February-Absenteeism',
                  name: 'Absenteeism Data for February',
-                 data: generateDailyData(28, 0.05) // 28 days in February
+                 data: generateDailyData(28, 0.35) // 28 days in February
              },
              // March
              {
                  id: 'March-Attendance',
                  name: 'Attendance Data for March',
-                 data: generateDailyData(31, 0.95) // 31 days in March
+                 data: generateDailyData(31, 0.25) // 31 days in March
              },
              {
                  id: 'March-Absenteeism',
                  name: 'Absenteeism Data for March',
-                 data: generateDailyData(31, 0.05) // 31 days in March
+                 data: generateDailyData(31, 0.75) // 31 days in March
              },
              // April
              {
                  id: 'April-Attendance',
                  name: 'Attendance Data for April',
-                 data: generateDailyData(30, 0.95) // 30 days in April
+                 data: generateDailyData(30, 0.85) // 30 days in April
              },
              {
                  id: 'April-Absenteeism',
                  name: 'Absenteeism Data for April',
-                 data: generateDailyData(30, 0.05) // 30 days in April
+                 data: generateDailyData(30, 0.15) // 30 days in April
              },
              // May
              {
@@ -1892,12 +1828,12 @@
              {
                  id: 'June-Attendance',
                  name: 'Attendance Data for June',
-                 data: generateDailyData(30, 0.95) // 30 days in June
+                 data: generateDailyData(30, 0.5) // 30 days in June
              },
              {
                  id: 'June-Absenteeism',
                  name: 'Absenteeism Data for June',
-                 data: generateDailyData(30, 0.05) // 30 days in June
+                 data: generateDailyData(30, 0.50) // 30 days in June
              },
              // July
              {
@@ -2264,6 +2200,230 @@
   </script>
 
  <!-- newley hired staff distribution bey department End -->
+
+
+
+<script>
+    Highcharts.chart('ExitChart', {
+        chart: {
+            type: 'pie'
+        },
+        title: {
+            text: 'Nature of Exits'
+        },
+        subtitle: {
+            text: 'Click on a category to view department-wise breakdown'
+        },
+        accessibility: {
+            announceNewData: {
+                enabled: true
+            }
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}: {point.y}'
+                }
+            }
+        },
+        series: [{
+            name: 'Exits',
+            colorByPoint: true,
+            data: [
+                {
+                    name: 'Death',
+                    y: 30,
+                    drilldown: 'death'
+                },
+                {
+                    name: 'Dismissal',
+                    y: 40,
+                    drilldown: 'dismissal'
+                },
+                {
+                    name: 'Resignation',
+                    y: 60,
+                    drilldown: 'resignation'
+                },
+                {
+                    name: 'Transfers',
+                    y: 40,
+                    drilldown: 'transfers'
+                },
+                {
+                    name: 'Other',
+                    y: 20,
+                    drilldown: 'other'
+                }
+            ]
+        }],
+        drilldown: {
+            series: [
+                {
+                    id: 'death',
+                    name: 'Death - Department Breakdown',
+                    data: [
+                        ['Health Services', 10],
+                        ['Education & ICT', 5],
+                        ['Finance & Economic Planning', 3],
+                        ['Agriculture, Livestock & Fisheries', 2],
+                        ['Transport & Infrastructure', 4],
+                        ['Trade, Industry & Cooperatives', 2],
+                        ['Other', 4]
+                    ]
+                },
+                {
+                    id: 'dismissal',
+                    name: 'Dismissal - Department Breakdown',
+                    data: [
+                        ['Health Services', 15],
+                        ['Education & ICT', 10],
+                        ['Finance & Economic Planning', 5],
+                        ['Agriculture, Livestock & Fisheries', 5],
+                        ['Transport & Infrastructure', 6],
+                        ['Trade, Industry & Cooperatives', 3],
+                        ['Other', 2]
+                    ]
+                },
+                {
+                    id: 'resignation',
+                    name: 'Resignation - Department Breakdown',
+                    data: [
+                        ['Health Services', 20],
+                        ['Education & ICT', 15],
+                        ['Finance & Economic Planning', 12],
+                        ['Agriculture, Livestock & Fisheries', 8],
+                        ['Transport & Infrastructure', 10],
+                        ['Trade, Industry & Cooperatives', 6],
+                        ['Other', 4]
+                    ]
+                },
+                {
+                    id: 'transfers',
+                    name: 'Transfers - Department Breakdown',
+                    data: [
+                        ['Health Services', 5],
+                        ['Education & ICT', 10],
+                        ['Finance & Economic Planning', 10],
+                        ['Agriculture, Livestock & Fisheries', 5],
+                        ['Transport & Infrastructure', 5],
+                        ['Trade, Industry & Cooperatives', 4],
+                        ['Other', 1]
+                    ]
+                },
+                {
+                    id: 'other',
+                    name: 'Other - Department Breakdown',
+                    data: [
+                        ['Health Services', 3],
+                        ['Education & ICT', 5],
+                        ['Finance & Economic Planning', 2],
+                        ['Agriculture, Livestock & Fisheries', 1],
+                        ['Transport & Infrastructure', 3],
+                        ['Trade, Industry & Cooperatives', 4],
+                        ['Other', 2]
+                    ]
+                }
+            ]
+        }
+    });
+</script>
+
+
+
+
+
+<script>
+    Highcharts.chart('disabilityChart', {
+        chart: {
+            type: 'pie',
+            backgroundColor: 'transparent',
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: 'Click to see department-wise distribution'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: ''
+            }
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}: {point.y} ({point.percentage:.1f}%)' // Shows count + percentage
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%'],
+                size: '110%'
+            }
+        },
+        series: [{
+            name: 'Gender',
+            colorByPoint: true,
+            innerSize: '50%', // Donut effect
+            data: [
+                {
+                    name: 'Male',
+                    y: 35,
+                    drilldown: 'male'
+                },
+                {
+                    name: 'Female',
+                    y: 24,
+                    drilldown: 'female'
+                }
+            ]
+        }],
+        drilldown: {
+            series: [
+                {
+                    id: 'male',
+                    name: 'Male Employees with Disabilities - Department Breakdown',
+                    dataLabels: {
+                        format: '{point.name}: {point.y} ({point.percentage:.1f}%)' // Percentage for drilldown
+                    },
+                    data: [
+                        ['Health Services', 10],
+                        ['Education & ICT', 6],
+                        ['Finance & Economic Planning', 5],
+                        ['Agriculture, Livestock & Fisheries', 4],
+                        ['Transport & Infrastructure', 4],
+                        ['Trade, Industry & Cooperatives', 3],
+                        ['Other', 3]
+                    ]
+                },
+                {
+                    id: 'female',
+                    name: 'Female Employees with Disabilities - Department Breakdown',
+                    dataLabels: {
+                        format: '{point.name}: {point.y} ({point.percentage:.1f}%)'
+                    },
+                    data: [
+                        ['Health Services', 8],
+                        ['Education & ICT', 4],
+                        ['Finance & Economic Planning', 3],
+                        ['Agriculture, Livestock & Fisheries', 2],
+                        ['Transport & Infrastructure', 3],
+                        ['Trade, Industry & Cooperatives', 2],
+                        ['Other', 2]
+                    ]
+                }
+            ]
+        }
+    });
+</script>
+
+
+
 
 
 
