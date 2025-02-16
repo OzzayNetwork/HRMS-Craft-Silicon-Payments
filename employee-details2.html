@@ -2521,6 +2521,48 @@
     </div>
     <!-- [ Header ] end -->
 
+    <!-- Other Document Modal -->
+    <div class="modal fade" id="otherDocumentModal" tabindex="-1" role="dialog"
+    aria-labelledby="otherDocumentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="otherDocumentModalLabel">Upload
+                    Other Document</h5>
+                <button type="button" class="close" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted">
+                    Please use this form to upload any additional document
+                    that is relevant but not listed in the primary document
+                    categories. Ensure you provide a clear and concise
+                    document title for easy identification.
+                </p>
+                <div class="form-group mt-3">
+                    <label for="document_title">Document Title</label>
+                    <input type="text" class="form-control"
+                        id="document_title" name="document_title"
+                        placeholder="Enter document title">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="other_document">Choose File</label>
+                    <input type="file" class="form-control"
+                        id="other_document" name="other_document">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Close</button>
+                <button type="submit"
+                    class="btn btn-primary">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- [ Main Content ] start -->
     <section class="dash-container">
@@ -2538,8 +2580,8 @@
                                 </h4>
                             </div>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="https://hr-uat.little.africa/home">Home</a></li>
-                                <li class="breadcrumb-item"><a href="https://hr-uat.little.africa/employee">Employee</a>
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="employee.html">Employee</a>
                                 </li>
                                 <li class="breadcrumb-item">Manage Employee</li>
                                 <style>
@@ -2625,27 +2667,190 @@
                                 <input class="form-control " name="name" type="text" value="LKE006" disabled="">
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3">
-                            <div class="form-group">
-                                <label class="col-form-label text-dark">Department </label>
-                                <input class="form-control " name="name" type="text" value="Customer Support"
-                                    disabled="">
+                        <div class="form-group col-sm-6 col-md-3">
+                            <label for="section_id" class="form-label">Department</label><span class="text-danger pl-1">*</span>
+                            <div class="form-icon-user">
+                                <select class="form-control section_id" required="required" id="section_id" name="section_id">
+                                    <option selected="selected" value="">Department</option>
+                                    <option value="65">65 - Finance & Economic Planning</option>
+                                    <option value="67">67 - Governance, Administration, Communication & Devolution</option>
+                                    <option value="73">73 - Education, Human Capital Development & Vocational Training</option>
+                                    <option value="62">62 - Blue Economy, Fisheries, Mining & Digital Economy</option>
+                                    <option value="66">66 - Roads, Public Works, Transport & Infrastructure</option>
+                                    <option value="61">61 - Youth, Sports, Talent Development, Gender Inclusivity, Cultural Heritage & Social Services</option>
+                                    <option value="63">63 - Water, Irrigation, Sanitation, Environment, Energy, Forestry & Climate Change</option>
+                                    <option value="68">68 - Public Health & Medical Services</option>
+                                    <option value="64">64 - Lands, Physical Planning, Housing & Urban Development</option>
+                                    <option value="69">69 - Trade, Industry, Tourism, Co-Operative Development and Marketing</option>
+                                    <option value="70">70 - Agriculture and Livestock Production</option>
+                                    <option value="72">72 - Office of the County Secretary and Head of Public Service</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3">
-                            <div class="form-group">
-                                <label class="col-form-label text-dark">Designation </label>
-                                <input class="form-control " name="name" type="text" value="Customer Care- Front Desk"
-                                    disabled="">
+                        
+
+                        <div class="form-group col-sm-6 col-md-3">
+                            <label for="section_id" class="form-label">Section/Sub-Vote</label><span class="text-danger pl-1">*</span>
+                            <div class="form-icon-user">
+                                <select class="form-control section_id" required="required" id="section_id" name="section_id">
+                                    <option selected="selected" value="">Select Section/Sub-Vote</option>
+                                    <option value="1">Medical Services</option>
+                                    <option value="2">Public Health</option>
+                                    <option value="3">Roads and Transport</option>
+                                    <option value="4">Public Works</option>
+                                    <option value="5">Education and Vocational Training</option>
+                                    <option value="6">Human Capital Development</option>
+                                    <option value="7">Economic Planning</option>
+                                    <option value="8">Revenue Collection</option>
+                                    <option value="9">Water and Sanitation</option>
+                                    <option value="10">Environment and Climate Change</option>
+                                    <option value="11">Trade and Cooperatives</option>
+                                    <option value="12">Tourism and Marketing</option>
+                                    <option value="13">Lands and Housing</option>
+                                    <option value="14">Urban Development</option>
+                                    <option value="15">Governance and Administration</option>
+                                    <option value="16">Communication and Public Relations</option>
+                                    <option value="17">Fisheries and Blue Economy</option>
+                                    <option value="18">Mining and Digital Economy</option>
+                                    <option value="19">Youth and Sports</option>
+                                    <option value="20">Talent Development</option>
+                                    <option value="21">Gender Inclusivity</option>
+                                    <option value="22">Cultural Heritage</option>
+                                    <option value="23">Social Services</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3">
-                            <div class="form-group">
-                                <label class="col-form-label text-dark">Branch </label>
-                                <input class="form-control " name="name" type="text" value="Little Kenya (HQ)"
-                                    disabled="">
+                        
+
+                        <div class="form-group col-sm-6 col-md-3">
+                            <label for="unit_id" class="form-label">Unit/Directorate (Subhead)</label><span class="text-danger pl-1">*</span>
+                            <div class="form-icon-user">
+                                <select class="form-control unit_id" required="required" id="unit_id" name="unit_id">
+                                    <option selected="selected" value="">Select Unit/Directorate</option>
+                                    <option value="651">651 - Accounts</option>
+                                    <option value="652">652 - Audit</option>
+                                    <option value="653">653 - Project Finance</option>
+                                    <option value="654">654 - Revenue</option>
+                                    <option value="655">655 - Procurement</option>
+                                    <option value="656">656 - Economic Planning and Budgets</option>
+                                    <option value="671">671 - Administration</option>
+                                    <option value="672">672 - Inspectorate and Security Services</option>
+                                    <option value="673">673 - Public Communication</option>
+                                    <option value="674">674 - Stakeholder Management and Public Participation</option>
+                                    <option value="675">675 - Special Projects and Disaster Management</option>
+                                    <option value="731">731 - Early Years Education</option>
+                                    <option value="732">732 - Vocational Training and Human Capital</option>
+                                    <option value="621">621 - Blue Economy and Fisheries</option>
+                                    <option value="622">622 - Mining and Excavation of Mineral Resources</option>
+                                    <option value="623">623 - Digital Economy</option>
+                                    <option value="661">661 - Roads</option>
+                                    <option value="662">662 - Public Works</option>
+                                    <option value="611">611 - Sports and Talent Development</option>
+                                    <option value="612">612 - Youth</option>
+                                    <option value="613">613 - Cultural Heritage</option>
+                                    <option value="614">614 - Gender Inclusivity and Women Empowerment</option>
+                                    <option value="615">615 - Social Services</option>
+                                    <option value="631">631 - Water and Sanitation</option>
+                                    <option value="632">632 - Environment and Forestry</option>
+                                    <option value="633">633 - Energy</option>
+                                    <option value="634">634 - Climate Change</option>
+                                    <option value="635">635 - Irrigation Service</option>
+                                    <option value="681">681 - Medical Services</option>
+                                    <option value="682">682 - Public Health</option>
+                                    <option value="641">641 - Lands and Physical Planning</option>
+                                    <option value="642">642 - Housing and Urban Development</option>
+                                    <option value="643">643 - Municipalities</option>
+                                    <option value="691">691 - Trade, Industry and Tourism</option>
+                                    <option value="692">692 - Cooperative and Marketing</option>
+                                    <option value="701">701 - Agriculture</option>
+                                    <option value="702">702 - Livestock Production</option>
+                                    <option value="721">721 - Human Resource Management and Development</option>
+                                    <option value="722">722 - Inter-Governmental Relations</option>
+                                    <option value="723">723 - Cabinet Affairs</option>
+                                    <option value="724">724 - Office of the Ombudsman</option>
+                                    <option value="725">725 - Office of the County Secretary</option>
+                                </select>
                             </div>
                         </div>
+                        
+
+                        <!-- sub units -->
+                        <div class="form-group col-sm-6 col-md-3">
+                            <label for="sub_unit_id" class="form-label">Sub-Unit</label><span class="text-danger pl-1">*</span>
+                            <div class="form-icon-user">
+                                <select class="form-control sub_unit_id" required="required" id="sub_unit_id" name="sub_unit_id">
+                                    <option selected="selected" value="">Select Sub-Unit</option>
+                                    <option value="1">Emergency and Referral Services</option>
+                                    <option value="2">Health Promotion and Disease Prevention</option>
+                                    <option value="3">Primary Healthcare Services</option>
+                                    <option value="4">Roads Maintenance</option>
+                                    <option value="5">Traffic Management</option>
+                                    <option value="6">Public Infrastructure Development</option>
+                                    <option value="7">Technical and Vocational Training Centers</option>
+                                    <option value="8">Human Resource Training and Capacity Building</option>
+                                    <option value="9">Budget Implementation and Monitoring</option>
+                                    <option value="10">Revenue Compliance and Enforcement</option>
+                                    <option value="11">Water Resource Management</option>
+                                    <option value="12">Sanitation and Waste Management</option>
+                                    <option value="13">Climate Change Adaptation</option>
+                                    <option value="14">Small Business Support</option>
+                                    <option value="15">Cooperative Societies Regulation</option>
+                                    <option value="16">Tourism Promotion</option>
+                                    <option value="17">Urban Planning and Development</option>
+                                    <option value="18">Public Housing Projects</option>
+                                    <option value="19">Administrative Reforms and Policy</option>
+                                    <option value="20">Media and Public Communication</option>
+                                    <option value="21">Aquaculture Development</option>
+                                    <option value="22">Mining Operations Management</option>
+                                    <option value="23">Youth Skills Development</option>
+                                    <option value="24">Sports Infrastructure Development</option>
+                                    <option value="25">Women Empowerment Programs</option>
+                                    <option value="26">Cultural Events and Heritage Conservation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-6 col-md-3">
+                            <label for="sub_unit_id" class="form-label">Designation</label><span class="text-danger pl-1">*</span>
+                            <select class="form-control designation_id" name="designation_id" required>
+                                <option value="">Select Designation</option>
+                                <option value="governor">Governor</option>
+                                <option value="deputy_governor">Deputy Governor</option>
+                                <option value="county_secretary">County Secretary</option>
+                                <option value="c_ec_member">County Executive Committee (CEC) Member</option>
+                                <option value="chief_officer">Chief Officer</option>
+                                <option value="county_attorney">County Attorney</option>
+                                <option value="director">Director</option>
+                                <option value="sub_county_administrator">Sub-County Administrator</option>
+                                <option value="ward_administrator">Ward Administrator</option>
+                                <option value="chief_finance_officer">Chief Finance Officer</option>
+                                <option value="chief_hr_officer">Chief Human Resource Officer</option>
+                                <option value="procurement_officer">Procurement Officer</option>
+                                <option value="revenue_officer">Revenue Officer</option>
+                                <option value="planning_officer">Planning Officer</option>
+                                <option value="public_health_officer">Public Health Officer</option>
+                                <option value="medical_officer">Medical Officer</option>
+                                <option value="agriculture_officer">Agriculture Officer</option>
+                                <option value="livestock_officer">Livestock Officer</option>
+                                <option value="environment_officer">Environment Officer</option>
+                                <option value="education_officer">Education Officer</option>
+                                <option value="ict_officer">ICT Officer</option>
+                                <option value="social_services_officer">Social Services Officer</option>
+                                <option value="youth_officer">Youth Affairs Officer</option>
+                                <option value="gender_officer">Gender & Social Development Officer</option>
+                                <option value="legal_officer">Legal Officer</option>
+                                <option value="town_administrator">Town Administrator</option>
+                                <option value="public_relations_officer">Public Relations Officer</option>
+                                <option value="county_engineer">County Engineer</option>
+                                <option value="road_supervisor">Road Supervisor</option>
+                                <option value="water_officer">Water and Sanitation Officer</option>
+                            </select>
+                            </div>
+                        
+                        
+
+
+                      
                         <div class="col-lg-3 col-md-3">
                             <div class="form-group">
                                 <label class="col-form-label text-dark">Date of Joining </label>
@@ -2780,7 +2985,7 @@
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="TabControl-Specs" data-bs-toggle="tab" href="#tab-About"
                                 role="tab" tabindex="-1" aria-controls="tab-About" aria-selected="true">
-                                About
+                                About & Documents
                             </a>
                         </li>
 
@@ -3825,6 +4030,13 @@
                                                         <a href="storage/files/passport_photo.pdf" target="_blank">View</a> | 
                                                         <a href="edit/passport_photo">Edit</a> | 
                                                         <a href="log/passport_photo">Log</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#otherDocumentModal">
+                                                            Upload Other Documents
+                                                        </button>
                                                     </td>
                                                 </tr>
                                             </tbody>
