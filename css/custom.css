@@ -686,3 +686,82 @@ a > i.ti-plus {
 .btn-apply {
     font-size: 31px;
 }
+
+
+/*otp styling*/
+.otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 5px;
+}
+.resend-link {
+    cursor: pointer;
+    color: #0d6efd;
+    text-decoration: none;
+}
+.resend-link:hover {
+    text-decoration: underline;
+}
+.countdown {
+    color: #6c757d;
+    font-size: 14px;
+}
+.phone-number {
+    font-weight: 500;
+}
+.float-middle {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.success-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.error-message {
+    display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.verification-content {
+    display: block;
+}
+
+.according-body-kev {
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-top: none;
+}
+
+.bg-info.bg-soft {
+    background-color: rgba(80, 165, 241, .25) !important;
+}
+
+.according-body-kev .card-title {
+    font-size: 15px;
+    margin: 0 0 7px 0;
+    font-weight: 600;
+}
+
+.card-title-desc {
+    color: #74788d;
+    margin-bottom: 24px;
+}
