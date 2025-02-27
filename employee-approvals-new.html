@@ -1805,7 +1805,7 @@
             <div class="m-header main-logo">
                 <a href="index.html" class="b-brand">
                     <!-- ========   logo   ============ -->
-                    <img src="https://hr-uat.little.africa/storage/uploads/logo/demo_logo.png" alt="HR-System"
+                    <img src="storage/uploads/logo/demo_logo.png" alt="HR-System"
                         class="logo logo-lg" style="height: 120px;">
 
                     <!-- <span style="font-size: 40px;">🇰🇪</span> -->
@@ -1825,7 +1825,7 @@
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg></span></a>
                         <ul class="dash-submenu " style="display: block;">
-                            <li class="dash-item active">
+                            <li class="dash-item ">
                                 <a class="dash-link" href="index.html">Overview</a>
                             </li>
 
@@ -1873,6 +1873,60 @@
                     </li>
 
                     <!-- employee-->
+
+                    <!-- editing and approval of employe data -->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-check"></i> <!-- Changed from 'ti-template' to 'ti-check-box' for approvals context -->
+                            </span>
+                            <span class="dash-mtext">Employee Approvals</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-new.html">Pending Approvals - New Employees</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-edit-approvals.html">Pending Approvals - Data Edits</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- end of editing of employee data -->
+
+                    <!-- company assets -->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-package"></i> <!-- Changed to better represent assets -->
+                            </span>
+                            <span class="dash-mtext">Company Assets</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="assets-all.html">Asset Tracking</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="assets-new.html">Register New Asset</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- end of company assets -->
 
                     <!-- payroll-->
                     <li class="dash-item dash-hasmenu  ">
@@ -2367,7 +2421,7 @@
                 </div>
             </div>
         </div>
-    </nav> <!-- [ navigation menu ] end -->
+    </nav>  <!-- [ navigation menu ] end -->
     <!-- [ Header ] start -->
 
     <header class="dash-header">
@@ -2598,36 +2652,15 @@
                         <div class="col-auto">
                             <div class="page-header-title">
                                 <h4 class="m-b-10">
-                                    Manage Employee
+                                    Manage Employee Recruitment Approvals
                                 </h4>
                             </div>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item">Employee</li>
+                                <li class="breadcrumb-item">EMployee Approvals</li>
                             </ul>
                         </div>
-                        <div class="col-sm-auto col-md">
-                            <div class="float-end ">
-                                <a href="https://hr-uat.little.africa/export/employee" data-bs-toggle="tooltip"
-                                    data-bs-placement="top" data-bs-original-title="Export"
-                                    class="btn btn-sm btn-primary">
-                                    <i class="ti ti-file-export"></i>
-                                </a>
-
-                                <a href="#" data-url="https://hr-uat.little.africa/import/employee/file"
-                                    data-ajax-popup="true" data-title="Import  Employee CSV File"
-                                    data-bs-toggle="tooltip" title="" class="btn btn-sm btn-primary"
-                                    data-bs-original-title="Import">
-                                    <i class="ti ti-file"></i>
-                                </a>
-
-                                <a href="employee-create.html" data-title="Create New Employee" data-bs-toggle="tooltip"
-                                    title="" class="btn btn-sm btn-primary" data-bs-original-title="Create">
-                                    <i class="ti ti-plus"></i>
-                                </a>
-                            </div>
-
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -2641,83 +2674,83 @@
                 <div class="col-xxl-12">
 
                     <div class="col-xxl-12">
-
-
                         <div class="row">
-    
+                            <!-- Employees Pending Approval -->
                             <div class="col-lg-4 col-md-6">
-    
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-primary">
-                                                        <i class="ti ti-users"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Total</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-primary">7,720 </h4>
-                                                <small class="text-muted">+ 500 Since Last Month</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="col-lg-4 col-md-6">
-    
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-info">
-                                                        <i class="ti ti-ticket"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Total</small>
-                                                        <h6 class="m-0">Departments</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-info"> 7</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-    
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row align-items-center justify-content-between">
                                             <div class="col-auto mb-3 mb-sm-0">
                                                 <div class="d-flex align-items-center">
                                                     <div class="theme-avtar bg-warning">
-                                                        <i class="ti ti-wallet"></i>
+                                                        <i class="ti ti-user-check"></i>
                                                     </div>
                                                     <div class="ms-3">
-                                                        <small class="text-muted">Total</small>
-                                                        <h6 class="m-0">Units</h6>
+                                                        <small class="text-muted">Awaiting Approval</small>
+                                                        <h6 class="m-0">Employees Pending Approval</h6>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto text-end">
-                                                <h4 class="m-0 text-warning">5
-                                                </h4>
+                                                <h4 class="m-0 text-warning">215</h4>
+                                                <small class="text-muted">New Entries This Week</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Rejected Entries for Reassessment -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-danger">
+                                                        <i class="ti ti-user-x"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Sent for Review</small>
+                                                        <h6 class="m-0">Rejected for Reassessment</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-danger">35</h4>
+                                                <small class="text-muted">Needs Correction</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Employees Approved This Month -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-success">
+                                                        <i class="ti ti-check"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Total</small>
+                                                        <h6 class="m-0">Employees Approved</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-success">420</h4>
+                                                <small class="text-muted">Successfully Verified</small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
     
                     </div>
 
