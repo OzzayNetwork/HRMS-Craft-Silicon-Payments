@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Assets Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .badge-good { background-color: #28a745; }
+        .badge-maintenance { background-color: #ffc107; }
+        .badge-defective { background-color: #dc3545; }
+        .badge-stolen { background-color: #6c757d; }
+        .badge-assigned { background-color: #0d6efd; }
+        .badge-not-assigned { background-color: #6c757d; }
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        }
+        .table-hover tbody tr:hover {
+            background-color: rgba(13, 110, 253, 0.05);
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .pagination .page-item.active .page-link {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-building"></i> Company Assets
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Assets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search assets..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page Header -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h2>Assets Management</h2>
+                <p class="text-muted">Manage and track company assets</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAssetModal">
+                    <i class="bi bi-plus-circle"></i> Add New Asset
+                </button>
+                <button type="button" class="btn btn-outline-primary ms-2">
+                    <i class="bi bi-file-earmark-excel"></i> Export
+                </button>
+            </div>
+        </div>
+
+        <!-- Filters Card -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-2">
+                        <label class="form-label">Category</label>
+                        <select class="form-select">
+                            <option value="">All Categories</option>
+                            <option>Hardware</option>
+                            <option>Software</option>
+                            <option>Furniture</option>
+                            <option>Electronics</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Department</label>
+                        <select class="form-select">
+                            <option value="">All Departments</option>
+                            <option>IT</option>
+                            <option>HR</option>
+                            <option>Finance</option>
+                            <option>Marketing</option>
+                            <option>Operations</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Status</label>
+                        <select class="form-select">
+                            <option value="">All Status</option>
+                            <option>Good</option>
+                            <option>Under Maintenance</option>
+                            <option>Defective</option>
+                            <option>Stolen</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Assignment</label>
+                        <select class="form-select">
+                            <option value="">All</option>
+                            <option>Assigned</option>
+                            <option>Not Assigned</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="button" class="btn btn-primary me-2">Apply Filters</button>
+                        <button type="button" class="btn btn-outline-secondary">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assets Table -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th><input type="checkbox" class="form-check-input"></th>
+                                <th>Asset ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Model</th>
+                                <th>Department</th>
+                                <th>Assignment</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td>AST-001</td>
+                                <td>Dell Laptop</td>
+                                <td>Hardware</td>
+                                <td>XPS 15</td>
+                                <td>IT</td>
+                                <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                <td><span class="badge rounded-pill bg-success">Good</span></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewDetailsModal"><i class="bi bi-eye"></i> View Details</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td>AST-002</td>
+                                <td>Office Chair</td>
+                                <td>Furniture</td>
+                                <td>Ergonomic Pro</td>
+                                <td>HR</td>
+                                <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                <td><span class="badge rounded-pill bg-success">Good</span></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View Details</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td>AST-003</td>
+                                <td>Adobe Creative Suite</td>
+                                <td>Software</td>
+                                <td>Creative Cloud 2023</td>
+                                <td>Marketing</td>
+                                <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                <td><span class="badge rounded-pill bg-success">Good</span></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View Details</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td>AST-004</td>
+                                <td>HP Printer</td>
+                                <td>Hardware</td>
+                                <td>LaserJet Pro</td>
+                                <td>Finance</td>
+                                <td><span class="badge rounded-pill bg-secondary">Not Assigned</span></td>
+                                <td><span class="badge rounded-pill bg-warning text-dark">Under Maintenance</span></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View Details</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td>AST-005</td>
+                                <td>iPhone 14</td>
+                                <td>Electronics</td>
+                                <td>Pro Max</td>
+                                <td>Sales</td>
+                                <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                <td><span class="badge rounded-pill bg-danger">Defective</span></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View Details</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td>AST-006</td>
+                                <td>ThinkPad Laptop</td>
+                                <td>Hardware</td>
+                                <td>X1 Carbon</td>
+                                <td>Operations</td>
+                                <td><span class="badge rounded-pill bg-secondary">Not Assigned</span></td>
+                                <td><span class="badge rounded-pill bg-secondary">Stolen</span></td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye"></i> View Details</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Edit</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div>
+                        <p class="text-muted mb-0">Showing 1 to 6 of 24 entries</p>
+                    </div>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Details Modal -->
+    <div class="modal fade" id="viewDetailsModal" tabindex="-1" aria-labelledby="viewDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewDetailsModalLabel">Asset Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary">General Information</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <th width="40%">Asset ID:</th>
+                                    <td>AST-001</td>
+                                </tr>
+                                <tr>
+                                    <th>Name:</th>
+                                    <td>Dell Laptop</td>
+                                </tr>
+                                <tr>
+                                    <th>Category:</th>
+                                    <td>Hardware</td>
+                                </tr>
+                                <tr>
+                                    <th>Model:</th>
+                                    <td>XPS 15</td>
+                                </tr>
+                                <tr>
+                                    <th>Serial Number:</th>
+                                    <td>DLL-XPS15-2023-4857</td>
+                                </tr>
+                                <tr>
+                                    <th>Purchase Date:</th>
+                                    <td>15 Jan 2023</td>
+                                </tr>
+                                <tr>
+                                    <th>Warranty Until:</th>
+                                    <td>15 Jan 2026</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary">Assignment & Status</h6>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <th width="40%">Status:</th>
+                                    <td><span class="badge bg-success">Good</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Assignment:</th>
+                                    <td><span class="badge bg-primary">Assigned</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Assigned To:</th>
+                                    <td>John Smith</td>
+                                </tr>
+                                <tr>
+                                    <th>Department:</th>
+                                    <td>IT Department</td>
+                                </tr>
+                                <tr>
+                                    <th>Assigned Date:</th>
+                                    <td>20 Jan 2023</td>
+                                </tr>
+                                <tr>
+                                    <th>Location:</th>
+                                    <td>Headquarters - 3rd Floor</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <h6 class="text-primary">Specifications</h6>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th width="30%">Processor:</th>
+                                    <td>Intel Core i7-11800H, 8 cores</td>
+                                </tr>
+                                <tr>
+                                    <th>Memory:</th>
+                                    <td>32GB DDR4 RAM</td>
+                                </tr>
+                                <tr>
+                                    <th>Storage:</th>
+                                    <td>1TB SSD</td>
+                                </tr>
+                                <tr>
+                                    <th>Display:</th>
+                                    <td>15.6" 4K UHD Touch Display</td>
+                                </tr>
+                                <tr>
+                                    <th>Graphics:</th>
+                                    <td>NVIDIA GeForce RTX 3050Ti</td>
+                                </tr>
+                                <tr>
+                                    <th>Additional Notes:</th>
+                                    <td>Includes docking station and carrying case</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <h6 class="text-primary">Maintenance History</h6>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                        <th>Performed By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12 Jul 2023</td>
+                                        <td>Routine Check</td>
+                                        <td>Software updates and system cleaning</td>
+                                        <td>IT Support</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 Dec 2023</td>
+                                        <td>Repair</td>
+                                        <td>Battery replacement</td>
+                                        <td>Dell Service Center</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary me-2">
+                        <i class="bi bi-printer"></i> Print Details
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Asset Modal -->
+   <!-- Add Asset Modal -->
+<div class="modal fade" id="addAssetModal" tabindex="-1" aria-labelledby="addAssetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addAssetModalLabel">Add New Asset</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- General Information -->
+                    <h6 class="text-primary">General Information</h6>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="assetID" class="form-label">Asset ID</label>
+                            <input type="text" class="form-control" id="assetID" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="assetName" class="form-label">Asset Name</label>
+                            <input type="text" class="form-control" id="assetName" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="assetCategory" class="form-label">Category</label>
+                            <select class="form-select" id="assetCategory" required>
+                                <option value="">Select Category</option>
+                                <option>Hardware</option>
+                                <option>Software</option>
+                                <option>Furniture</option>
+                                <option>Electronics</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="assetModel" class="form-label">Model</label>
+                            <input type="text" class="form-control" id="assetModel">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="serialNumber" class="form-label">Serial Number</label>
+                            <input type="text" class="form-control" id="serialNumber" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="purchaseDate" class="form-label">Purchase Date</label>
+                            <input type="date" class="form-control" id="purchaseDate">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="warrantyDate" class="form-label">Warranty Until</label>
+                            <input type="date" class="form-control" id="warrantyDate">
+                        </div>
+                    </div>
+
+                    <!-- Assignment & Status -->
+                    <h6 class="text-primary">Assignment & Status</h6>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="assetStatus" class="form-label">Status</label>
+                            <select class="form-select" id="assetStatus" required>
+                                <option value="">Select Status</option>
+                                <option>Good</option>
+                                <option>Under Maintenance</option>
+                                <option>Defective</option>
+                                <option>Stolen</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="assetAssignment" class="form-label">Assignment Status</label>
+                            <select class="form-select" id="assetAssignment" required>
+                                <option value="">Select Assignment Status</option>
+                                <option>Assigned</option>
+                                <option>Not Assigned</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="assignedTo" class="form-label">Assigned To</label>
+                            <input type="text" class="form-control" id="assignedTo">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="department" class="form-label">Department</label>
+                            <select class="form-select" id="department">
+                                <option value="">Select Department</option>
+                                <option>IT</option>
+                                <option>HR</option>
+                                <option>Finance</option>
+                                <option>Marketing</option>
+                                <option>Sales</option>
+                                <option>Operations</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="assignedDate" class="form-label">Assigned Date</label>
+                            <input type="date" class="form-control" id="assignedDate">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" class="form-control" id="location">
+                        </div>
+                    </div>
+
+                    <!-- Specifications -->
+                    <h6 class="text-primary">Specifications</h6>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="processor" class="form-label">Processor</label>
+                            <input type="text" class="form-control" id="processor">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="memory" class="form-label">Memory</label>
+                            <input type="text" class="form-control" id="memory">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="storage" class="form-label">Storage</label>
+                            <input type="text" class="form-control" id="storage">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="display" class="form-label">Display</label>
+                            <input type="text" class="form-control" id="display">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="graphics" class="form-label">Graphics</label>
+                            <input type="text" class="form-control" id="graphics">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="additionalNotes" class="form-label">Additional Notes</label>
+                            <textarea class="form-control" id="additionalNotes" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Maintenance History -->
+                    <h6 class="text-primary">Maintenance History</h6>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="maintenanceDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="maintenanceDate">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="maintenanceType" class="form-label">Type</label>
+                            <select class="form-select" id="maintenanceType">
+                                <option value="">Select Type</option>
+                                <option>Routine Check</option>
+                                <option>Repair</option>
+                                <option>Upgrade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="maintenanceDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="maintenanceDescription" rows="2"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="performedBy" class="form-label">Performed By</label>
+                            <input type="text" class="form-control" id="performedBy">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save Asset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dynamic form fields based on assignment status
+        document.getElementById('assetAssignment').addEventListener('change', function() {
+            const assignmentDetails = document.getElementById('assignmentDetails');
+            if (this.value === 'Assigned') {
+                assignmentDetails.style.display = 'flex';
+            } else {
+                assignmentDetails.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

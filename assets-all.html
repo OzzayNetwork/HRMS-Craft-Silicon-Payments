@@ -1,0 +1,3901 @@
+<HTML>
+
+<head>
+    <style data-merge-styles="true"></style>
+
+    <style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style>
+    <style data-merge-styles="true"></style>
+    <title>
+
+        - Manage Employee
+    </title>
+
+    <!-- SEO META -->
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hr-uat.little.africa">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://hr-uat.little.africa/storage/uploads/meta">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hr-uat.little.africa">
+    <meta property="twitter:title" content="">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:image" content="https://hr-uat.little.africa/storage/uploads/meta">
+
+
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="Gv60whoN3EflLEtbOhxGeGCmxpr4yi0629OfYEPj">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Craft HR Description">
+    <meta name="keywords" content="Craft HR">
+    <meta name="author" content="Zynamis">
+
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="https://hr-uat.little.africa/storage/uploads/logo//2_favicon.png" type="image/x-icon">
+    <!-- for calender-->
+    <link rel="stylesheet" href="assets/css/plugins/main.css">
+
+    <link rel="stylesheet" href="assets/css/plugins/datepicker-bs5.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/style.css">
+    <!-- font css -->
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-switch-button.min.css">
+    <link rel="stylesheet" href="assets/fonts/tabler-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/feather.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="assets/fonts/material.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- vendor css -->
+
+
+
+    <meta name="url" content="https://hr-uat.little.africa/chats" data-user="22">
+    <link rel="stylesheet" href="assets/css/customizer.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+
+
+    <link rel="stylesheet" href="assets/css/style.css" id="main-style-link">
+
+
+
+
+
+    <style type="text/css">
+        .hide {
+            display: none;
+        }
+
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        .flip-card {
+            background-color: transparent;
+            width: 100px;
+            height: 50px;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            text-align: center;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+
+
+
+        }
+
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            color: black;
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: space-around;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            transform: rotateY(180deg);
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: space-around;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <style>
+        .swal2-popup.swal2-toast {
+            box-sizing: border-box;
+            grid-column: 1/4 !important;
+            grid-row: 1/4 !important;
+            grid-template-columns: 1fr 99fr 1fr;
+            padding: 1em;
+            overflow-y: hidden;
+            background: #fff;
+            box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
+            pointer-events: all
+        }
+
+        .swal2-popup.swal2-toast>* {
+            grid-column: 2
+        }
+
+        .swal2-popup.swal2-toast .swal2-title {
+            margin: .5em 1em;
+            padding: 0;
+            font-size: 1em;
+            text-align: initial
+        }
+
+        .swal2-popup.swal2-toast .swal2-loading {
+            justify-content: center
+        }
+
+        .swal2-popup.swal2-toast .swal2-input {
+            height: 2em;
+            margin: .5em;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-validation-message {
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-footer {
+            margin: .5em 0 0;
+            padding: .5em 0 0;
+            font-size: .8em
+        }
+
+        .swal2-popup.swal2-toast .swal2-close {
+            grid-column: 3/3;
+            grid-row: 1/99;
+            align-self: center;
+            width: .8em;
+            height: .8em;
+            margin: 0;
+            font-size: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-html-container {
+            margin: .5em 1em;
+            padding: 0;
+            font-size: 1em;
+            text-align: initial
+        }
+
+        .swal2-popup.swal2-toast .swal2-html-container:empty {
+            padding: 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-loader {
+            grid-column: 1;
+            grid-row: 1/99;
+            align-self: center;
+            width: 2em;
+            height: 2em;
+            margin: .25em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon {
+            grid-column: 1;
+            grid-row: 1/99;
+            align-self: center;
+            width: 2em;
+            min-width: 2em;
+            height: 2em;
+            margin: 0 .5em 0 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: 700
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            top: .875em;
+            width: 1.375em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-actions {
+            justify-content: flex-start;
+            height: auto;
+            margin: 0;
+            margin-top: .5em;
+            padding: 0 .5em
+        }
+
+        .swal2-popup.swal2-toast .swal2-styled {
+            margin: .25em .5em;
+            padding: .4em .6em;
+            font-size: 1em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success {
+            border-color: #a5dc86
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 1.6em;
+            height: 3em;
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -.8em;
+            left: -.5em;
+            transform: rotate(-45deg);
+            transform-origin: 2em 2em;
+            border-radius: 4em 0 0 4em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -.25em;
+            left: .9375em;
+            transform-origin: 0 1.5em;
+            border-radius: 0 4em 4em 0
+        }
+
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+            width: 2em;
+            height: 2em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+            top: 0;
+            left: .4375em;
+            width: .4375em;
+            height: 2.6875em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line] {
+            height: .3125em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 1.125em;
+            left: .1875em;
+            width: .75em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+            top: .9375em;
+            right: .1875em;
+            width: 1.375em
+        }
+
+        .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+            -webkit-animation: swal2-toast-animate-success-line-tip .75s;
+            animation: swal2-toast-animate-success-line-tip .75s
+        }
+
+        .swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+            -webkit-animation: swal2-toast-animate-success-line-long .75s;
+            animation: swal2-toast-animate-success-line-long .75s
+        }
+
+        .swal2-popup.swal2-toast.swal2-show {
+            -webkit-animation: swal2-toast-show .5s;
+            animation: swal2-toast-show .5s
+        }
+
+        .swal2-popup.swal2-toast.swal2-hide {
+            -webkit-animation: swal2-toast-hide .1s forwards;
+            animation: swal2-toast-hide .1s forwards
+        }
+
+        .swal2-container {
+            display: grid;
+            position: fixed;
+            z-index: 1060;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            grid-template-areas: "top-start     top            top-end""center-start  center         center-end""bottom-start  bottom-center  bottom-end";
+            grid-template-rows: minmax(-webkit-min-content, auto) minmax(-webkit-min-content, auto) minmax(-webkit-min-content, auto);
+            grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
+            height: 100%;
+            padding: .625em;
+            overflow-x: hidden;
+            transition: background-color .1s;
+            -webkit-overflow-scrolling: touch
+        }
+
+        .swal2-container.swal2-backdrop-show,
+        .swal2-container.swal2-noanimation {
+            background: rgba(0, 0, 0, .4)
+        }
+
+        .swal2-container.swal2-backdrop-hide {
+            background: 0 0 !important
+        }
+
+        .swal2-container.swal2-bottom-start,
+        .swal2-container.swal2-center-start,
+        .swal2-container.swal2-top-start {
+            grid-template-columns: minmax(0, 1fr) auto auto
+        }
+
+        .swal2-container.swal2-bottom,
+        .swal2-container.swal2-center,
+        .swal2-container.swal2-top {
+            grid-template-columns: auto minmax(0, 1fr) auto
+        }
+
+        .swal2-container.swal2-bottom-end,
+        .swal2-container.swal2-center-end,
+        .swal2-container.swal2-top-end {
+            grid-template-columns: auto auto minmax(0, 1fr)
+        }
+
+        .swal2-container.swal2-top-start>.swal2-popup {
+            align-self: start
+        }
+
+        .swal2-container.swal2-top>.swal2-popup {
+            grid-column: 2;
+            align-self: start;
+            justify-self: center
+        }
+
+        .swal2-container.swal2-top-end>.swal2-popup,
+        .swal2-container.swal2-top-right>.swal2-popup {
+            grid-column: 3;
+            align-self: start;
+            justify-self: end
+        }
+
+        .swal2-container.swal2-center-left>.swal2-popup,
+        .swal2-container.swal2-center-start>.swal2-popup {
+            grid-row: 2;
+            align-self: center
+        }
+
+        .swal2-container.swal2-center>.swal2-popup {
+            grid-column: 2;
+            grid-row: 2;
+            align-self: center;
+            justify-self: center
+        }
+
+        .swal2-container.swal2-center-end>.swal2-popup,
+        .swal2-container.swal2-center-right>.swal2-popup {
+            grid-column: 3;
+            grid-row: 2;
+            align-self: center;
+            justify-self: end
+        }
+
+        .swal2-container.swal2-bottom-left>.swal2-popup,
+        .swal2-container.swal2-bottom-start>.swal2-popup {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: end
+        }
+
+        .swal2-container.swal2-bottom>.swal2-popup {
+            grid-column: 2;
+            grid-row: 3;
+            justify-self: center;
+            align-self: end
+        }
+
+        .swal2-container.swal2-bottom-end>.swal2-popup,
+        .swal2-container.swal2-bottom-right>.swal2-popup {
+            grid-column: 3;
+            grid-row: 3;
+            align-self: end;
+            justify-self: end
+        }
+
+        .swal2-container.swal2-grow-fullscreen>.swal2-popup,
+        .swal2-container.swal2-grow-row>.swal2-popup {
+            grid-column: 1/4;
+            width: 100%
+        }
+
+        .swal2-container.swal2-grow-column>.swal2-popup,
+        .swal2-container.swal2-grow-fullscreen>.swal2-popup {
+            grid-row: 1/4;
+            align-self: stretch
+        }
+
+        .swal2-container.swal2-no-transition {
+            transition: none !important
+        }
+
+        .swal2-popup {
+            display: none;
+            position: relative;
+            box-sizing: border-box;
+            grid-template-columns: minmax(0, 100%);
+            width: 32em;
+            max-width: 100%;
+            padding: 0 0 1.25em;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #545454;
+            font-family: inherit;
+            font-size: 1rem
+        }
+
+        .swal2-popup:focus {
+            outline: 0
+        }
+
+        .swal2-popup.swal2-loading {
+            overflow-y: hidden
+        }
+
+        .swal2-title {
+            position: relative;
+            max-width: 100%;
+            margin: 0;
+            padding: .8em 1em 0;
+            color: inherit;
+            font-size: 1.875em;
+            font-weight: 600;
+            text-align: center;
+            text-transform: none;
+            word-wrap: break-word
+        }
+
+        .swal2-actions {
+            display: flex;
+            z-index: 1;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            margin: 1.25em auto 0;
+            padding: 0
+        }
+
+        .swal2-actions:not(.swal2-loading) .swal2-styled[disabled] {
+            opacity: .4
+        }
+
+        .swal2-actions:not(.swal2-loading) .swal2-styled:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1))
+        }
+
+        .swal2-actions:not(.swal2-loading) .swal2-styled:active {
+            background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2))
+        }
+
+        .swal2-loader {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 2.2em;
+            height: 2.2em;
+            margin: 0 1.875em;
+            -webkit-animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+            border-width: .25em;
+            border-style: solid;
+            border-radius: 100%;
+            border-color: #2778c4 transparent #2778c4 transparent
+        }
+
+        .swal2-styled {
+            margin: .3125em;
+            padding: .625em 1.1em;
+            transition: box-shadow .1s;
+            box-shadow: 0 0 0 3px transparent;
+            font-weight: 500
+        }
+
+        .swal2-styled:not([disabled]) {
+            cursor: pointer
+        }
+
+        .swal2-styled.swal2-confirm {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #7066e0;
+            color: #fff;
+            font-size: 1em
+        }
+
+        .swal2-styled.swal2-confirm:focus {
+            box-shadow: 0 0 0 3px rgba(112, 102, 224, .5)
+        }
+
+        .swal2-styled.swal2-deny {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #dc3741;
+            color: #fff;
+            font-size: 1em
+        }
+
+        .swal2-styled.swal2-deny:focus {
+            box-shadow: 0 0 0 3px rgba(220, 55, 65, .5)
+        }
+
+        .swal2-styled.swal2-cancel {
+            border: 0;
+            border-radius: .25em;
+            background: initial;
+            background-color: #6e7881;
+            color: #fff;
+            font-size: 1em
+        }
+
+        .swal2-styled.swal2-cancel:focus {
+            box-shadow: 0 0 0 3px rgba(110, 120, 129, .5)
+        }
+
+        .swal2-styled.swal2-default-outline:focus {
+            box-shadow: 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+
+        .swal2-styled:focus {
+            outline: 0
+        }
+
+        .swal2-styled::-moz-focus-inner {
+            border: 0
+        }
+
+        .swal2-footer {
+            justify-content: center;
+            margin: 1em 0 0;
+            padding: 1em 1em 0;
+            border-top: 1px solid #eee;
+            color: inherit;
+            font-size: 1em
+        }
+
+        .swal2-timer-progress-bar-container {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            grid-column: auto !important;
+            overflow: hidden;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px
+        }
+
+        .swal2-timer-progress-bar {
+            width: 100%;
+            height: .25em;
+            background: rgba(0, 0, 0, .2)
+        }
+
+        .swal2-image {
+            max-width: 100%;
+            margin: 2em auto 1em
+        }
+
+        .swal2-close {
+            z-index: 2;
+            align-items: center;
+            justify-content: center;
+            width: 1.2em;
+            height: 1.2em;
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: -1.2em;
+            padding: 0;
+            overflow: hidden;
+            transition: color .1s, box-shadow .1s;
+            border: none;
+            border-radius: 5px;
+            background: 0 0;
+            color: #ccc;
+            font-family: serif;
+            font-family: monospace;
+            font-size: 2.5em;
+            cursor: pointer;
+            justify-self: end
+        }
+
+        .swal2-close:hover {
+            transform: none;
+            background: 0 0;
+            color: #f27474
+        }
+
+        .swal2-close:focus {
+            outline: 0;
+            box-shadow: inset 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+
+        .swal2-close::-moz-focus-inner {
+            border: 0
+        }
+
+        .swal2-html-container {
+            z-index: 1;
+            justify-content: center;
+            margin: 1em 1.6em .3em;
+            padding: 0;
+            overflow: auto;
+            color: inherit;
+            font-size: 1.125em;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+            word-wrap: break-word;
+            word-break: break-word
+        }
+
+        .swal2-checkbox,
+        .swal2-file,
+        .swal2-input,
+        .swal2-radio,
+        .swal2-select,
+        .swal2-textarea {
+            margin: 1em 2em 3px
+        }
+
+        .swal2-file,
+        .swal2-input,
+        .swal2-textarea {
+            box-sizing: border-box;
+            width: auto;
+            transition: border-color .1s, box-shadow .1s;
+            border: 1px solid #d9d9d9;
+            border-radius: .1875em;
+            background: inherit;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px transparent;
+            color: inherit;
+            font-size: 1.125em
+        }
+
+        .swal2-file.swal2-inputerror,
+        .swal2-input.swal2-inputerror,
+        .swal2-textarea.swal2-inputerror {
+            border-color: #f27474 !important;
+            box-shadow: 0 0 2px #f27474 !important
+        }
+
+        .swal2-file:focus,
+        .swal2-input:focus,
+        .swal2-textarea:focus {
+            border: 1px solid #b4dbed;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(100, 150, 200, .5)
+        }
+
+        .swal2-file::-moz-placeholder,
+        .swal2-input::-moz-placeholder,
+        .swal2-textarea::-moz-placeholder {
+            color: #ccc
+        }
+
+        .swal2-file:-ms-input-placeholder,
+        .swal2-input:-ms-input-placeholder,
+        .swal2-textarea:-ms-input-placeholder {
+            color: #ccc
+        }
+
+        .swal2-file::placeholder,
+        .swal2-input::placeholder,
+        .swal2-textarea::placeholder {
+            color: #ccc
+        }
+
+        .swal2-range {
+            margin: 1em 2em 3px;
+            background: #fff
+        }
+
+        .swal2-range input {
+            width: 80%
+        }
+
+        .swal2-range output {
+            width: 20%;
+            color: inherit;
+            font-weight: 600;
+            text-align: center
+        }
+
+        .swal2-range input,
+        .swal2-range output {
+            height: 2.625em;
+            padding: 0;
+            font-size: 1.125em;
+            line-height: 2.625em
+        }
+
+        .swal2-input {
+            height: 2.625em;
+            padding: 0 .75em
+        }
+
+        .swal2-file {
+            width: 75%;
+            margin-right: auto;
+            margin-left: auto;
+            background: inherit;
+            font-size: 1.125em
+        }
+
+        .swal2-textarea {
+            height: 6.75em;
+            padding: .75em
+        }
+
+        .swal2-select {
+            min-width: 50%;
+            max-width: 100%;
+            padding: .375em .625em;
+            background: inherit;
+            color: inherit;
+            font-size: 1.125em
+        }
+
+        .swal2-checkbox,
+        .swal2-radio {
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: inherit
+        }
+
+        .swal2-checkbox label,
+        .swal2-radio label {
+            margin: 0 .6em;
+            font-size: 1.125em
+        }
+
+        .swal2-checkbox input,
+        .swal2-radio input {
+            flex-shrink: 0;
+            margin: 0 .4em
+        }
+
+        .swal2-input-label {
+            display: flex;
+            justify-content: center;
+            margin: 1em auto 0
+        }
+
+        .swal2-validation-message {
+            align-items: center;
+            justify-content: center;
+            margin: 1em 0 0;
+            padding: .625em;
+            overflow: hidden;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 1em;
+            font-weight: 300
+        }
+
+        .swal2-validation-message::before {
+            content: "!";
+            display: inline-block;
+            width: 1.5em;
+            min-width: 1.5em;
+            height: 1.5em;
+            margin: 0 .625em;
+            border-radius: 50%;
+            background-color: #f27474;
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.5em;
+            text-align: center
+        }
+
+        .swal2-icon {
+            position: relative;
+            box-sizing: content-box;
+            justify-content: center;
+            width: 5em;
+            height: 5em;
+            margin: 2.5em auto .6em;
+            border: .25em solid transparent;
+            border-radius: 50%;
+            border-color: #000;
+            font-family: inherit;
+            line-height: 5em;
+            cursor: default;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .swal2-icon .swal2-icon-content {
+            display: flex;
+            align-items: center;
+            font-size: 3.75em
+        }
+
+        .swal2-icon.swal2-error {
+            border-color: #f27474;
+            color: #f27474
+        }
+
+        .swal2-icon.swal2-error .swal2-x-mark {
+            position: relative;
+            flex-grow: 1
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+            display: block;
+            position: absolute;
+            top: 2.3125em;
+            width: 2.9375em;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #f27474
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+            left: 1.0625em;
+            transform: rotate(45deg)
+        }
+
+        .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+            right: 1em;
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-error.swal2-icon-show {
+            -webkit-animation: swal2-animate-error-icon .5s;
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark {
+            -webkit-animation: swal2-animate-error-x-mark .5s;
+            animation: swal2-animate-error-x-mark .5s
+        }
+
+        .swal2-icon.swal2-warning {
+            border-color: #facea8;
+            color: #f8bb86
+        }
+
+        .swal2-icon.swal2-warning.swal2-icon-show {
+            -webkit-animation: swal2-animate-error-icon .5s;
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content {
+            -webkit-animation: swal2-animate-i-mark .5s;
+            animation: swal2-animate-i-mark .5s
+        }
+
+        .swal2-icon.swal2-info {
+            border-color: #9de0f6;
+            color: #3fc3ee
+        }
+
+        .swal2-icon.swal2-info.swal2-icon-show {
+            -webkit-animation: swal2-animate-error-icon .5s;
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content {
+            -webkit-animation: swal2-animate-i-mark .8s;
+            animation: swal2-animate-i-mark .8s
+        }
+
+        .swal2-icon.swal2-question {
+            border-color: #c9dae1;
+            color: #87adbd
+        }
+
+        .swal2-icon.swal2-question.swal2-icon-show {
+            -webkit-animation: swal2-animate-error-icon .5s;
+            animation: swal2-animate-error-icon .5s
+        }
+
+        .swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content {
+            -webkit-animation: swal2-animate-question-mark .8s;
+            animation: swal2-animate-question-mark .8s
+        }
+
+        .swal2-icon.swal2-success {
+            border-color: #a5dc86;
+            color: #a5dc86
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line] {
+            position: absolute;
+            width: 3.75em;
+            height: 7.5em;
+            transform: rotate(45deg);
+            border-radius: 50%
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left] {
+            top: -.4375em;
+            left: -2.0635em;
+            transform: rotate(-45deg);
+            transform-origin: 3.75em 3.75em;
+            border-radius: 7.5em 0 0 7.5em
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right] {
+            top: -.6875em;
+            left: 1.875em;
+            transform: rotate(-45deg);
+            transform-origin: 0 3.75em;
+            border-radius: 0 7.5em 7.5em 0
+        }
+
+        .swal2-icon.swal2-success .swal2-success-ring {
+            position: absolute;
+            z-index: 2;
+            top: -.25em;
+            left: -.25em;
+            box-sizing: content-box;
+            width: 100%;
+            height: 100%;
+            border: .25em solid rgba(165, 220, 134, .3);
+            border-radius: 50%
+        }
+
+        .swal2-icon.swal2-success .swal2-success-fix {
+            position: absolute;
+            z-index: 1;
+            top: .5em;
+            left: 1.625em;
+            width: .4375em;
+            height: 5.625em;
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line] {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            height: .3125em;
+            border-radius: .125em;
+            background-color: #a5dc86
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+            top: 2.875em;
+            left: .8125em;
+            width: 1.5625em;
+            transform: rotate(45deg)
+        }
+
+        .swal2-icon.swal2-success [class^=swal2-success-line][class$=long] {
+            top: 2.375em;
+            right: .5em;
+            width: 2.9375em;
+            transform: rotate(-45deg)
+        }
+
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+            -webkit-animation: swal2-animate-success-line-tip .75s;
+            animation: swal2-animate-success-line-tip .75s
+        }
+
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+            -webkit-animation: swal2-animate-success-line-long .75s;
+            animation: swal2-animate-success-line-long .75s
+        }
+
+        .swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+            -webkit-animation: swal2-rotate-success-circular-line 4.25s ease-in;
+            animation: swal2-rotate-success-circular-line 4.25s ease-in
+        }
+
+        .swal2-progress-steps {
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 100%;
+            margin: 1.25em auto;
+            padding: 0;
+            background: inherit;
+            font-weight: 600
+        }
+
+        .swal2-progress-steps li {
+            display: inline-block;
+            position: relative
+        }
+
+        .swal2-progress-steps .swal2-progress-step {
+            z-index: 20;
+            flex-shrink: 0;
+            width: 2em;
+            height: 2em;
+            border-radius: 2em;
+            background: #2778c4;
+            color: #fff;
+            line-height: 2em;
+            text-align: center
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+            background: #2778c4
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step {
+            background: #add8e6;
+            color: #fff
+        }
+
+        .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line {
+            background: #add8e6
+        }
+
+        .swal2-progress-steps .swal2-progress-step-line {
+            z-index: 10;
+            flex-shrink: 0;
+            width: 2.5em;
+            height: .4em;
+            margin: 0 -1px;
+            background: #2778c4
+        }
+
+        [class^=swal2] {
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .swal2-show {
+            -webkit-animation: swal2-show .3s;
+            animation: swal2-show .3s
+        }
+
+        .swal2-hide {
+            -webkit-animation: swal2-hide .15s forwards;
+            animation: swal2-hide .15s forwards
+        }
+
+        .swal2-noanimation {
+            transition: none
+        }
+
+        .swal2-scrollbar-measure {
+            position: absolute;
+            top: -9999px;
+            width: 50px;
+            height: 50px;
+            overflow: scroll
+        }
+
+        .swal2-rtl .swal2-close {
+            margin-right: initial;
+            margin-left: 0
+        }
+
+        .swal2-rtl .swal2-timer-progress-bar {
+            right: 0;
+            left: auto
+        }
+
+        @-webkit-keyframes swal2-toast-show {
+            0% {
+                transform: translateY(-.625em) rotateZ(2deg)
+            }
+
+            33% {
+                transform: translateY(0) rotateZ(-2deg)
+            }
+
+            66% {
+                transform: translateY(.3125em) rotateZ(2deg)
+            }
+
+            100% {
+                transform: translateY(0) rotateZ(0)
+            }
+        }
+
+        @keyframes swal2-toast-show {
+            0% {
+                transform: translateY(-.625em) rotateZ(2deg)
+            }
+
+            33% {
+                transform: translateY(0) rotateZ(-2deg)
+            }
+
+            66% {
+                transform: translateY(.3125em) rotateZ(2deg)
+            }
+
+            100% {
+                transform: translateY(0) rotateZ(0)
+            }
+        }
+
+        @-webkit-keyframes swal2-toast-hide {
+            100% {
+                transform: rotateZ(1deg);
+                opacity: 0
+            }
+        }
+
+        @keyframes swal2-toast-hide {
+            100% {
+                transform: rotateZ(1deg);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes swal2-toast-animate-success-line-tip {
+            0% {
+                top: .5625em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: .125em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: .625em;
+                left: -.25em;
+                width: 1.625em
+            }
+
+            84% {
+                top: 1.0625em;
+                left: .75em;
+                width: .5em
+            }
+
+            100% {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
+        }
+
+        @keyframes swal2-toast-animate-success-line-tip {
+            0% {
+                top: .5625em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: .125em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: .625em;
+                left: -.25em;
+                width: 1.625em
+            }
+
+            84% {
+                top: 1.0625em;
+                left: .75em;
+                width: .5em
+            }
+
+            100% {
+                top: 1.125em;
+                left: .1875em;
+                width: .75em
+            }
+        }
+
+        @-webkit-keyframes swal2-toast-animate-success-line-long {
+            0% {
+                top: 1.625em;
+                right: 1.375em;
+                width: 0
+            }
+
+            65% {
+                top: 1.25em;
+                right: .9375em;
+                width: 0
+            }
+
+            84% {
+                top: .9375em;
+                right: 0;
+                width: 1.125em
+            }
+
+            100% {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+        }
+
+        @keyframes swal2-toast-animate-success-line-long {
+            0% {
+                top: 1.625em;
+                right: 1.375em;
+                width: 0
+            }
+
+            65% {
+                top: 1.25em;
+                right: .9375em;
+                width: 0
+            }
+
+            84% {
+                top: .9375em;
+                right: 0;
+                width: 1.125em
+            }
+
+            100% {
+                top: .9375em;
+                right: .1875em;
+                width: 1.375em
+            }
+        }
+
+        @-webkit-keyframes swal2-show {
+            0% {
+                transform: scale(.7)
+            }
+
+            45% {
+                transform: scale(1.05)
+            }
+
+            80% {
+                transform: scale(.95)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        @keyframes swal2-show {
+            0% {
+                transform: scale(.7)
+            }
+
+            45% {
+                transform: scale(1.05)
+            }
+
+            80% {
+                transform: scale(.95)
+            }
+
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        @-webkit-keyframes swal2-hide {
+            0% {
+                transform: scale(1);
+                opacity: 1
+            }
+
+            100% {
+                transform: scale(.5);
+                opacity: 0
+            }
+        }
+
+        @keyframes swal2-hide {
+            0% {
+                transform: scale(1);
+                opacity: 1
+            }
+
+            100% {
+                transform: scale(.5);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-success-line-tip {
+            0% {
+                top: 1.1875em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: 1.0625em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: 2.1875em;
+                left: -.375em;
+                width: 3.125em
+            }
+
+            84% {
+                top: 3em;
+                left: 1.3125em;
+                width: 1.0625em
+            }
+
+            100% {
+                top: 2.8125em;
+                left: .8125em;
+                width: 1.5625em
+            }
+        }
+
+        @keyframes swal2-animate-success-line-tip {
+            0% {
+                top: 1.1875em;
+                left: .0625em;
+                width: 0
+            }
+
+            54% {
+                top: 1.0625em;
+                left: .125em;
+                width: 0
+            }
+
+            70% {
+                top: 2.1875em;
+                left: -.375em;
+                width: 3.125em
+            }
+
+            84% {
+                top: 3em;
+                left: 1.3125em;
+                width: 1.0625em
+            }
+
+            100% {
+                top: 2.8125em;
+                left: .8125em;
+                width: 1.5625em
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-success-line-long {
+            0% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            65% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            84% {
+                top: 2.1875em;
+                right: 0;
+                width: 3.4375em
+            }
+
+            100% {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em
+            }
+        }
+
+        @keyframes swal2-animate-success-line-long {
+            0% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            65% {
+                top: 3.375em;
+                right: 2.875em;
+                width: 0
+            }
+
+            84% {
+                top: 2.1875em;
+                right: 0;
+                width: 3.4375em
+            }
+
+            100% {
+                top: 2.375em;
+                right: .5em;
+                width: 2.9375em
+            }
+        }
+
+        @-webkit-keyframes swal2-rotate-success-circular-line {
+            0% {
+                transform: rotate(-45deg)
+            }
+
+            5% {
+                transform: rotate(-45deg)
+            }
+
+            12% {
+                transform: rotate(-405deg)
+            }
+
+            100% {
+                transform: rotate(-405deg)
+            }
+        }
+
+        @keyframes swal2-rotate-success-circular-line {
+            0% {
+                transform: rotate(-45deg)
+            }
+
+            5% {
+                transform: rotate(-45deg)
+            }
+
+            12% {
+                transform: rotate(-405deg)
+            }
+
+            100% {
+                transform: rotate(-405deg)
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-error-x-mark {
+            0% {
+                margin-top: 1.625em;
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            50% {
+                margin-top: 1.625em;
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            80% {
+                margin-top: -.375em;
+                transform: scale(1.15)
+            }
+
+            100% {
+                margin-top: 0;
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-animate-error-x-mark {
+            0% {
+                margin-top: 1.625em;
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            50% {
+                margin-top: 1.625em;
+                transform: scale(.4);
+                opacity: 0
+            }
+
+            80% {
+                margin-top: -.375em;
+                transform: scale(1.15)
+            }
+
+            100% {
+                margin-top: 0;
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-error-icon {
+            0% {
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+
+            100% {
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-animate-error-icon {
+            0% {
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+
+            100% {
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes swal2-rotate-loading {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes swal2-rotate-loading {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-question-mark {
+            0% {
+                transform: rotateY(-360deg)
+            }
+
+            100% {
+                transform: rotateY(0)
+            }
+        }
+
+        @keyframes swal2-animate-question-mark {
+            0% {
+                transform: rotateY(-360deg)
+            }
+
+            100% {
+                transform: rotateY(0)
+            }
+        }
+
+        @-webkit-keyframes swal2-animate-i-mark {
+            0% {
+                transform: rotateZ(45deg);
+                opacity: 0
+            }
+
+            25% {
+                transform: rotateZ(-25deg);
+                opacity: .4
+            }
+
+            50% {
+                transform: rotateZ(15deg);
+                opacity: .8
+            }
+
+            75% {
+                transform: rotateZ(-5deg);
+                opacity: 1
+            }
+
+            100% {
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        @keyframes swal2-animate-i-mark {
+            0% {
+                transform: rotateZ(45deg);
+                opacity: 0
+            }
+
+            25% {
+                transform: rotateZ(-25deg);
+                opacity: .4
+            }
+
+            50% {
+                transform: rotateZ(15deg);
+                opacity: .8
+            }
+
+            75% {
+                transform: rotateZ(-5deg);
+                opacity: 1
+            }
+
+            100% {
+                transform: rotateX(0);
+                opacity: 1
+            }
+        }
+
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+            overflow: hidden
+        }
+
+        body.swal2-height-auto {
+            height: auto !important
+        }
+
+        body.swal2-no-backdrop .swal2-container {
+            background-color: transparent !important;
+            pointer-events: none
+        }
+
+        body.swal2-no-backdrop .swal2-container .swal2-popup {
+            pointer-events: all
+        }
+
+        body.swal2-no-backdrop .swal2-container .swal2-modal {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .4)
+        }
+
+        @media print {
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+                overflow-y: scroll !important
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true] {
+                display: none
+            }
+
+            body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
+                position: static !important
+            }
+        }
+
+        body.swal2-toast-shown .swal2-container {
+            box-sizing: border-box;
+            width: 360px;
+            max-width: 100%;
+            background-color: transparent;
+            pointer-events: none
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top-end,
+        body.swal2-toast-shown .swal2-container.swal2-top-right {
+            top: 0;
+            right: 0;
+            bottom: auto;
+            left: auto
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-top-left,
+        body.swal2-toast-shown .swal2-container.swal2-top-start {
+            top: 0;
+            right: auto;
+            bottom: auto;
+            left: 0
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center-left,
+        body.swal2-toast-shown .swal2-container.swal2-center-start {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 0;
+            transform: translateY(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center {
+            top: 50%;
+            right: auto;
+            bottom: auto;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-center-end,
+        body.swal2-toast-shown .swal2-container.swal2-center-right {
+            top: 50%;
+            right: 0;
+            bottom: auto;
+            left: auto;
+            transform: translateY(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom-left,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-start {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 0
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom {
+            top: auto;
+            right: auto;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%)
+        }
+
+        body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+        body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: auto
+        }
+    </style>
+</head>
+
+<body class="theme-1" data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed="">
+    <!-- [ Pre-loader ] start -->
+
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="dash-sidebar light-sidebar">
+
+
+
+        <div class="navbar-wrapper">
+            <div class="m-header main-logo">
+                <a href="index.html" class="b-brand">
+                    <!-- ========   logo   ============ -->
+                    <img src="storage/uploads/logo/demo_logo.png" alt="HR-System"
+                        class="logo logo-lg" style="height: 120px;">
+
+                    <!-- <span style="font-size: 40px;">🇰🇪</span> -->
+                    <span style="font-size: 15px; color:black;">Homabay County</span>
+                </a>
+            </div>
+            <div class="navbar-content dash-trigger ps ps--active-y">
+                <ul class="dash-navbar" style="display: block;">
+
+                    <!-- dashboard-->
+                    <li class="dash-item dash-hasmenu dash-trigger">
+                        <a href="#" class="dash-link"><span class="dash-micon"><i class="ti ti-home"></i></span><span
+                                class="dash-mtext">Dashboard</span><span class="dash-arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span></a>
+                        <ul class="dash-submenu " style="display: block;">
+                            <li class="dash-item ">
+                                <a class="dash-link" href="index.html">Overview</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <!--dashboard-->
+
+                    <!-- user-->
+
+
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon"><i class="ti ti-users"></i></span>
+                            <span class="dash-mtext">Staff</span>
+                            <span class="dash-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span>
+                        </a>
+                        <ul class="dash-submenu " style="display: none;">
+                            <li class="dash-item ">
+                                <a class="dash-link" href="https://hr-uat.little.africa/user">User</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/roles">Role</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/employee-profile">Employee
+                                    Profile</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
+                    <!-- user-->
+
+                    <!-- employee-->
+                    <li class="dash-item ">
+                        <a href="employee.html" class="dash-link"><span class="dash-micon"><i
+                                    class="ti ti-user"></i></span><span class="dash-mtext">Employee</span></a>
+                    </li>
+
+                    <!-- employee-->
+
+                    <!-- editing and approval of employe data -->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-check"></i> <!-- Changed from 'ti-template' to 'ti-check-box' for approvals context -->
+                            </span>
+                            <span class="dash-mtext">Employee Approvals</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-new.html">Pending Approvals - New Employees</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-edit-approvals.html">Pending Approvals - Data Edits</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- end of editing of employee data -->
+
+                    <!-- company assets -->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-package"></i> <!-- Changed to better represent assets -->
+                            </span>
+                            <span class="dash-mtext">Company Assets</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="assets-all.html">Asset Tracking</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="assets-new.html">Register New Asset</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- end of company assets -->
+
+                    <!-- payroll-->
+                    <li class="dash-item dash-hasmenu  ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-receipt">
+                                </i>
+                            </span>
+                            <span class="dash-mtext">
+                                Remuneration
+                            </span>
+                            <span class="dash-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu " style="display: none;">
+
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/payslip">Payroll</a>
+                            </li>
+                            <li class="dash-item -">
+                                <a class="dash-link" href="https://hr-uat.little.africa/salarycompare">Salary
+                                    Comparison</a>
+                            </li>
+                            <li class="dash-item -">
+                                <a class="dash-link" href="https://hr-uat.little.africa/employeep9form">P9 Form</a>
+                            </li>
+
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/download/nssf">NSSF Export</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/download/nhif">NHIF Export</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/download/paye">PAYE Export</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/download/housing">Housing Levy
+                                    Export</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/download/allowances">Allowances
+                                    Export</a>
+                            </li>
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/loanreport">Loan Report</a>
+                            </li>
+
+                            <li class="dash-item -">
+                                <a class="dash-link" href="https://hr-uat.little.africa/salarystructure">Salary
+                                    Structure</a>
+                            </li>
+
+
+
+
+                        </ul>
+                    </li>
+                    <!-- payroll-->
+                    <!--reports-->
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-template"></i>
+                            </span>
+                            <span class="dash-mtext">MySalary</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/advancereport">MySalary
+                                    Report</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/blacklist">Blacklist</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- timesheet-->
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link"><span class="dash-micon"><i class="ti ti-clock"></i></span><span
+                                class="dash-mtext">Leave &amp; Attendance</span><span class="dash-arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span></a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/timesheet">Timesheet</a>
+                            </li>
+                            <li class="dash-item ">
+                                <a class="dash-link" href="https://hr-uat.little.africa/manageleave">Manage Leave</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/attendancemanage">Manage
+                                    Attendance</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+                    <!-- timesheet-->
+
+
+
+
+                    <!-- performance-->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link"><span class="dash-micon"><i
+                                    class="ti ti-3d-cube-sphere"></i></span><span
+                                class="dash-mtext">Performance</span><span class="dash-arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span></a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/indicator">Indicator</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/appraisal">Appraisal</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/goaltracking">Goal Tracking</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/employeeofthemonth">Employee Of
+                                    The Month</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--performance-->
+
+                    <!--fianance-->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link"><span class="dash-micon"><i class="ti ti-wallet"></i></span><span
+                                class="dash-mtext">Finance</span><span class="dash-arrow"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span></a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/accountlist">Account List</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/accountbalance">Account
+                                    Balance</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/payees">Payees</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/payer">Payers</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/deposit">Deposit</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/expense">Expense</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/transferbalance">Transfer
+                                    Balance</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- fianance-->
+
+                    <!--trainning-->
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link "><span class="dash-micon"><i
+                                    class="ti ti-school"></i></span><span class="dash-mtext">Trainings</span><span
+                                class="dash-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span></a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item ">
+                                <a class="dash-link" href="https://hr-uat.little.africa/training">Training List</a>
+                            </li>
+
+                            <li class="dash-item ">
+                                <a class="dash-link" href="https://hr-uat.little.africa/trainer">Trainer</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- tranning-->
+
+
+
+                    <!-- HR-->
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-user-plus"></i>
+                            </span>
+                            <span class="dash-mtext">HR Actions</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/transfer">Transfer</a>
+                            </li>
+
+
+                            <!-- Event-->
+                            <li class="dash-item">
+                                <a href="https://hr-uat.little.africa/event" class="dash-link">Event
+                                </a>
+                            </li>
+
+                            <!--meeting-->
+                            <li class="dash-item">
+                                <a href="https://hr-uat.little.africa/meeting" class="dash-link">Meeting</a>
+                            </li>
+
+
+                            <!-- Zoom meeting-->
+
+
+                            <!-- assets-->
+                            <li class="dash-item">
+                                <a href="https://hr-uat.little.africa/account-assets" class="dash-link">Assets</a>
+                            </li>
+
+
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/promotion">Promotion</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/warning">Warning</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/announcement">Announcement</a>
+                            </li>
+                            <li class="dash-item ">
+                                <a class="dash-link" href="https://hr-uat.little.africa/holiday">Holidays</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-user-plus"></i>
+                            </span>
+                            <span class="dash-mtext">Separation</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/resignation">Termination</a>
+                            </li>
+                            <li class="dash-item ">
+                                <a class="dash-link" href="https://hr-uat.little.africa/fnf">FNF</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- HR-->
+
+                    <!-- documents-->
+
+
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-file"></i>
+                            </span>
+                            <span class="dash-mtext">Documents (EDMS)</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+
+
+
+
+                            <li class="dash-item">
+                                <a href="https://hr-uat.little.africa/document-upload" class="dash-link">General
+                                    Documents</a>
+                            </li>
+
+
+
+
+
+                            <li class="dash-item">
+                                <a href="https://hr-uat.little.africa/company-policy" class="dash-link">Company
+                                    Policy</a>
+                            </li>
+
+
+
+
+                        </ul>
+                    </li>
+
+                    <li class="dash-item">
+                        <a href="https://hr-uat.little.africa/chats" class="dash-link"><span class="dash-micon"><i
+                                    class="ti ti-messages"></i></span><span class="dash-mtext">Messenger</span></a>
+                    </li>
+
+                    <!--reports-->
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-template"></i>
+                            </span>
+                            <span class="dash-mtext">MySalary</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/advancereport">MySalary
+                                    Report</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/blacklist">Blacklist</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--reports-->
+
+                    <li class="dash-item dash-hasmenu ">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-template"></i>
+                            </span>
+                            <span class="dash-mtext">Reports</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/report/income-expense">Income Vs
+                                    Expense</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link"
+                                    href="https://hr-uat.little.africa/report/monthly/attendance">Monthly Attendance</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/report/leave">Leave</a>
+                            </li>
+
+
+                            <li class="dash-item">
+                                <a class="dash-link"
+                                    href="https://hr-uat.little.africa/report/account-statement">Account Statement</a>
+                            </li>
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/report/payroll">Payroll</a>
+                            </li>
+
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="https://hr-uat.little.africa/report/timesheet">Timesheet</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+
+
+                    <!-- reports-->
+
+                    <!--company policy-->
+
+
+
+
+
+                    <!--constant-->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="company-setup.html" class="dash-link"><span class="dash-micon"><i
+                                    class="ti ti-table"></i></span><span class="dash-mtext">Company Setup</span></a>
+                    </li>
+                    <!--constant-->
+
+
+
+                    <!--------------------- Start System Setup ----------------------------------->
+
+
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link ">
+                            <span class="dash-micon"><i class="ti ti-settings"></i></span><span
+                                class="dash-mtext">System Setup</span><span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item dash-hasmenu ">
+                                <a href="https://hr-uat.little.africa/settings" class="dash-link">System Settings</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <!--------------------- End System Setup ----------------------------------->
+
+                </ul>
+
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps__rail-y" style="top: 0px; height: 754px; right: 0px;">
+                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 553px;"></div>
+                </div>
+            </div>
+        </div>
+    </nav>  <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+
+    <header class="dash-header">
+
+
+        <div class="header-wrapper">
+            <div class="me-auto dash-mob-drp">
+                <ul class="list-unstyled">
+                    <li class="dash-h-item mob-hamburger">
+                        <a href="#!" class="dash-head-link" id="mobile-collapse">
+                            <div class="hamburger hamburger--arrowturn">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="dropdown dash-h-item drp-company">
+                        <a class="dash-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="false" aria-expanded="false">
+                            <span class="theme-avtar">
+                                <img alt="#" src="https://hr-uat.little.africa/storage/uploads/avatar/avatar.png"
+                                    class="header-avtar" style="width: 100%; border-radius:50%">
+                            </span>
+                            <span class="hide-mob ms-2"> Hi, Director - HRM&amp;D!
+                                <i class="ti ti-chevron-down drp-arrow nocolor hide-mob"></i>
+                            </span></a>
+                        <div class="dropdown-menu dash-h-dropdown">
+                            <a href="https://hr-uat.little.africa/profile" class="dropdown-item">
+                                <i class="ti ti-user"></i>
+                                <span>My Profile</span>
+                            </a>
+
+                            <a href="https://hr-uat.little.africa/logout" class="dropdown-item"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                <i class="ti ti-power"></i>
+                                <span>Logout</span>
+                            </a>
+                            <form id="logout-form" action="https://hr-uat.little.africa/logout" method="POST"
+                                style="display: none;">
+                                <input type="hidden" name="_token" value="Gv60whoN3EflLEtbOhxGeGCmxpr4yi0629OfYEPj">
+                            </form>
+                        </div>
+                    </li>&nbsp;&nbsp;
+
+                    <!-- <li class="dash-h-item">
+                    <div class="language-selector">
+                        <label for="languageSelect" class="visually-hidden">Select Language:</label>
+                        <select id="languageSelect" class="form-select" style="width:122% !important;">
+                                                    <option value="en" selected>English</option>
+                            <option value="fr" >French</option>
+                        </select>
+                    </div>
+                </li> -->
+
+
+                    <li class="dash-h-item">
+
+                    </li>
+
+
+
+
+
+                </ul>
+            </div>
+            <div class="ms-auto">
+                <ul class="list-unstyled">
+
+
+                    <li class="dash-h-item">
+                        <a class="dash-head-link me-0" href="https://hr-uat.little.africa/chats">
+                            <i class="ti ti-message-circle"></i>
+                            <span class="bg-danger dash-h-badge message-counter custom_messanger_counter">0
+                                <span class="sr-only"></span>
+                            </span>
+                        </a>
+                    </li>
+
+
+
+
+
+
+                    <li class="dropdown dash-h-item drp-notification">
+                        <a class="dash-head-link dropdown-toggle arrow-none me-0 " data-bs-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="false" aria-expanded="false" id="msg-btn">
+                            <i class="ti ti-message-2"></i>
+                            <span class="bg-danger dash-h-badge message-counter custom_messanger_counter">0
+                                <span class="sr-only"></span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dash-h-dropdown dropdown-menu-end">
+                            <div class="noti-header">
+                                <h5 class="m-0">Messages</h5>
+                                <a href="#" class="dash-head-link mark_all_as_read_message">Clear All</a>
+                            </div>
+
+                            <div class="noti-body dropdown-list-message-msg ps">
+                                <div style="display: flex;">
+                                    <a href="#" class="show-listView"></a>
+
+                                    <div class="count-listOfContacts">
+                                    </div>
+                                </div>
+                                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                </div>
+                                <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                </div>
+                            </div>
+                            <div class="noti-footer">
+                                <div class="d-grid">
+                                    <a href="#" class="btn dash-head-link justify-content-center text-primary mx-0">View
+                                        all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal notification-modal fade" id="notification-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <h6 class="mt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-monitor me-2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>Desktop settings
+                    </h6>
+                    <hr>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="pcsetting1" checked="">
+                        <label class="form-check-label f-w-600 pl-1" for="pcsetting1">Allow desktop
+                            notification</label>
+                    </div>
+                    <p class="text-muted ms-5">
+                        you get lettest content at a time when data will updated
+                    </p>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="pcsetting2">
+                        <label class="form-check-label f-w-600 pl-1" for="pcsetting2">Store Cookie</label>
+                    </div>
+                    <h6 class="mb-0 mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-save me-2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>Application settings
+                    </h6>
+                    <hr>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="pcsetting3">
+                        <label class="form-check-label f-w-600 pl-1" for="pcsetting3">Backup Storage</label>
+                    </div>
+                    <p class="text-muted mb-4 ms-5">
+                        Automaticaly take backup as par schedule
+                    </p>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="pcsetting4">
+                        <label class="form-check-label f-w-600 pl-1" for="pcsetting4">Allow guest to print
+                            file</label>
+                    </div>
+                    <h6 class="mb-0 mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-cpu me-2">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <rect x="9" y="9" width="6" height="6"></rect>
+                            <line x1="9" y1="1" x2="9" y2="4"></line>
+                            <line x1="15" y1="1" x2="15" y2="4"></line>
+                            <line x1="9" y1="20" x2="9" y2="23"></line>
+                            <line x1="15" y1="20" x2="15" y2="23"></line>
+                            <line x1="20" y1="9" x2="23" y2="9"></line>
+                            <line x1="20" y1="14" x2="23" y2="14"></line>
+                            <line x1="1" y1="9" x2="4" y2="9"></line>
+                            <line x1="1" y1="14" x2="4" y2="14"></line>
+                        </svg>System settings
+                    </h6>
+                    <hr>
+                    <div class="form-check form-switch">
+                        <input type="checkbox" class="form-check-input" id="pcsetting5" checked="">
+                        <label class="form-check-label f-w-600 pl-1" for="pcsetting5">View other user chat</label>
+                    </div>
+                    <p class="text-muted ms-5">Allow to show public user message</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-danger btn-sm" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-light-primary btn-sm">
+                        Save changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Header ] end -->
+
+
+    <!-- [ Main Content ] start -->
+    <section class="dash-container">
+        <div class="dash-content">
+            <!-- [ breadcrumb ] start -->
+
+
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <div class="page-header-title">
+                                <h4 class="m-b-10">
+                                    Manage Employee Recruitment Approvals
+                                </h4>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item">EMployee Approvals</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-auto col-md">
+                            <div class="float-end ">
+                                <a href="https://hr-uat.little.africa/export/employee" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Export" class="btn btn-sm btn-primary">
+                                    <i class="ti ti-file-export"></i>
+                                </a>
+
+                                <a href="#" data-url="https://hr-uat.little.africa/import/employee/file" data-ajax-popup="true" data-title="Import  Employee CSV File" data-bs-toggle="tooltip" title="" class="btn btn-sm btn-primary" data-bs-original-title="Import">
+                                    <i class="ti ti-file"></i>
+                                </a>
+
+                                <a href="employee-create.html" data-title="Create New Employee" data-bs-toggle="tooltip" title="" class="btn btn-sm btn-primary" data-bs-original-title="Create">
+                                    <i class="ti ti-plus"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+            <!-- [ basic-table ] start -->
+            <div class="row">
+
+
+                <div class="col-xxl-12">
+
+                    <div class="col-xxl-12">
+                        <div class="row">
+                            <!-- Employees Pending Approval -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-warning">
+                                                        <i class="ti ti-user-check"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Awaiting Approval</small>
+                                                        <h6 class="m-0">Employees Pending Approval</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-warning">215</h4>
+                                                <small class="text-muted">New Entries This Week</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Rejected Entries for Reassessment -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-danger">
+                                                        <i class="ti ti-user-x"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Sent for Review</small>
+                                                        <h6 class="m-0">Rejected for Reassessment</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-danger">35</h4>
+                                                <small class="text-muted">Needs Correction</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <!-- Employees Approved This Month -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-success">
+                                                        <i class="ti ti-check"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Total</small>
+                                                        <h6 class="m-0">Employees Approved</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-success">420</h4>
+                                                <small class="text-muted">Successfully Verified</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+    
+                    </div>
+
+
+
+
+                    <div class="row d-none">
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <a href="https://hr-uat.little.africa/employee?status=active"
+                                class="list-group-item list-group-item-action border-0 ">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-info">
+                                                        <i class="ti ti-ticket"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Active</small>
+                                                        <h6 class="m-0">Employees</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-info">7,720</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <a href="https://hr-uat.little.africa/employee?status=seperated"
+                                class="list-group-item list-group-item-action border-0 seperated">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-primary">
+                                                        <i class="ti ti-users"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Seperated</small>
+                                                        <h6 class="m-0">Employees</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-primary">0</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6">
+
+                            <a href="https://hr-uat.little.africa/employee?status=inactive"
+                                class="list-group-item list-group-item-action border-0 ">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-between">
+                                            <div class="col-auto mb-3 mb-sm-0">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="theme-avtar bg-warning">
+                                                        <i class="ti ti-wallet"></i>
+                                                    </div>
+                                                    <div class="ms-3">
+                                                        <small class="text-muted">Notice</small>
+                                                        <h6 class="m-0">Employees</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <h4 class="m-0 text-warning">0
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+
+                <div class="col-2">
+                    <!-- <div class="card sticky-top" style="top:30px">
+        <div class="list-group list-group-flush" id="useradd-sidenav"> -->
+
+
+
+
+
+
+                    <!-- <a href="https://hr-uat.little.africa/employee?status=terminated"
+                    class="list-group-item list-group-item-action border-0 ">Terminated (0)
+                    <div class="float-end"><i class="ti ti-chevron-right"></i></div>
+                </a> -->
+
+
+
+
+
+
+
+
+
+
+                    <!-- </div>
+    </div> -->
+                </div>
+
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header card-body table-border-style">
+
+                            <div class="custom-dataTable-Upper">
+                                <form
+                                    action="https://hr-uat.little.africa/employee?sort_by=id&amp;perPage=5&amp;sort_direction=asc"
+                                    method="GET" class="c-page-count">
+                                    <label for="perPage">Records per page:</label>
+                                    <select name="perPage" class="form-control custom-dd" id="perPage"
+                                        onchange="this.form.submit()">
+
+                                        <option value="5" selected="">5</option>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <!-- Add more options as needed -->
+                                    </select>
+                                    <input type="hidden" name="sort_direction" value="asc">
+                                </form>
+                                <form action="https://hr-uat.little.africa/employee" method="GET" class="c-DT-search">
+                                    <input type="text" name="search" class="form-control c-search-text"
+                                        placeholder="Search..." onchange="this.form.submit()" value=""
+                                        spellcheck="false" data-ms-editor="true">
+                                    <button type="submit" class="btn btn-sm btn-primary">Search</button>
+                                </form>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Asset ID</th>
+                                            <th>Name</th>
+                                            <th>Category</th>
+                                            <th>Model</th>
+                                            <th>Department</th>
+                                            <th>Assignment</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>AST-001</td>
+                                            <td>Dell Laptop</td>
+                                            <td>Hardware</td>
+                                            <td>XPS 15</td>
+                                            <td>IT</td>
+                                            <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                            <td><span class="badge rounded-pill bg-success">Good</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>AST-002</td>
+                                            <td>Office Chair</td>
+                                            <td>Furniture</td>
+                                            <td>Ergonomic Pro</td>
+                                            <td>HR</td>
+                                            <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                            <td><span class="badge rounded-pill bg-success">Good</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>AST-003</td>
+                                            <td>Adobe Creative Suite</td>
+                                            <td>Software</td>
+                                            <td>Creative Cloud 2023</td>
+                                            <td>Marketing</td>
+                                            <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                            <td><span class="badge rounded-pill bg-success">Good</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>AST-004</td>
+                                            <td>HP Printer</td>
+                                            <td>Hardware</td>
+                                            <td>LaserJet Pro</td>
+                                            <td>Finance</td>
+                                            <td><span class="badge rounded-pill bg-secondary">Not Assigned</span></td>
+                                            <td><span class="badge rounded-pill bg-warning text-dark">Under Maintenance</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>AST-005</td>
+                                            <td>iPhone 14</td>
+                                            <td>Electronics</td>
+                                            <td>Pro Max</td>
+                                            <td>Sales</td>
+                                            <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
+                                            <td><span class="badge rounded-pill bg-danger">Defective</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>AST-006</td>
+                                            <td>ThinkPad Laptop</td>
+                                            <td>Hardware</td>
+                                            <td>X1 Carbon</td>
+                                            <td>Operations</td>
+                                            <td><span class="badge rounded-pill bg-secondary">Not Assigned</span></td>
+                                            <td><span class="badge rounded-pill bg-secondary">Stolen</span></td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
+                                            <td><a class="btn btn-outline-primary" data-bs-target="#viewDetailsModal" data-bs-toggle="modal">View Details</a></td>
+                                        </tr>
+                                    </tbody>
+
+
+
+                                    <tbody>
+                                       
+                                        
+                                        <tr>
+                                            <td class="hide hidden"><a class="btn btn-outline-primary" href="employee-details.html">#EMP0000304</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">LKE009</a></td>
+                                            <td><a href="employee-details.html">Omondi Felix</a></td>
+                                            <td>omondi.felix@homabay.go.ke</td>
+                                            <td>65872901</td>
+                                            <td>Contract</td>
+                                            <td><a href="#" class="btn btn-sm">View Salary</a></td>
+                                            <td>Homa Bay County</td>
+                                            <td>Finance</td>
+                                            <td>Accountant</td>
+                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">Modification log</a></td>
+                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            <div class="pagination-container custom-dataTable-pagination">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- [ basic-table ] end -->
+            <!-- [ Main Content ] end -->
+        </div>
+    </section>
+
+
+        <!-- View Details Modal -->
+        <div class="modal fade" id="viewDetailsModal" tabindex="-1" aria-labelledby="viewDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="viewDetailsModalLabel">Asset Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-primary">General Information</h6>
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th width="40%">Asset ID:</th>
+                                        <td>AST-001</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td>Dell Laptop</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Category:</th>
+                                        <td>Hardware</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Model:</th>
+                                        <td>XPS 15</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Serial Number:</th>
+                                        <td>DLL-XPS15-2023-4857</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Purchase Date:</th>
+                                        <td>15 Jan 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Warranty Until:</th>
+                                        <td>15 Jan 2026</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-primary">Assignment & Status</h6>
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <th width="40%">Status:</th>
+                                        <td><span class="badge bg-success">Good</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Assignment:</th>
+                                        <td><span class="badge bg-primary">Assigned</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Assigned To:</th>
+                                        <td>John Smith</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Department:</th>
+                                        <td>IT Department</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Assigned Date:</th>
+                                        <td>20 Jan 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Location:</th>
+                                        <td>Headquarters - 3rd Floor</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <h6 class="text-primary">Specifications</h6>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th width="30%">Processor:</th>
+                                        <td>Intel Core i7-11800H, 8 cores</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Memory:</th>
+                                        <td>32GB DDR4 RAM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Storage:</th>
+                                        <td>1TB SSD</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Display:</th>
+                                        <td>15.6" 4K UHD Touch Display</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Graphics:</th>
+                                        <td>NVIDIA GeForce RTX 3050Ti</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Additional Notes:</th>
+                                        <td>Includes docking station and carrying case</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <h6 class="text-primary">Maintenance History</h6>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th>Performed By</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12 Jul 2023</td>
+                                            <td>Routine Check</td>
+                                            <td>Software updates and system cleaning</td>
+                                            <td>IT Support</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10 Dec 2023</td>
+                                            <td>Repair</td>
+                                            <td>Battery replacement</td>
+                                            <td>Dell Service Center</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary me-2">
+                            <i class="bi bi-printer"></i> Print Details
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add Asset Modal -->
+       <!-- Add Asset Modal -->
+    <div class="modal fade" id="addAssetModal" tabindex="-1" aria-labelledby="addAssetModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAssetModalLabel">Add New Asset</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- General Information -->
+                        <h6 class="text-primary">General Information</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="assetID" class="form-label">Asset ID</label>
+                                <input type="text" class="form-control" id="assetID" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="assetName" class="form-label">Asset Name</label>
+                                <input type="text" class="form-control" id="assetName" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="assetCategory" class="form-label">Category</label>
+                                <select class="form-select" id="assetCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option>Hardware</option>
+                                    <option>Software</option>
+                                    <option>Furniture</option>
+                                    <option>Electronics</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="assetModel" class="form-label">Model</label>
+                                <input type="text" class="form-control" id="assetModel">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="serialNumber" class="form-label">Serial Number</label>
+                                <input type="text" class="form-control" id="serialNumber" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="purchaseDate" class="form-label">Purchase Date</label>
+                                <input type="date" class="form-control" id="purchaseDate">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="warrantyDate" class="form-label">Warranty Until</label>
+                                <input type="date" class="form-control" id="warrantyDate">
+                            </div>
+                        </div>
+    
+                        <!-- Assignment & Status -->
+                        <h6 class="text-primary">Assignment & Status</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="assetStatus" class="form-label">Status</label>
+                                <select class="form-select" id="assetStatus" required>
+                                    <option value="">Select Status</option>
+                                    <option>Good</option>
+                                    <option>Under Maintenance</option>
+                                    <option>Defective</option>
+                                    <option>Stolen</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="assetAssignment" class="form-label">Assignment Status</label>
+                                <select class="form-select" id="assetAssignment" required>
+                                    <option value="">Select Assignment Status</option>
+                                    <option>Assigned</option>
+                                    <option>Not Assigned</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="assignedTo" class="form-label">Assigned To</label>
+                                <input type="text" class="form-control" id="assignedTo">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="department" class="form-label">Department</label>
+                                <select class="form-select" id="department">
+                                    <option value="">Select Department</option>
+                                    <option>IT</option>
+                                    <option>HR</option>
+                                    <option>Finance</option>
+                                    <option>Marketing</option>
+                                    <option>Sales</option>
+                                    <option>Operations</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="assignedDate" class="form-label">Assigned Date</label>
+                                <input type="date" class="form-control" id="assignedDate">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location">
+                            </div>
+                        </div>
+    
+                        <!-- Specifications -->
+                        <h6 class="text-primary">Specifications</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="processor" class="form-label">Processor</label>
+                                <input type="text" class="form-control" id="processor">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="memory" class="form-label">Memory</label>
+                                <input type="text" class="form-control" id="memory">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="storage" class="form-label">Storage</label>
+                                <input type="text" class="form-control" id="storage">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="display" class="form-label">Display</label>
+                                <input type="text" class="form-control" id="display">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="graphics" class="form-label">Graphics</label>
+                                <input type="text" class="form-control" id="graphics">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="additionalNotes" class="form-label">Additional Notes</label>
+                                <textarea class="form-control" id="additionalNotes" rows="2"></textarea>
+                            </div>
+                        </div>
+    
+                        <!-- Maintenance History -->
+                        <h6 class="text-primary">Maintenance History</h6>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="maintenanceDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="maintenanceDate">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="maintenanceType" class="form-label">Type</label>
+                                <select class="form-select" id="maintenanceType">
+                                    <option value="">Select Type</option>
+                                    <option>Routine Check</option>
+                                    <option>Repair</option>
+                                    <option>Upgrade</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="maintenanceDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="maintenanceDescription" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="performedBy" class="form-label">Performed By</label>
+                                <input type="text" class="form-control" id="performedBy">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save Asset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commonModalOver" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 99999">
+        <div id="liveToast" class="toast text-white  fade" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    <footer class="dash-footer">
+        <div class="footer-wrapper">
+            <div class="py-1">
+                <span class="text-muted">
+
+
+
+
+                </span>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+     
+    <![endif]-->
+    <!-- Warning Section Ends -->
+    <!-- Required Js -->
+    <script src="assets/js/plugins/choices.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+
+    <script src="js/letter.avatar.js"></script>
+    <script src="assets/js/plugins/datepicker-full.min.js"></script>
+    <script src="assets/js/plugins/popper.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/feather.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-switch-button.min.js"></script>
+    <script src="assets/js/dash.js"></script>
+    <script src="assets/js/plugins/sweetalert2.all.min.js"></script>
+    <script src="assets/js/plugins/simple-datatables.js"></script>
+    <script src="assets/js/plugins/flatpickr.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <script src="js/chatify/autosize.js"></script>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+
+    <script>
+        const dataTable = new simpleDatatables.DataTable("#pc-dt-simple");
+    </script>
+
+    <script>
+        const dataTablee = new simpleDatatables.DataTable("#pc-dt-simplee");
+    </script>
+
+    <script>
+        feather.replace();
+        var pctoggle = document.querySelector("#pct-toggler");
+        if (pctoggle) {
+            pctoggle.addEventListener("click", function () {
+                if (
+                    !document.querySelector(".pct-customizer").classList.contains("active")
+                ) {
+                    document.querySelector(".pct-customizer").classList.add("active");
+                } else {
+                    document.querySelector(".pct-customizer").classList.remove("active");
+                }
+            });
+        }
+        var themescolors = document.querySelectorAll(".themes-color > a");
+        for (var h = 0; h < themescolors.length; h++) {
+            var c = themescolors[h];
+            c.addEventListener("click", function (event) {
+                var targetElement = event.target;
+                if (targetElement.tagName == "SPAN") {
+                    targetElement = targetElement.parentNode;
+                }
+                var temp = targetElement.getAttribute("data-value");
+                removeClassByPrefix(document.querySelector("body"), "theme-");
+                document.querySelector("body").classList.add(temp);
+            });
+        }
+        var custthemebg = document.querySelector("#cust_theme_bg");
+        custthemebg.addEventListener("click", function () {
+            if (custthemebg.checked) {
+                document.querySelector(".dash-sidebar").classList.add("transprent-bg");
+                document
+                    .querySelector(".dash-header:not(.dash-mob-header)")
+                    .classList.add("transprent-bg");
+            } else {
+                document.querySelector(".dash-sidebar").classList.remove("transprent-bg");
+                document
+                    .querySelector(".dash-header:not(.dash-mob-header)")
+                    .classList.remove("transprent-bg");
+            }
+        });
+        var custdarklayout = document.querySelector("#cust_darklayout");
+        custdarklayout.addEventListener("click", function () {
+            if (custdarklayout.checked) {
+                document
+                    .querySelector("#main-style-link")
+                    .setAttribute("href", "https://hr-uat.little.africa/assets/css/style-dark.css");
+                document
+                    .querySelector(".m-header > .b-brand > .logo-lg")
+                    .setAttribute("src", "https://hr-uat.little.africa/storage/uploads/logo/logo-light.png");
+            } else {
+                document
+                    .querySelector("#main-style-link")
+                    .setAttribute("href", "https://hr-uat.little.africa/assets/css/style.css");
+                document
+                    .querySelector(".m-header > .b-brand > .logo-lg")
+                    .setAttribute("src", "https://hr-uat.little.africa/storage/uploads/logo/logo-dark.png");
+            }
+        });
+
+        function removeClassByPrefix(node, prefix) {
+            for (let i = 0; i < node.classList.length; i++) {
+                let value = node.classList[i];
+                if (value.startsWith(prefix)) {
+                    node.classList.remove(value);
+                }
+            }
+        }
+    </script>
+
+    <script>
+        $(document).on('click', '.local_calender .fc-daygrid-event', function (e) {
+            // if (!$(this).hasClass('project')) {
+            e.preventDefault();
+            var event = $(this);
+            var title = $(this).find('.fc-event-title').html();
+
+            var size = 'md';
+            var url = $(this).attr('href');
+            $("#commonModal .modal-title ").html(title);
+            $("#commonModal .modal-dialog").addClass('modal-' + size);
+            $.ajax({
+                url: url,
+                success: function (data) {
+                    $('#commonModal .body').html(data);
+                    $("#commonModal").modal('show');
+                    if ($(".d_week").length > 0) {
+                        $($(".d_week")).each(function (index, element) {
+                            var id = $(element).attr('id');
+
+                            (function () {
+                                const d_week = new Datepicker(document.querySelector(
+                                    '#' +
+                                    id), {
+                                    buttonClass: 'btn',
+                                    format: 'yyyy-mm-dd',
+                                });
+                            })();
+
+                        });
+                    }
+
+                },
+                error: function (data) {
+                    data = data.responseJSON;
+                    toastrs('Error', data.error, 'error')
+                }
+            });
+            // }
+        });
+    </script>
+
+    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            pushNotification('22');
+        });
+
+        function pushNotification(id) {
+
+            // ajax setup form csrf token
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            // Enable pusher logging - don't include this in production
+            Pusher.logToConsole = false;
+
+            var pusher = new Pusher('838e9a665bd33382e2af', {
+                cluster: 'ap2',
+                forceTLS: true
+            });
+
+            // Pusher Notification
+            var channel = pusher.subscribe('send_notification');
+            channel.bind('notification', function (data) {
+                if (id == data.user_id) {
+                    $(".notification-toggle").addClass('beep');
+                    $(".notification-dropdown #notification-list").prepend(data.html);
+                }
+            });
+
+            // Pusher Message
+            var msgChannel = pusher.subscribe('my-channel');
+            msgChannel.bind('my-chat', function (data) {
+
+                if (id == data.to) {
+                    getChat();
+                }
+            });
+        }
+
+        // Get chat for top ox
+    </script>
+
+
+
+
+    <script src="assets/js/plugins/main.min.js"></script>
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            get_data();
+        });
+
+        function get_data() {
+            var calender_type = $('#calender_type :selected').val();
+
+            $('#calendar').removeClass('local_calender');
+            $('#calendar').removeClass('google_calender');
+            if (calender_type == undefined) {
+                calender_type = 'local_calender';
+            }
+            $('#calendar').addClass(calender_type);
+
+            $.ajax({
+                url: $("#path_admin").val() + "/event/get_event_data",
+                method: "POST",
+                data: {
+                    "_token": "Gv60whoN3EflLEtbOhxGeGCmxpr4yi0629OfYEPj",
+                    'calender_type': calender_type
+                },
+                success: function (data) {
+
+                    var etitle;
+                    var etype;
+                    var etypeclass;
+                    var calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+                        headerToolbar: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                        },
+                        buttonText: {
+                            timeGridDay: "Day",
+                            timeGridWeek: "Week",
+                            dayGridMonth: "Month"
+                        },
+                        // slotLabelFormat: {
+                        //     hour: '2-digit',
+                        //     minute: '2-digit',
+                        //     hour12: false,
+                        // },
+                        themeSystem: 'bootstrap',
+                        slotDuration: '00:10:00',
+                        allDaySlot: true,
+                        navLinks: true,
+                        droppable: true,
+                        selectable: true,
+                        selectMirror: true,
+                        editable: true,
+                        dayMaxEvents: true,
+                        handleWindowResize: true,
+                        events: data,
+                        // height: 'auto',
+                        // timeFormat: 'H(:mm)',
+                    });
+                    calendar.render();
+                }
+            });
+        };
+    </script>
+
+    <script>
+        (function () {
+            var options = {
+                series: [1.4365234375],
+                chart: {
+                    height: 350,
+                    type: 'radialBar',
+                    offsetY: -20,
+                    sparkline: {
+                        enabled: true
+                    }
+                },
+                plotOptions: {
+                    radialBar: {
+                        startAngle: -90,
+                        endAngle: 90,
+                        track: {
+                            background: "#e7e7e7",
+                            strokeWidth: '97%',
+                            margin: 5, // margin is in pixels
+                        },
+                        dataLabels: {
+                            name: {
+                                show: true
+                            },
+                            value: {
+                                offsetY: -50,
+                                fontSize: '20px'
+                            }
+                        }
+                    }
+                },
+                grid: {
+                    padding: {
+                        top: -10
+                    }
+                },
+                colors: ["#6FD943"],
+                labels: ['Used'],
+            };
+            var chart = new ApexCharts(document.querySelector("#device-chart"), options);
+            chart.render();
+        })();
+    </script>
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Slick Initialization -->
+    <script>
+        $(document).ready(function () {
+            $('.employee-slider').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+            });
+        });
+    </script>
+
+
+
+    <script>
+        $('#msg-btn').click(function () {
+            let contactsPage = 1;
+            let contactsLoading = false;
+            let noMoreContacts = false;
+            $.ajax({
+                url: url + "/getContacts",
+                method: "GET",
+                data: {
+                    _token: "Gv60whoN3EflLEtbOhxGeGCmxpr4yi0629OfYEPj",
+                    page: contactsPage,
+                    type: 'custom',
+                },
+                dataType: "JSON",
+                success: (data) => {
+
+                    if (contactsPage < 2) {
+                        $(".count-listOfContacts").html(data.contacts);
+
+                    } else {
+                        $(".count-listOfContacts").append(data.contacts);
+                    }
+                    $('.count-listOfContacts').find('.messenger-list-item').each(function (e) {
+                        $('.noti-body .activeStatus').remove()
+                        $('.noti-body .avatar').remove()
+                        $(this).find('span').remove()
+                        $(this).find('p').addClass("d-inline")
+                        // $(this).find('b').addClass('position-absolute')
+                        // $(this).find('b').css({position: "absolute"});
+                        $(this).find('b').css({
+                            "position": "absolute",
+                            "right": "50px"
+                        });
+                        $(this).find('tr').remove('td')
+
+                    })
+                },
+                error: (error) => {
+                    setContactsLoading(false);
+                    console.error(error);
+                },
+            });
+        })
+    </script>
+
+    <script>
+        // Function to handle language selection
+        function handleLanguageSelection(lang) {
+            // Set the selected language in local storage
+            // Redirect to the corresponding route with the selected language
+            window.location.href = 'https://hr-uat.little.africa/employee-language?lang=' + lang;
+        }
+        // Get the language select element
+        const languageSelect = document.getElementById('languageSelect');
+
+        // Attach onchange event listener to the language select element
+        languageSelect.addEventListener('change', function () {
+            // Get the selected language from the select element
+            const selectedLanguage = this.value;
+            // Call the function to handle language selection
+            handleLanguageSelection(selectedLanguage);
+        });
+    </script>
+
+    <script>
+        document.getElementById('roleSelect').addEventListener('change', function (event) {
+            event.preventDefault(); // Prevent default action (if necessary)
+
+            var selectedRoleId = this.value;
+
+            // Make an AJAX call to update the user's role
+            fetch("https://hr-uat.little.africa/update-role", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': 'Gv60whoN3EflLEtbOhxGeGCmxpr4yi0629OfYEPj'
+                    },
+                    body: JSON.stringify({
+                        role_id: selectedRoleId
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message); // Show the message from the server
+                        window.location.href = "https://hr-uat.little.africa/home";
+                    } else {
+                        alert('Failed to update role: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while updating the role.');
+                });
+        });
+    </script>
+    <script src="https://js.pusher.com/7.0.3/pusher.min.js"></script>
+    <script>
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher("838e9a665bd33382e2af", {
+            encrypted: true,
+            cluster: "ap2",
+            authEndpoint: 'https://hr-uat.little.africa/chats/chat/auth',
+            auth: {
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            }
+        });
+
+        // Bellow are all the methods/variables that using php to assign globally.
+        const allowedImages = ["png", "jpg", "jpeg", "gif"] || [];
+        const allowedFiles = ["zip", "rar", "txt"] || [];
+        const getAllowedExtensions = [...allowedImages, ...allowedFiles];
+        const getMaxUploadSize = 157286400;
+    </script>
+    <script src="js/chatify/code.js"></script>
+
+
+
+
+
+
+
+    <svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+        style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0;">
+        <defs id="SvgjsDefs1002"></defs>
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+</body>
+
+
+
+
+
+</HTML>
