@@ -2670,7 +2670,7 @@
                                     <i class="ti ti-file"></i>
                                 </a>
 
-                                <a href="employee-create.html" data-title="Create New Employee" data-bs-toggle="tooltip" title="" class="btn btn-sm btn-primary" data-bs-original-title="Create">
+                                <a href="#"data-bs-target="#addAssetModal" data-bs-toggle="modal" data-bs-toggle="tooltip" title="" class="btn btn-sm btn-primary" data-bs-original-title="Create">
                                     <i class="ti ti-plus"></i>
                                 </a>
                             </div>
@@ -2685,38 +2685,35 @@
             <!-- [ Main Content ] start -->
             <!-- [ basic-table ] start -->
             <div class="row">
-
-
                 <div class="col-xxl-12">
-
                     <div class="col-xxl-12">
                         <div class="row">
-                            <!-- Employees Pending Approval -->
+                            <!-- Total Assets -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row align-items-center justify-content-between">
                                             <div class="col-auto mb-3 mb-sm-0">
                                                 <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-warning">
-                                                        <i class="ti ti-user-check"></i>
+                                                    <div class="theme-avtar bg-success">
+                                                        <i class=" fas fa-header"></i>
                                                     </div>
                                                     <div class="ms-3">
-                                                        <small class="text-muted">Awaiting Approval</small>
-                                                        <h6 class="m-0">Employees Pending Approval</h6>
+                                                        <h6 class="m-0">Total</h6>
+                                                        <small class="text-muted">Assets</small>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto text-end">
-                                                <h4 class="m-0 text-warning">215</h4>
-                                                <small class="text-muted">New Entries This Week</small>
+                                                <h4 class="m-0 text-warning">2,548</h4>
+                                                <small class="text-muted"></small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        
-                            <!-- Rejected Entries for Reassessment -->
+                            
+                            <!-- Unassigned Assets -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
@@ -2726,22 +2723,25 @@
                                                     <div class="theme-avtar bg-danger">
                                                         <i class="ti ti-user-x"></i>
                                                     </div>
+
+                                                   
+
                                                     <div class="ms-3">
-                                                        <small class="text-muted">Sent for Review</small>
-                                                        <h6 class="m-0">Rejected for Reassessment</h6>
+                                                        <h6 class="m-0">Total</h6>
+                                                        <small class="text-muted">Unassigned Assets</small>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto text-end">
-                                                <h4 class="m-0 text-danger">35</h4>
-                                                <small class="text-muted">Needs Correction</small>
+                                                <h4 class="m-0 text-danger">187</h4>
+                                                <small class="text-muted"></small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        
-                            <!-- Employees Approved This Month -->
+                            
+                            <!-- Assigned Assets -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="card">
                                     <div class="card-body">
@@ -2749,118 +2749,25 @@
                                             <div class="col-auto mb-3 mb-sm-0">
                                                 <div class="d-flex align-items-center">
                                                     <div class="theme-avtar bg-success">
-                                                        <i class="ti ti-check"></i>
+                                                        <i class="fa fa-check-square-o"></i>
                                                     </div>
                                                     <div class="ms-3">
-                                                        <small class="text-muted">Total</small>
-                                                        <h6 class="m-0">Employees Approved</h6>
+                                                        <h6 class="m-0">Total</h6>
+                                                        <small class="text-muted">Assigned Assets</small>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-auto text-end">
-                                                <h4 class="m-0 text-success">420</h4>
-                                                <small class="text-muted">Successfully Verified</small>
+                                                <h4 class="m-0 text-success">2,361</h4>
+                                                <small class="text-muted"></small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-    
                     </div>
-
-
-
-
-                    <div class="row d-none">
-
-                        <div class="col-lg-4 col-md-6">
-
-                            <a href="https://hr-uat.little.africa/employee?status=active"
-                                class="list-group-item list-group-item-action border-0 ">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-info">
-                                                        <i class="ti ti-ticket"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Active</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-info">7,720</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <a href="https://hr-uat.little.africa/employee?status=seperated"
-                                class="list-group-item list-group-item-action border-0 seperated">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-primary">
-                                                        <i class="ti ti-users"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Seperated</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-primary">0</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6">
-
-                            <a href="https://hr-uat.little.africa/employee?status=inactive"
-                                class="list-group-item list-group-item-action border-0 ">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-warning">
-                                                        <i class="ti ti-wallet"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Notice</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-warning">0
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-
                 </div>
-
             </div>
 
             <div class="row">
@@ -2945,7 +2852,7 @@
                                             <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
                                             <td><span class="badge rounded-pill bg-success">Good</span></td>
                                             <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                            <td><a class="btn btn-outline-primary" href="#"  data-bs-target="#viewDetailsModal" data-bs-toggle="modal">View Details</a></td>
                                         </tr>
                                         <tr>
                                            
@@ -2957,7 +2864,7 @@
                                             <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
                                             <td><span class="badge rounded-pill bg-success">Good</span></td>
                                             <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                            <td><a class="btn btn-outline-primary" href="#"  data-bs-target="#viewDetailsModal" data-bs-toggle="modal">View Details</a></td>
                                         </tr>
                                         <tr>
                                            
@@ -2969,7 +2876,7 @@
                                             <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
                                             <td><span class="badge rounded-pill bg-success">Good</span></td>
                                             <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                            <td><a class="btn btn-outline-primary" href="#"  data-bs-target="#viewDetailsModal" data-bs-toggle="modal">View Details</a></td>
                                         </tr>
                                         <tr>
                                            
@@ -2981,7 +2888,7 @@
                                             <td><span class="badge rounded-pill bg-secondary">Not Assigned</span></td>
                                             <td><span class="badge rounded-pill bg-warning text-dark">Under Maintenance</span></td>
                                             <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                            <td><a class="btn btn-outline-primary" href="#"  data-bs-target="#viewDetailsModal" data-bs-toggle="modal">View Details</a></td>
                                         </tr>
                                         <tr>
                                            
@@ -2993,7 +2900,7 @@
                                             <td><span class="badge rounded-pill bg-primary">Assigned</span></td>
                                             <td><span class="badge rounded-pill bg-danger">Defective</span></td>
                                             <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
+                                            <td><a class="btn btn-outline-primary"   data-bs-target="#viewDetailsModal" data-bs-toggle="modal" href="#">View Details</a></td>
                                         </tr>
                                         <tr>
                                            
@@ -3005,31 +2912,10 @@
                                             <td><span class="badge rounded-pill bg-secondary">Not Assigned</span></td>
                                             <td><span class="badge rounded-pill bg-secondary">Stolen</span></td>
                                             <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">View History log</a></td>
-                                            <td><a class="btn btn-outline-primary" data-bs-target="#viewDetailsModal" data-bs-toggle="modal">View Details</a></td>
+                                            <td><a class="btn btn-outline-primary" data-bs-target="#viewDetailsModal" data-bs-toggle="modal"href="#">View Details</a></td>
                                         </tr>
                                     </tbody>
 
-
-
-                                    <tbody>
-                                       
-                                        
-                                        <tr>
-                                            <td class="hide hidden"><a class="btn btn-outline-primary" href="employee-details.html">#EMP0000304</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">LKE009</a></td>
-                                            <td><a href="employee-details.html">Omondi Felix</a></td>
-                                            <td>omondi.felix@homabay.go.ke</td>
-                                            <td>65872901</td>
-                                            <td>Contract</td>
-                                            <td><a href="#" class="btn btn-sm">View Salary</a></td>
-                                            <td>Homa Bay County</td>
-                                            <td>Finance</td>
-                                            <td>Accountant</td>
-                                            <td><a href="#" class="btn btn-sm btn-info">Edit</a> <a href="#" class="btn btn-sm btn-danger">Delete</a> <a href="employee-modification-logs.html" class="btn btn-sm btn-secondary">Modification log</a></td>
-                                            <td><a class="btn btn-outline-primary" href="employee-details.html">View Details</a></td>
-                                        </tr>
-                                        
-                                    </tbody>
                                 </table>
                                 
                             </div>
@@ -3195,7 +3081,7 @@
         <!-- Add Asset Modal -->
        <!-- Add Asset Modal -->
     <div class="modal fade" id="addAssetModal" tabindex="-1" aria-labelledby="addAssetModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg  modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addAssetModalLabel">Add New Asset</h5>
