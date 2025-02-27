@@ -1741,18 +1741,18 @@
             <div class="m-header main-logo">
                 <a href="index.html" class="b-brand">
                     <!-- ========   logo   ============ -->
-                    <img src="https://hr-uat.little.africa/storage/uploads/logo/demo_logo.png" alt="HR-System"
+                    <img src="storage/uploads/logo/demo_logo.png" alt="HR-System"
                         class="logo logo-lg" style="height: 120px;">
 
                     <!-- <span style="font-size: 40px;">🇰🇪</span> -->
                     <span style="font-size: 15px; color:black;">Homabay County</span>
                 </a>
             </div>
-            <div class="navbar-content ps ps--active-y">
-                <ul class="dash-navbar">
+            <div class="navbar-content active dash-trigger ps ps--active-y">
+                <ul class="dash-navbar" style="display: block;">
 
                     <!-- dashboard-->
-                    <li class="dash-item dash-hasmenu  ">
+                    <li class="dash-item dash-hasmenu active dash-trigger">
                         <a href="#" class="dash-link"><span class="dash-micon"><i class="ti ti-home"></i></span><span
                                 class="dash-mtext">Dashboard</span><span class="dash-arrow"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -1760,8 +1760,8 @@
                                     stroke-linejoin="round" class="feather feather-chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg></span></a>
-                        <ul class="dash-submenu " style="display: none;">
-                            <li class="dash-item ">
+                        <ul class="dash-submenu " style="display: block;">
+                            <li class="dash-item active">
                                 <a class="dash-link" href="index.html">Overview</a>
                             </li>
 
@@ -1803,12 +1803,70 @@
                     <!-- user-->
 
                     <!-- employee-->
-                    <li class="dash-item active">
+                    <li class="dash-item ">
                         <a href="employee.html" class="dash-link"><span class="dash-micon"><i
                                     class="ti ti-user"></i></span><span class="dash-mtext">Employee</span></a>
                     </li>
 
                     <!-- employee-->
+
+                    <!-- editing and approval of employe data -->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-check"></i> <!-- Changed from 'ti-template' to 'ti-check-box' for approvals context -->
+                            </span>
+                            <span class="dash-mtext">Employee Approvals</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-new.html">Pending Approvals - New Employees</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-edit-approvals.html">Pending Approvals - Data Edits</a>
+                            </li>
+
+                            <li class="dash-item">
+                                <a class="dash-link" href="employee-approvals-edit-approvals.html">Rejected </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- end of editing of employee data -->
+
+                    <!-- company assets -->
+                    <li class="dash-item dash-hasmenu">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-package"></i> <!-- Changed to better represent assets -->
+                            </span>
+                            <span class="dash-mtext">Company Assets</span>
+                            <span class="dash-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu" style="display: none;">
+                            <li class="dash-item">
+                                <a class="dash-link" href="assets-all.html">Asset Tracking</a>
+                            </li>
+                            <li class="dash-item">
+                                <a class="dash-link" href="assets-new.html">Register New Asset</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- end of company assets -->
 
                     <!-- payroll-->
                     <li class="dash-item dash-hasmenu  ">
@@ -2133,7 +2191,7 @@
                             <span class="dash-micon">
                                 <i class="ti ti-file"></i>
                             </span>
-                           <span class="dash-mtext">Documents (EDMS)</span>
+                            <span class="dash-mtext">Documents (EDMS)</span>
                             <span class="dash-arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -2299,7 +2357,7 @@
                     <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
                 </div>
                 <div class="ps__rail-y" style="top: 0px; height: 754px; right: 0px;">
-                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 580px;"></div>
+                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 553px;"></div>
                 </div>
             </div>
         </div>
@@ -3852,7 +3910,7 @@
                             <p>By continuing the employee agrees to share their information in compliance with the DATA
                                 Privacy Act and the <a href="">Terms &amp; Conditions</a></p>
                         </div>
-                        <button type="submit" class="btn  btn-primary">Save</button>
+                        <button type="submit" class="btn  btn-primary" data-bs-toggle="modal" data-bs-target="#otherDocumentModal">Save</button>
                     </div>
 
                 </div>
