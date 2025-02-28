@@ -49,6 +49,8 @@
     <link rel="stylesheet" href="assets/css/plugins/style.css">
     <!-- font css -->
     <link rel="stylesheet" href="assets/css/plugins/bootstrap-switch-button.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/css/bootstrap.css">
+
     <link rel="stylesheet" href="assets/fonts/tabler-icons.min.css">
     <link rel="stylesheet" href="assets/fonts/feather.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome.css">
@@ -2661,7 +2663,8 @@
                             </div>
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item">EMployee Approvals</li>
+                                <li class="breadcrumb-item"><a href="employee-approvals-new.html">Pending Approvals</a></li>
+                                <li class="breadcrumb-item">Kelvin Njuguna</li>
                             </ul>
                         </div>
                        
@@ -2669,390 +2672,316 @@
                 </div>
             </div>
 
-            <!-- [ breadcrumb ] end -->
-            <!-- [ Main Content ] start -->
-            <!-- [ basic-table ] start -->
-            <div class="row">
-
-
-                <div class="col-xxl-12">
-
-                    <div class="col-xxl-12">
-                        <div class="row">
-                            <!-- Employees Pending Approval -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-warning">
-                                                        <i class="ti ti-user-check"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Awaiting Approval</small>
-                                                        <h6 class="m-0">Employees Pending Approval</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-warning">215</h4>
-                                                <small class="text-muted">New Entries This Week</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <!-- Rejected Entries for Reassessment -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-danger">
-                                                        <i class="ti ti-user-x"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Sent for Review</small>
-                                                        <h6 class="m-0">Rejected for Reassessment</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-danger">35</h4>
-                                                <small class="text-muted">Needs Correction</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <!-- Employees Approved This Month -->
-                            <div class="col-lg-4 col-md-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-success">
-                                                        <i class="ti ti-check"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Total</small>
-                                                        <h6 class="m-0">Employees Approved</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-success">420</h4>
-                                                <small class="text-muted">Successfully Verified</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-    
-                    </div>
-
-
-
-
-                    <div class="row d-none">
-
-                        <div class="col-lg-4 col-md-6">
-
-                            <a href="https://hr-uat.little.africa/employee?status=active"
-                                class="list-group-item list-group-item-action border-0 ">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-info">
-                                                        <i class="ti ti-ticket"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Active</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-info">7,720</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <a href="https://hr-uat.little.africa/employee?status=seperated"
-                                class="list-group-item list-group-item-action border-0 seperated">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-primary">
-                                                        <i class="ti ti-users"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Seperated</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-primary">0</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6">
-
-                            <a href="https://hr-uat.little.africa/employee?status=inactive"
-                                class="list-group-item list-group-item-action border-0 ">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center justify-content-between">
-                                            <div class="col-auto mb-3 mb-sm-0">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="theme-avtar bg-warning">
-                                                        <i class="ti ti-wallet"></i>
-                                                    </div>
-                                                    <div class="ms-3">
-                                                        <small class="text-muted">Notice</small>
-                                                        <h6 class="m-0">Employees</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto text-end">
-                                                <h4 class="m-0 text-warning">0
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
 
             <div class="row">
-
-
-
                 <div class="col-2">
-                    <!-- <div class="card sticky-top" style="top:30px">
-        <div class="list-group list-group-flush" id="useradd-sidenav"> -->
-
-
-
-
-
-
-                    <!-- <a href="https://hr-uat.little.africa/employee?status=terminated"
-                    class="list-group-item list-group-item-action border-0 ">Terminated (0)
-                    <div class="float-end"><i class="ti ti-chevron-right"></i></div>
-                </a> -->
-
-
-
-
-
-
-
-
-
-
-                    <!-- </div>
-    </div> -->
                 </div>
-
 
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header card-body table-border-style">
+                        <div class="card-body bg-white text-uppercase">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" href="user-details.html" role="tab">
+                                        <span class="d-block d-sm-none"><i class="fas fa-info-circle"></i></span>
+                                        <span class="d-none d-sm-block">Details</span>    
+                                    </a>
+                                </li>
+                               
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" href="user-logs.html">
+                                        <span class="d-block d-sm-none"><i class="fas fa-history"></i></span>
+                                        <!-- <span class="d-none d-sm-block">Activity Log</span>     -->
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="col-12 according-body-kev">
+                                <div class="row">
+                                  <div class="col-12">
+    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+        <p class="fw-semibold mb-0 pb-0 text-uppercase">Personal Information</p>
+    </div>
 
-                            <div class="custom-dataTable-Upper">
-                                <form
-                                    action="https://hr-uat.little.africa/employee?sort_by=id&amp;perPage=5&amp;sort_direction=asc"
-                                    method="GET" class="c-page-count">
-                                    <label for="perPage">Records per page:</label>
-                                    <select name="perPage" class="form-control custom-dd" id="perPage"
-                                        onchange="this.form.submit()">
+    <div class="row">
+        <div class="col-auto">
+            <h4 class="card-title">Full Name</h4>
+            <p class="card-title-desc">John Doe</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">National ID / Passport Number</h4>
+            <p class="card-title-desc">12345678</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Date of Birth</h4>
+            <p class="card-title-desc">15/05/1985</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Gender</h4>
+            <p class="card-title-desc">Male</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Marital Status</h4>
+            <p class="card-title-desc">Married</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Phone Number</h4>
+            <p class="card-title-desc">+254712345678</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Email Address</h4>
+            <p class="card-title-desc">johndoe@email.com</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Postal Address</h4>
+            <p class="card-title-desc">P.O. Box 1234-40300</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Physical Address</h4>
+            <p class="card-title-desc">123 Street, Homa Bay</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">County</h4>
+            <p class="card-title-desc">Homa Bay</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Sub-county</h4>
+            <p class="card-title-desc">Rachuonyo</p>
+        </div>
+        <!-- New Fields Added Here -->
+        <div class="col-auto">
+            <h4 class="card-title">Employment Type Id</h4>
+            <p class="card-title-desc">32132104</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Currency</h4>
+            <p class="card-title-desc">KSH</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Driving License</h4>
+            <p class="card-title-desc">ABC123456789</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Blood Group</h4>
+            <p class="card-title-desc">O+</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Town</h4>
+            <p class="card-title-desc">Nairobi</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Nationality</h4>
+            <p class="card-title-desc">Kenyan</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Personal Email</h4>
+            <p class="card-title-desc">john.doe.personal@email.com</p>
+        </div>
+    </div>
 
-                                        <option value="5" selected="">5</option>
-                                        <option value="10">10</option>
-                                        <option value="25">25</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
-                                    <input type="hidden" name="sort_direction" value="asc">
-                                </form>
-                                <form action="https://hr-uat.little.africa/employee" method="GET" class="c-DT-search">
-                                    <input type="text" name="search" class="form-control c-search-text"
-                                        placeholder="Search..." onchange="this.form.submit()" value=""
-                                        spellcheck="false" data-ms-editor="true">
-                                    <button type="submit" class="btn btn-sm btn-primary">Search</button>
-                                </form>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th class="hidden hide">Name</th>
-                                            <th>Role</th>
-                                            <th>Department</th>
-                                            
-                                            <th>Recruitment Type</th>
-                                            <th>Basic Salary</th>
-                                            <th>Date Added</th>
-                                            <th>Added By</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th>Kelvin Omtati</th>
-                                            <td>Revenue Director</td>
-                                            <td>Own Source Revenue</td>
-                                            <td>120,000</td>
-                                            <td>Permanent</td>
-                                            <td>12 Jan 2025 5:54 AM</td>
-                                            <td>Alex Wanjala</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Jane Mwangi</th>
-                                            <td>Finance Officer</td>
-                                            <td>Finance</td>
-                                            <td>95,000</td>
-                                            <td>Contract</td>
-                                            <td>10 Jan 2025 3:30 PM</td>
-                                            <td>Peter Kariuki</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>James Mutua</th>
-                                            <td>HR Manager</td>
-                                            <td>Human Resources</td>
-                                            <td>110,000</td>
-                                            <td>Permanent</td>
-                                            <td>8 Jan 2025 10:15 AM</td>
-                                            <td>Mary Atieno</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Caroline Njeri</th>
-                                            <td>ICT Officer</td>
-                                            <td>IT</td>
-                                            <td>88,000</td>
-                                            <td>Contract</td>
-                                            <td>5 Jan 2025 9:00 AM</td>
-                                            <td>Samuel Ochieng</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>David Kimani</th>
-                                            <td>Legal Advisor</td>
-                                            <td>Legal</td>
-                                            <td>130,000</td>
-                                            <td>Permanent</td>
-                                            <td>2 Jan 2025 2:45 PM</td>
-                                            <td>Grace Wambui</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Anne Chebet</th>
-                                            <td>Procurement Officer</td>
-                                            <td>Procurement</td>
-                                            <td>105,000</td>
-                                            <td>Contract</td>
-                                            <td>30 Dec 2024 4:20 PM</td>
-                                            <td>Brian Ndungu</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Samuel Omondi</th>
-                                            <td>Operations Manager</td>
-                                            <td>Operations</td>
-                                            <td>125,000</td>
-                                            <td>Permanent</td>
-                                            <td>28 Dec 2024 7:30 AM</td>
-                                            <td>Edwin Kiptoo</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Lucy Wanjiru</th>
-                                            <td>PR Officer</td>
-                                            <td>Public Relations</td>
-                                            <td>78,000</td>
-                                            <td>Contract</td>
-                                            <td>25 Dec 2024 11:00 AM</td>
-                                            <td>Rita Mwangi</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>John Otieno</th>
-                                            <td>Marketing Manager</td>
-                                            <td>Marketing</td>
-                                            <td>115,000</td>
-                                            <td>Permanent</td>
-                                            <td>22 Dec 2024 5:15 PM</td>
-                                            <td>Kevin Omollo</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Agnes Musyoka</th>
-                                            <td>Accountant</td>
-                                            <td>Finance</td>
-                                            <td>98,000</td>
-                                            <td>Contract</td>
-                                            <td>20 Dec 2024 6:45 AM</td>
-                                            <td>Faith Nduta</td>
-                                            <td>
-                                                <a href="employee-approvals-new-verification.html" class="btn btn-primary btn-sm">Restart Verification</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                
-                            </div>
-                            <div class="pagination-container custom-dataTable-pagination">
+    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+        <p class="fw-semibold mb-0 pb-0 text-uppercase">Employment Details</p>
+    </div>
+    <div class="row">
+        <div class="col-auto">
+            <h4 class="card-title">Employee Number</h4>
+            <p class="card-title-desc">HB12345</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Job Title</h4>
+            <p class="card-title-desc">Revenue Officer</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Department</h4>
+            <p class="card-title-desc">Finance</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Section / Sub Vote</h4>
+            <p class="card-title-desc">Revenue Collection</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Unit / Directorate (Sub Head)</h4>
+            <p class="card-title-desc">Revenue Management</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Sub Unit</h4>
+            <p class="card-title-desc">Field Operations</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Designation</h4>
+            <p class="card-title-desc">Senior Revenue Officer</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Date of Joining</h4>
+            <p class="card-title-desc">15/03/2023</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Employment Type</h4>
+            <p class="card-title-desc">Permanent & Pensionable</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Workstation</h4>
+            <p class="card-title-desc">Homa Bay County Headquarters</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Supervisor</h4>
+            <p class="card-title-desc">Michael Otieno</p>
+        </div>
+    </div>
 
+    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+        <p class="fw-semibold mb-0 pb-0 text-uppercase">Emergency Contacts</p>
+    </div>
+    <div class="row">
+        <div class="col-auto">
+            <h4 class="card-title">Full Name</h4>
+            <p class="card-title-desc">Jane Doe</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Relationship</h4>
+            <p class="card-title-desc">Sister</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Phone Number</h4>
+            <p class="card-title-desc">+254701234567</p>
+        </div>
+    </div>
+
+    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+        <p class="fw-semibold mb-0 pb-0 text-uppercase">Bank Details</p>
+    </div>
+    <div class="row">
+        <div class="col-auto">
+            <h4 class="card-title">Bank Name</h4>
+            <p class="card-title-desc">Cooperative Bank</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Branch</h4>
+            <p class="card-title-desc">Homa Bay</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Account Number</h4>
+            <p class="card-title-desc">9876543210</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Basic Salary</h4>
+            <p class="card-title-desc">KES 85,000</p>
+        </div>
+    </div>
+
+    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+        <p class="fw-semibold mb-0 pb-0 text-uppercase">Documents</p>
+    </div>
+    <div class="row">
+        <div class="col-auto">
+            <h4 class="card-title">National ID</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/national_id.pdf" target="_blank">View National ID</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">SHIF</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/shif_document.pdf" target="_blank">View SHIF</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">NSSF</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/nssf_document.pdf" target="_blank">View NSSF</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">KRA PIN</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/kra_pin_document.pdf" target="_blank">View KRA PIN</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Deployment Letter</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/deployment_letter.pdf" target="_blank">View Deployment Letter</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Appointment Letter</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/appointment_letter.pdf" target="_blank">View Appointment Letter</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Birth Certificate</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/birth_certificate.pdf" target="_blank">View Birth Certificate</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Confirmation Letter</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/confirmation_letter.pdf" target="_blank">View Confirmation Letter</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Transfer Letter</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/transfer_letter.pdf" target="_blank">View Transfer Letter</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Disciplinary Letter</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/disciplinary_letter.pdf" target="_blank">View Disciplinary Letter</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Innovative Project Proposal (Other Document)</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/innovative_project_proposal.pdf" target="_blank">View Innovative Project Proposal</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Passport Photo</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/passport_photo.pdf" target="_blank">View Passport Photo</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Contract</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/contract.pdf" target="_blank">View Contract</a>
+            </p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Academic Certificates</h4>
+            <p class="card-title-desc">
+                <a href="storage/files/academic_certificates.pdf" target="_blank">View Academic Certificates</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+        <p class="fw-semibold mb-0 pb-0 text-uppercase">Added By</p>
+    </div>
+    <div class="row">
+        <div class="col-auto">
+            <h4 class="card-title">Added By</h4>
+            <p class="card-title-desc">Admin</p>
+        </div>
+        <div class="col-auto">
+            <h4 class="card-title">Date of Creation</h4>
+            <p class="card-title-desc">25/02/2024</p>
+        </div>
+    </div>
+</div>
+                                    
+                                    
+                                </div>
                             </div>
+
+                <div class="col-12">
+    <button class="btn btn-primary mt-4 text-uppercase" id="approveButton" data-bs-target="#otpModalapprove" data-bs-toggle="modal">Approve</button>
+    <button class="btn btn-danger mt-4 text-uppercase mx-3" id="saveButton" data-bs-target="#otpModalreject" data-bs-toggle="modal">Reject</button>
+                </div>      
+                            
                         </div>
                     </div>
                 </div>
@@ -3063,6 +2992,160 @@
             <!-- [ Main Content ] end -->
         </div>
     </section>
+
+
+
+  <!-- OTP Verification Modal approve -->
+<div class="modal fade" id="otpModalapprove" tabindex="-1" aria-labelledby="otpModalLabelApprove" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="otpModalLabelApprove">Verification Code</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <!-- Verification Content (OTP Input) -->
+            <div class="modal-body text-center verification-content h-auto" id="verificationContent">
+                <p>Please enter the verification code sent to</p>
+                <p class="phone-number mb-3" id="phoneNumberDisplay">+254 *** *** 5678</p>
+                <div class="d-flex justify-content-center my-4">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="approve-otp1" onkeyup="moveToNext(this, 'approve-otp2')">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="approve-otp2" onkeyup="moveToNext(this, 'approve-otp3')" onkeydown="moveToPrev(this, 'approve-otp1', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="approve-otp3" onkeyup="moveToNext(this, 'approve-otp4')" onkeydown="moveToPrev(this, 'approve-otp2', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="approve-otp4" onkeyup="moveToNext(this, 'approve-otp5')" onkeydown="moveToPrev(this, 'approve-otp3', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="approve-otp5" onkeyup="moveToNext(this, 'approve-otp6')" onkeydown="moveToPrev(this, 'approve-otp4', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="approve-otp6" onkeydown="moveToPrev(this, 'approve-otp5', event)">
+                </div>
+                
+                <!-- Error message for incomplete OTP -->
+                <div class="error-message" id="otpError" style="display: none;">
+                    <i class="bi bi-exclamation-triangle-fill"></i> Please enter all 6 digits of the verification code.
+                </div>
+                
+                <div class="mb-3">
+                    <p class="text-muted">Didn't receive the code? Click <a href="#">Here</a> to Resend
+                           
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Success Message (Initially Hidden) -->
+            <div class="success-message" id="successMessage" style="display: none;">
+                <i class="bi bi-check-circle-fill"></i> This application has been successfully approved.
+            </div>
+            
+            <div class="modal-footer" id="modalFooter">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="verifyButton">Verify</button>
+            </div>
+            
+            <!-- Done Button (Initially Hidden) -->
+            <div class="modal-footer" id="successFooter" style="display: none;">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- OTP Verification Modal reject -->
+<div class="modal fade" id="otpModalreject" tabindex="-1" aria-labelledby="otpModalLabelReject" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="otpModalLabelReject">Verification Code</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <!-- Verification Content -->
+            <div class="modal-body text-center verification-content" id="verificationContent">
+                <p>Please enter the verification code sent to</p>
+                <p class="phone-number mb-3" id="phoneNumberDisplay">+254 *** *** 5678</p>
+                
+                <!-- OTP Input Fields -->
+                <div class="d-flex justify-content-center my-4">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="reject-otp1" onkeyup="moveToNext(this, 'reject-otp2')">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="reject-otp2" onkeyup="moveToNext(this, 'reject-otp3')" onkeydown="moveToPrev(this, 'reject-otp1', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="reject-otp3" onkeyup="moveToNext(this, 'reject-otp4')" onkeydown="moveToPrev(this, 'reject-otp2', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="reject-otp4" onkeyup="moveToNext(this, 'reject-otp5')" onkeydown="moveToPrev(this, 'reject-otp3', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="reject-otp5" onkeyup="moveToNext(this, 'reject-otp6')" onkeydown="moveToPrev(this, 'reject-otp4', event)">
+                    <input type="text" maxlength="1" class="form-control otp-input" id="reject-otp6" onkeydown="moveToPrev(this, 'reject-otp5', event)">
+                </div>
+                
+                <!-- Error Message -->
+                <div class="error-message" id="otpError" style="display: none;">
+                    <i class="bi bi-exclamation-triangle-fill"></i> Please enter all 6 digits of the verification code.
+                </div>
+                
+                <!-- Resend Code Section -->
+                <div class="mb-3">
+                    <p class="text-muted">Didn't receive the code? Click <a href="#">Here</a> to Resend
+                           
+                    </p>
+                </div>
+
+                <!-- Rejection Reason Field -->
+                <div class="rejection-reason">
+                    <label for="rejectionReason">Reason for Rejection:</label>
+                    <textarea 
+                        id="rejectionReason" 
+                        name="rejectionReason" 
+                        class="form-control"
+                        placeholder="Enter the reason for rejection..."
+                    ></textarea>
+                </div>
+                
+                <!-- Guidance Document -->
+                <div class="guidance-card mt-3">
+                    <h5 class="guidance-title text-left">Guidance on Avoiding Application Rejection</h5>
+                    <ul class="guidance-list ml-0 pl-0">
+                        <li class="guidance-item">
+                            <span class="guidance-bullet">•</span>
+                            <span>Verify that document scans are clear and legit.</span>
+                        </li>
+                        <li class="guidance-item">
+                            <span class="guidance-bullet">•</span>
+                            <span>Verify the expiration dates of all documents before submission.</span>
+                        </li>
+                        <li class="guidance-item">
+                            <span class="guidance-bullet">•</span>
+                            <span>Verify that the employee's identification matches the information on the submitted document.</span>
+                        </li>
+                        <li class="guidance-item">
+                            <span class="guidance-bullet">•</span>
+                            <span>Verify that all signatures and required fields are properly filled out.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage" style="display: none;">
+                <i class="bi bi-check-circle-fill"></i> The Application has been successfully rejected
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer" id="modalFooter">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="verifyButton">Verify</button>
+            </div>
+            
+            <!-- Success Footer -->
+            <div class="modal-footer" id="successFooter" style="display: none;">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
     <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -3570,6 +3653,254 @@
         const allowedFiles = ["zip", "rar", "txt"] || [];
         const getAllowedExtensions = [...allowedImages, ...allowedFiles];
         const getMaxUploadSize = 157286400;
+    </script>
+    <script>
+        // Common OTP Field Setup Function
+function setupOTPFields(modalPrefix) {
+    const otpInputs = document.querySelectorAll(`#${modalPrefix} .otp-input`);
+    otpInputs.forEach(input => {
+        input.addEventListener('input', function(e) {
+            // Remove any non-numeric characters
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+        
+        // Handle paste events
+        input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const pastedData = (e.clipboardData || window.clipboardData).getData('text');
+            
+            // If pasted data is 6 digits, distribute across fields
+            if (/^\d{6}$/.test(pastedData)) {
+                const otpInputs = document.querySelectorAll(`#${modalPrefix} .otp-input`);
+                for (let i = 0; i < 6; i++) {
+                    if (otpInputs[i]) {
+                        otpInputs[i].value = pastedData.charAt(i);
+                    }
+                }
+                // Focus on the last field
+                otpInputs[5].focus();
+            } else {
+                // Just paste the first digit
+                this.value = pastedData.replace(/[^0-9]/g, '').charAt(0);
+                
+                // Move to next field if available
+                const currentIndex = Array.from(otpInputs).indexOf(this);
+                if (currentIndex < otpInputs.length - 1) {
+                    otpInputs[currentIndex + 1].focus();
+                }
+            }
+        });
+    });
+}
+
+// Navigation between OTP fields
+function moveToNext(current, nextId) {
+    if (current.value.length === current.maxLength) {
+        const nextField = document.getElementById(nextId);
+        if (nextField) {
+            nextField.focus();
+        }
+    }
+}
+
+function moveToPrev(current, prevId, event) {
+    if (event.key === "Backspace" && current.value.length === 0) {
+        const prevField = document.getElementById(prevId);
+        if (prevField) {
+            prevField.focus();
+        }
+    }
+}
+
+// Timer Functions
+function startTimer(modalPrefix) {
+    let timeLeft = 60;
+    const timerElement = document.querySelector(`#${modalPrefix} #timer`);
+    const countdownElement = document.querySelector(`#${modalPrefix} #countdown`);
+    const resendLinkElement = document.querySelector(`#${modalPrefix} #resendLink`);
+    
+    if (!timerElement || !countdownElement || !resendLinkElement) return;
+    
+    resendLinkElement.classList.add('d-none');
+    countdownElement.classList.remove('d-none');
+    
+    const timerId = setInterval(function() {
+        if(timeLeft <= 0) {
+            clearInterval(timerId);
+            countdownElement.classList.add('d-none');
+            resendLinkElement.classList.remove('d-none');
+        } else {
+            timerElement.textContent = timeLeft;
+        }
+        timeLeft -= 1;
+    }, 1000);
+}
+
+// Resend Code Function
+function resendCode() {
+    alert("OTP resent successfully!");
+    startTimer(event.target.closest('.modal').id);
+}
+
+// Phone Number Functions
+function setPhoneNumber(phoneNumber, modalPrefix) {
+    const maskedNumber = maskPhoneNumber(phoneNumber);
+    const displayElement = document.querySelector(`#${modalPrefix} #phoneNumberDisplay`);
+    if (displayElement) {
+        displayElement.textContent = maskedNumber;
+    }
+}
+
+function maskPhoneNumber(phoneNumber) {
+    if (!phoneNumber) return "+254 *** *** 5678";
+    const countryCode = phoneNumber.slice(0, 4);
+    const lastFourDigits = phoneNumber.slice(-4);
+    return `${countryCode} *** *** ${lastFourDigits}`;
+}
+
+// Reset OTP Fields
+function resetOTPFields(modalPrefix) {
+    const otpInputs = document.querySelectorAll(`#${modalPrefix} .otp-input`);
+    otpInputs.forEach(input => {
+        input.value = '';
+    });
+}
+
+// Reset Modal State
+function resetModalState(modalPrefix) {
+    resetOTPFields(modalPrefix);
+    
+    const rejectionReasonElement = document.querySelector(`#${modalPrefix} #rejectionReason`);
+    if (rejectionReasonElement) {
+        rejectionReasonElement.value = '';
+    }
+    
+    const elements = {
+        'otpError': 'none',
+        'successMessage': 'none',
+        'verificationContent': 'block',
+        'modalFooter': 'flex',
+        'successFooter': 'none'
+    };
+    
+    Object.keys(elements).forEach(id => {
+        const element = document.querySelector(`#${modalPrefix} #${id}`);
+        if (element) {
+            element.style.display = elements[id];
+        }
+    });
+}
+
+// Verify OTP Function
+function verifyOTP(modalPrefix) {
+    const otpInputs = document.querySelectorAll(`#${modalPrefix} .otp-input`);
+    let fullOTP = '';
+    
+    otpInputs.forEach(input => {
+        fullOTP += input.value || '';
+    });
+    
+    const rejectionReason = document.querySelector(`#${modalPrefix} #rejectionReason`)?.value || '';
+    
+    const otpError = document.querySelector(`#${modalPrefix} #otpError`);
+    if (otpError) {
+        otpError.style.display = 'none';
+    }
+    
+    if (fullOTP.length === 6) {
+        // Hide verification content
+        const verificationContent = document.querySelector(`#${modalPrefix} #verificationContent`);
+        if (verificationContent) {
+            verificationContent.style.display = 'none';
+        }
+        
+        // Show success message
+        const successMessage = document.querySelector(`#${modalPrefix} #successMessage`);
+        if (successMessage) {
+            successMessage.style.display = 'block';
+        }
+        
+        // Update footer
+        const modalFooter = document.querySelector(`#${modalPrefix} #modalFooter`);
+        const successFooter = document.querySelector(`#${modalPrefix} #successFooter`);
+        if (modalFooter) {
+            modalFooter.style.display = 'none';
+        }
+        if (successFooter) {
+            successFooter.style.display = 'flex';
+        }
+        
+        // Log the data (replace with your form submission logic)
+        console.log('OTP:', fullOTP);
+        if (rejectionReason) {
+            console.log('Rejection Reason:', rejectionReason);
+        }
+    } else {
+        if (otpError) {
+            otpError.style.display = 'block';
+        }
+    }
+}
+
+// Document Ready Event
+document.addEventListener('DOMContentLoaded', function() {
+    // Setup approve modal
+    const approveButton = document.getElementById('approveButton');
+    if (approveButton) {
+        approveButton.addEventListener('click', function() {
+            resetModalState('otpModalapprove');
+        });
+    }
+    
+    // Setup reject modal
+    const rejectButton = document.getElementById('saveButton');
+    if (rejectButton) {
+        rejectButton.addEventListener('click', function() {
+            resetModalState('otpModalreject');
+        });
+    }
+    
+    // Initialize OTP fields for both modals
+    setupOTPFields('otpModalapprove');
+    setupOTPFields('otpModalreject');
+    
+    // Approve modal events
+    $('#otpModalapprove').on('shown.bs.modal', function () {
+        startTimer('otpModalapprove');
+        document.querySelector('#otpModalapprove .otp-input').focus();
+        setPhoneNumber("+254712345678", 'otpModalapprove');
+    });
+    
+    $('#otpModalapprove').on('hidden.bs.modal', function () {
+        resetOTPFields('otpModalapprove');
+    });
+    
+    // Reject modal events
+    $('#otpModalreject').on('shown.bs.modal', function () {
+        startTimer('otpModalreject');
+        document.querySelector('#otpModalreject .otp-input').focus();
+        setPhoneNumber("+254712345678", 'otpModalreject');
+    });
+    
+    $('#otpModalreject').on('hidden.bs.modal', function () {
+        resetOTPFields('otpModalreject');
+    });
+    
+    // Set up verify buttons
+    const approveVerifyButton = document.querySelector('#otpModalapprove #verifyButton');
+    if (approveVerifyButton) {
+        approveVerifyButton.addEventListener('click', function() {
+            verifyOTP('otpModalapprove');
+        });
+    }
+    
+    const rejectVerifyButton = document.querySelector('#otpModalreject #verifyButton');
+    if (rejectVerifyButton) {
+        rejectVerifyButton.addEventListener('click', function() {
+            verifyOTP('otpModalreject');
+        });
+    }
+});
     </script>
     <script src="js/chatify/code.js"></script>
 
